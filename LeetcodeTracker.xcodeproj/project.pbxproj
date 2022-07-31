@@ -1,0 +1,641 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2CE25C3D2891E47F009FABA7 /* LeetcodeTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE25C3C2891E47F009FABA7 /* LeetcodeTrackerApp.swift */; };
+		2CE25C3F2891E47F009FABA7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE25C3E2891E47F009FABA7 /* ContentView.swift */; };
+		2CE25C412891E481009FABA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CE25C402891E481009FABA7 /* Assets.xcassets */; };
+		2CE25C442891E481009FABA7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CE25C432891E481009FABA7 /* Preview Assets.xcassets */; };
+		2CE25C462891E481009FABA7 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE25C452891E481009FABA7 /* Persistence.swift */; };
+		2CE25C492891E481009FABA7 /* LeetcodeTracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2CE25C472891E481009FABA7 /* LeetcodeTracker.xcdatamodeld */; };
+		2CE25C532891E481009FABA7 /* LeetcodeTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE25C522891E481009FABA7 /* LeetcodeTrackerTests.swift */; };
+		2CE25C5D2891E481009FABA7 /* LeetcodeTrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE25C5C2891E481009FABA7 /* LeetcodeTrackerUITests.swift */; };
+		2CE25C5F2891E481009FABA7 /* LeetcodeTrackerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE25C5E2891E481009FABA7 /* LeetcodeTrackerUITestsLaunchTests.swift */; };
+		2CE25C6C2891E4A1009FABA7 /* leetcode.json in Resources */ = {isa = PBXBuildFile; fileRef = 2CE25C6B2891E4A1009FABA7 /* leetcode.json */; };
+		2CE25C6E2891E548009FABA7 /* LeetCodeContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE25C6D2891E548009FABA7 /* LeetCodeContent.swift */; };
+		2CE25C702891E614009FABA7 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE25C6F2891E614009FABA7 /* DataModel.swift */; };
+		2CE25CF32897171E009FABA7 /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE25CF22897171E009FABA7 /* TabView.swift */; };
+		2CE25CF52897187E009FABA7 /* BoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE25CF42897187E009FABA7 /* BoardView.swift */; };
+		2CE25CF7289718B5009FABA7 /* DSAlgoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE25CF6289718B5009FABA7 /* DSAlgoView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2CE25C4F2891E481009FABA7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2CE25C312891E47F009FABA7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2CE25C382891E47F009FABA7;
+			remoteInfo = LeetcodeTracker;
+		};
+		2CE25C592891E481009FABA7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2CE25C312891E47F009FABA7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2CE25C382891E47F009FABA7;
+			remoteInfo = LeetcodeTracker;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2CE25C392891E47F009FABA7 /* LeetcodeTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeetcodeTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CE25C3C2891E47F009FABA7 /* LeetcodeTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetcodeTrackerApp.swift; sourceTree = "<group>"; };
+		2CE25C3E2891E47F009FABA7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2CE25C402891E481009FABA7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2CE25C432891E481009FABA7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2CE25C452891E481009FABA7 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		2CE25C482891E481009FABA7 /* LeetcodeTracker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LeetcodeTracker.xcdatamodel; sourceTree = "<group>"; };
+		2CE25C4E2891E481009FABA7 /* LeetcodeTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LeetcodeTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CE25C522891E481009FABA7 /* LeetcodeTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetcodeTrackerTests.swift; sourceTree = "<group>"; };
+		2CE25C582891E481009FABA7 /* LeetcodeTrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LeetcodeTrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CE25C5C2891E481009FABA7 /* LeetcodeTrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetcodeTrackerUITests.swift; sourceTree = "<group>"; };
+		2CE25C5E2891E481009FABA7 /* LeetcodeTrackerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetcodeTrackerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2CE25C6B2891E4A1009FABA7 /* leetcode.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = leetcode.json; sourceTree = "<group>"; };
+		2CE25C6D2891E548009FABA7 /* LeetCodeContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetCodeContent.swift; sourceTree = "<group>"; };
+		2CE25C6F2891E614009FABA7 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		2CE25CF22897171E009FABA7 /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
+		2CE25CF42897187E009FABA7 /* BoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardView.swift; sourceTree = "<group>"; };
+		2CE25CF6289718B5009FABA7 /* DSAlgoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSAlgoView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2CE25C362891E47F009FABA7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CE25C4B2891E481009FABA7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CE25C552891E481009FABA7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2CE25C302891E47F009FABA7 = {
+			isa = PBXGroup;
+			children = (
+				2CE25C3B2891E47F009FABA7 /* LeetcodeTracker */,
+				2CE25C512891E481009FABA7 /* LeetcodeTrackerTests */,
+				2CE25C5B2891E481009FABA7 /* LeetcodeTrackerUITests */,
+				2CE25C3A2891E47F009FABA7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2CE25C3A2891E47F009FABA7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2CE25C392891E47F009FABA7 /* LeetcodeTracker.app */,
+				2CE25C4E2891E481009FABA7 /* LeetcodeTrackerTests.xctest */,
+				2CE25C582891E481009FABA7 /* LeetcodeTrackerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2CE25C3B2891E47F009FABA7 /* LeetcodeTracker */ = {
+			isa = PBXGroup;
+			children = (
+				2CE25C712891E625009FABA7 /* Services */,
+				2CE25C6B2891E4A1009FABA7 /* leetcode.json */,
+				2CE25C3C2891E47F009FABA7 /* LeetcodeTrackerApp.swift */,
+				2CE25C3E2891E47F009FABA7 /* ContentView.swift */,
+				2CE25C402891E481009FABA7 /* Assets.xcassets */,
+				2CE25C452891E481009FABA7 /* Persistence.swift */,
+				2CE25C472891E481009FABA7 /* LeetcodeTracker.xcdatamodeld */,
+				2CE25C422891E481009FABA7 /* Preview Content */,
+				2CE25C6D2891E548009FABA7 /* LeetCodeContent.swift */,
+				2CE25CF22897171E009FABA7 /* TabView.swift */,
+				2CE25CF42897187E009FABA7 /* BoardView.swift */,
+				2CE25CF6289718B5009FABA7 /* DSAlgoView.swift */,
+			);
+			path = LeetcodeTracker;
+			sourceTree = "<group>";
+		};
+		2CE25C422891E481009FABA7 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				2CE25C432891E481009FABA7 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2CE25C512891E481009FABA7 /* LeetcodeTrackerTests */ = {
+			isa = PBXGroup;
+			children = (
+				2CE25C522891E481009FABA7 /* LeetcodeTrackerTests.swift */,
+			);
+			path = LeetcodeTrackerTests;
+			sourceTree = "<group>";
+		};
+		2CE25C5B2891E481009FABA7 /* LeetcodeTrackerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2CE25C5C2891E481009FABA7 /* LeetcodeTrackerUITests.swift */,
+				2CE25C5E2891E481009FABA7 /* LeetcodeTrackerUITestsLaunchTests.swift */,
+			);
+			path = LeetcodeTrackerUITests;
+			sourceTree = "<group>";
+		};
+		2CE25C712891E625009FABA7 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				2CE25C6F2891E614009FABA7 /* DataModel.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2CE25C382891E47F009FABA7 /* LeetcodeTracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2CE25C622891E481009FABA7 /* Build configuration list for PBXNativeTarget "LeetcodeTracker" */;
+			buildPhases = (
+				2CE25C352891E47F009FABA7 /* Sources */,
+				2CE25C362891E47F009FABA7 /* Frameworks */,
+				2CE25C372891E47F009FABA7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LeetcodeTracker;
+			productName = LeetcodeTracker;
+			productReference = 2CE25C392891E47F009FABA7 /* LeetcodeTracker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2CE25C4D2891E481009FABA7 /* LeetcodeTrackerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2CE25C652891E481009FABA7 /* Build configuration list for PBXNativeTarget "LeetcodeTrackerTests" */;
+			buildPhases = (
+				2CE25C4A2891E481009FABA7 /* Sources */,
+				2CE25C4B2891E481009FABA7 /* Frameworks */,
+				2CE25C4C2891E481009FABA7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2CE25C502891E481009FABA7 /* PBXTargetDependency */,
+			);
+			name = LeetcodeTrackerTests;
+			productName = LeetcodeTrackerTests;
+			productReference = 2CE25C4E2891E481009FABA7 /* LeetcodeTrackerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2CE25C572891E481009FABA7 /* LeetcodeTrackerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2CE25C682891E481009FABA7 /* Build configuration list for PBXNativeTarget "LeetcodeTrackerUITests" */;
+			buildPhases = (
+				2CE25C542891E481009FABA7 /* Sources */,
+				2CE25C552891E481009FABA7 /* Frameworks */,
+				2CE25C562891E481009FABA7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2CE25C5A2891E481009FABA7 /* PBXTargetDependency */,
+			);
+			name = LeetcodeTrackerUITests;
+			productName = LeetcodeTrackerUITests;
+			productReference = 2CE25C582891E481009FABA7 /* LeetcodeTrackerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2CE25C312891E47F009FABA7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					2CE25C382891E47F009FABA7 = {
+						CreatedOnToolsVersion = 13.4;
+					};
+					2CE25C4D2891E481009FABA7 = {
+						CreatedOnToolsVersion = 13.4;
+						TestTargetID = 2CE25C382891E47F009FABA7;
+					};
+					2CE25C572891E481009FABA7 = {
+						CreatedOnToolsVersion = 13.4;
+						TestTargetID = 2CE25C382891E47F009FABA7;
+					};
+				};
+			};
+			buildConfigurationList = 2CE25C342891E47F009FABA7 /* Build configuration list for PBXProject "LeetcodeTracker" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2CE25C302891E47F009FABA7;
+			productRefGroup = 2CE25C3A2891E47F009FABA7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2CE25C382891E47F009FABA7 /* LeetcodeTracker */,
+				2CE25C4D2891E481009FABA7 /* LeetcodeTrackerTests */,
+				2CE25C572891E481009FABA7 /* LeetcodeTrackerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2CE25C372891E47F009FABA7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CE25C442891E481009FABA7 /* Preview Assets.xcassets in Resources */,
+				2CE25C412891E481009FABA7 /* Assets.xcassets in Resources */,
+				2CE25C6C2891E4A1009FABA7 /* leetcode.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CE25C4C2891E481009FABA7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CE25C562891E481009FABA7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2CE25C352891E47F009FABA7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CE25C462891E481009FABA7 /* Persistence.swift in Sources */,
+				2CE25C492891E481009FABA7 /* LeetcodeTracker.xcdatamodeld in Sources */,
+				2CE25C3F2891E47F009FABA7 /* ContentView.swift in Sources */,
+				2CE25C3D2891E47F009FABA7 /* LeetcodeTrackerApp.swift in Sources */,
+				2CE25CF7289718B5009FABA7 /* DSAlgoView.swift in Sources */,
+				2CE25CF32897171E009FABA7 /* TabView.swift in Sources */,
+				2CE25CF52897187E009FABA7 /* BoardView.swift in Sources */,
+				2CE25C6E2891E548009FABA7 /* LeetCodeContent.swift in Sources */,
+				2CE25C702891E614009FABA7 /* DataModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CE25C4A2891E481009FABA7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CE25C532891E481009FABA7 /* LeetcodeTrackerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CE25C542891E481009FABA7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CE25C5F2891E481009FABA7 /* LeetcodeTrackerUITestsLaunchTests.swift in Sources */,
+				2CE25C5D2891E481009FABA7 /* LeetcodeTrackerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2CE25C502891E481009FABA7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2CE25C382891E47F009FABA7 /* LeetcodeTracker */;
+			targetProxy = 2CE25C4F2891E481009FABA7 /* PBXContainerItemProxy */;
+		};
+		2CE25C5A2891E481009FABA7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2CE25C382891E47F009FABA7 /* LeetcodeTracker */;
+			targetProxy = 2CE25C592891E481009FABA7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2CE25C602891E481009FABA7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2CE25C612891E481009FABA7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2CE25C632891E481009FABA7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"LeetcodeTracker/Preview Content\"";
+				DEVELOPMENT_TEAM = 8M22PYB3ZS;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Sathvik.LeetcodeTracker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2CE25C642891E481009FABA7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"LeetcodeTracker/Preview Content\"";
+				DEVELOPMENT_TEAM = 8M22PYB3ZS;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Sathvik.LeetcodeTracker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2CE25C662891E481009FABA7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8M22PYB3ZS;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Sathvik.LeetcodeTrackerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LeetcodeTracker.app/LeetcodeTracker";
+			};
+			name = Debug;
+		};
+		2CE25C672891E481009FABA7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8M22PYB3ZS;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Sathvik.LeetcodeTrackerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LeetcodeTracker.app/LeetcodeTracker";
+			};
+			name = Release;
+		};
+		2CE25C692891E481009FABA7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8M22PYB3ZS;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Sathvik.LeetcodeTrackerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LeetcodeTracker;
+			};
+			name = Debug;
+		};
+		2CE25C6A2891E481009FABA7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8M22PYB3ZS;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Sathvik.LeetcodeTrackerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LeetcodeTracker;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2CE25C342891E47F009FABA7 /* Build configuration list for PBXProject "LeetcodeTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CE25C602891E481009FABA7 /* Debug */,
+				2CE25C612891E481009FABA7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2CE25C622891E481009FABA7 /* Build configuration list for PBXNativeTarget "LeetcodeTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CE25C632891E481009FABA7 /* Debug */,
+				2CE25C642891E481009FABA7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2CE25C652891E481009FABA7 /* Build configuration list for PBXNativeTarget "LeetcodeTrackerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CE25C662891E481009FABA7 /* Debug */,
+				2CE25C672891E481009FABA7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2CE25C682891E481009FABA7 /* Build configuration list for PBXNativeTarget "LeetcodeTrackerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CE25C692891E481009FABA7 /* Debug */,
+				2CE25C6A2891E481009FABA7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2CE25C472891E481009FABA7 /* LeetcodeTracker.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2CE25C482891E481009FABA7 /* LeetcodeTracker.xcdatamodel */,
+			);
+			currentVersion = 2CE25C482891E481009FABA7 /* LeetcodeTracker.xcdatamodel */;
+			path = LeetcodeTracker.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 2CE25C312891E47F009FABA7 /* Project object */;
+}

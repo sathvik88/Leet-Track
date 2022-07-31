@@ -1,0 +1,95 @@
+[
+  {
+    "Question" : "Contains Duplicate", "Categorie" : "Arrays and Hashing", "Difficulty": "Easy", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/217-Contains-Duplicate.py"
+  },
+  {
+    "Question" : "Valid Anagram", "Categorie" : "Arrays and Hashing", "Difficulty": "Easy", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/242-Valid-Anagrams.py"
+  },
+  {
+    "Question" : "Two Sum", "Categorie" : "Arrays and Hashing", "Difficulty": "Easy", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/1-Two-Sum.py"
+  },
+  {
+    "Question" : "Group Anagrams", "Categorie" : "Arrays and Hashing", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/217-Contains-Duplicate.py"
+  },
+  {
+    "Question" : "Top K Frequent Elements", "Categorie" : "Arrays and Hashing", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/217-Contains-Duplicate.py"
+  },
+  {
+    "Question" : "Product of Array Except Self", "Categorie" : "Arrays and Hashing", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/217-Contains-Duplicate.py"
+  },
+  {
+    "Question" : "Valid Sudoku", "Categorie" : "Arrays and Hashing", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/217-Contains-Duplicate.py"
+  },
+  {
+    "Question" : "Encode and Decode Strings", "Categorie" : "Arrays and Hashing", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/217-Contains-Duplicate.py"
+  },
+  {
+    "Question" : "Longest Consecutive Sequence", "Categorie" : "Arrays and Hashing", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/217-Contains-Duplicate.py"
+  },
+  {
+    "Question" : "Valid Palindrome", "Categorie" : "Two Pointers", "Difficulty": "Easy", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/217-Contains-Duplicate.py"
+  },
+  {
+    "Question" : "Two Sum II", "Categorie" : "Two Pointers", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/217-Contains-Duplicate.py"
+  },
+  {
+    "Question" : "3Sum", "Categorie" : "Two Pointers", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/217-Contains-Duplicate.py"
+  },
+  {
+    "Question" : "Container with Most Water", "Categorie" : "Two Pointers", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/217-Contains-Duplicate.py"
+  },
+  {
+    "Question" : "Trapping Rain Water", "Categorie" : "Two Pointers", "Difficulty": "Hard", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/217-Contains-Duplicate.py"
+  },
+  {
+    "Question" : "Best Time to Buy & Sell Stocks", "Categorie" : "Sliding Window", "Difficulty": "Easy", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/217-Contains-Duplicate.py"
+  },
+  {
+    "Question" : "Longest Substring W/O Repeating Chars", "Categorie" : "Sliding Window", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/217-Contains-Duplicate.py"
+  },
+  {
+    "Question" : "Longest Repeating Char Replacement", "Categorie" : "Sliding Window", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/217-Contains-Duplicate.py"
+  },
+  {
+    "Question" : "Permutation In String", "Categorie" : "Sliding Window", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/217-Contains-Duplicate.py"
+  },
+  {
+    "Question" : "Minimum Window Substring", "Categorie" : "Sliding Window", "Difficulty": "Hard", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/217-Contains-Duplicate.py"
+  },
+  {
+    "Question" : "Sliding Window Maximum", "Categorie" : "Sliding Window", "Difficulty": "Hard", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/217-Contains-Duplicate.py"
+  },
+  {
+    "Question" : "Valid Parentheses", "Categorie" : "Stack", "Difficulty": "Easy", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/217-Contains-Duplicate.py"
+  },
+  {
+    "Question" : "Min Stack", "Categorie" : "Stack", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/217-Contains-Duplicate.py"
+  },
+  {
+    "Question" : "Car Fleet", "Categorie" : "Stack", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/217-Contains-Duplicate.py"
+  },
+  {
+    "Question" : "Daily Temperatures", "Categorie" : "Stack", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/217-Contains-Duplicate.py"
+  },
+  {
+    "Question" : "Generate Parentheses", "Categorie" : "Stack", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/217-Contains-Duplicate.py"
+  },
+  {
+    "Question" : "Largest Rectangle in Histogram", "Categorie" : "Stack", "Difficulty": "Hard", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/217-Contains-Duplicate.py"
+  },
+  {
+    "Question" : "Binary Search", "Categorie" : "Binary Search", "Difficulty": "Easy", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/217-Contains-Duplicate.py"
+  },
+  {
+    "Question" : "Search 2D Matrix", "Categorie" : "Binary Search", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/217-Contains-Duplicate.py"
+  },
+  {
+    "Question" : "Koko Eating Bananas", "Categorie" : "Binary Search", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/217-Contains-Duplicate.py"
+  },
+  {
+    "Question" : "Search Rotated Sorted Array", "Categorie" : "Binary Search", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/217-Contains-Duplicate.py"
+  },
+  {
+    "Question" : "Find Min in Rotated Sorted Array", "Categorie" : "Binary Search", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/217-Contains-Duplicate.py"
+  },
+]
