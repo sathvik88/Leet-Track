@@ -22,6 +22,12 @@
 		2CE25CF32897171E009FABA7 /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE25CF22897171E009FABA7 /* TabView.swift */; };
 		2CE25CF52897187E009FABA7 /* BoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE25CF42897187E009FABA7 /* BoardView.swift */; };
 		2CE25CF7289718B5009FABA7 /* DSAlgoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE25CF6289718B5009FABA7 /* DSAlgoView.swift */; };
+		2CE25CFD28977487009FABA7 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE25CFC28977487009FABA7 /* Card.swift */; };
+		2CE25CFF28977539009FABA7 /* BoardList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE25CFE28977539009FABA7 /* BoardList.swift */; };
+		2CE25D01289775C5009FABA7 /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE25D00289775C5009FABA7 /* Board.swift */; };
+		2CE25D0428977CC4009FABA7 /* Board+Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE25D0328977CC4009FABA7 /* Board+Stub.swift */; };
+		2CE25D092897800E009FABA7 /* BoardListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE25D082897800E009FABA7 /* BoardListView.swift */; };
+		2CE25D0B28978616009FABA7 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE25D0A28978615009FABA7 /* CardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +66,13 @@
 		2CE25CF22897171E009FABA7 /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
 		2CE25CF42897187E009FABA7 /* BoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardView.swift; sourceTree = "<group>"; };
 		2CE25CF6289718B5009FABA7 /* DSAlgoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSAlgoView.swift; sourceTree = "<group>"; };
+		2CE25CFC28977487009FABA7 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		2CE25CFE28977539009FABA7 /* BoardList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardList.swift; sourceTree = "<group>"; };
+		2CE25D00289775C5009FABA7 /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
+		2CE25D0228977BC5009FABA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		2CE25D0328977CC4009FABA7 /* Board+Stub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Board+Stub.swift"; sourceTree = "<group>"; };
+		2CE25D082897800E009FABA7 /* BoardListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardListView.swift; sourceTree = "<group>"; };
+		2CE25D0A28978615009FABA7 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,18 +123,16 @@
 		2CE25C3B2891E47F009FABA7 /* LeetcodeTracker */ = {
 			isa = PBXGroup;
 			children = (
+				2CE25D0528977E4D009FABA7 /* Views */,
+				2CE25D0228977BC5009FABA7 /* Info.plist */,
+				2CE25CFB28977474009FABA7 /* Model */,
 				2CE25C712891E625009FABA7 /* Services */,
 				2CE25C6B2891E4A1009FABA7 /* leetcode.json */,
 				2CE25C3C2891E47F009FABA7 /* LeetcodeTrackerApp.swift */,
-				2CE25C3E2891E47F009FABA7 /* ContentView.swift */,
 				2CE25C402891E481009FABA7 /* Assets.xcassets */,
 				2CE25C452891E481009FABA7 /* Persistence.swift */,
 				2CE25C472891E481009FABA7 /* LeetcodeTracker.xcdatamodeld */,
 				2CE25C422891E481009FABA7 /* Preview Content */,
-				2CE25C6D2891E548009FABA7 /* LeetCodeContent.swift */,
-				2CE25CF22897171E009FABA7 /* TabView.swift */,
-				2CE25CF42897187E009FABA7 /* BoardView.swift */,
-				2CE25CF6289718B5009FABA7 /* DSAlgoView.swift */,
 			);
 			path = LeetcodeTracker;
 			sourceTree = "<group>";
@@ -157,6 +168,31 @@
 				2CE25C6F2891E614009FABA7 /* DataModel.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		2CE25CFB28977474009FABA7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2CE25C6D2891E548009FABA7 /* LeetCodeContent.swift */,
+				2CE25CFC28977487009FABA7 /* Card.swift */,
+				2CE25CFE28977539009FABA7 /* BoardList.swift */,
+				2CE25D00289775C5009FABA7 /* Board.swift */,
+				2CE25D0328977CC4009FABA7 /* Board+Stub.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2CE25D0528977E4D009FABA7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2CE25C3E2891E47F009FABA7 /* ContentView.swift */,
+				2CE25CF22897171E009FABA7 /* TabView.swift */,
+				2CE25CF6289718B5009FABA7 /* DSAlgoView.swift */,
+				2CE25CF42897187E009FABA7 /* BoardView.swift */,
+				2CE25D082897800E009FABA7 /* BoardListView.swift */,
+				2CE25D0A28978615009FABA7 /* CardView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,11 +328,17 @@
 			files = (
 				2CE25C462891E481009FABA7 /* Persistence.swift in Sources */,
 				2CE25C492891E481009FABA7 /* LeetcodeTracker.xcdatamodeld in Sources */,
+				2CE25D01289775C5009FABA7 /* Board.swift in Sources */,
 				2CE25C3F2891E47F009FABA7 /* ContentView.swift in Sources */,
+				2CE25D0B28978616009FABA7 /* CardView.swift in Sources */,
 				2CE25C3D2891E47F009FABA7 /* LeetcodeTrackerApp.swift in Sources */,
 				2CE25CF7289718B5009FABA7 /* DSAlgoView.swift in Sources */,
 				2CE25CF32897171E009FABA7 /* TabView.swift in Sources */,
+				2CE25CFF28977539009FABA7 /* BoardList.swift in Sources */,
 				2CE25CF52897187E009FABA7 /* BoardView.swift in Sources */,
+				2CE25CFD28977487009FABA7 /* Card.swift in Sources */,
+				2CE25D0428977CC4009FABA7 /* Board+Stub.swift in Sources */,
+				2CE25D092897800E009FABA7 /* BoardListView.swift in Sources */,
 				2CE25C6E2891E548009FABA7 /* LeetCodeContent.swift in Sources */,
 				2CE25C702891E614009FABA7 /* DataModel.swift in Sources */,
 			);
@@ -460,6 +502,7 @@
 				DEVELOPMENT_TEAM = 8M22PYB3ZS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LeetcodeTracker/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -489,6 +532,7 @@
 				DEVELOPMENT_TEAM = 8M22PYB3ZS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LeetcodeTracker/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
