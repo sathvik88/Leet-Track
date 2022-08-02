@@ -52,7 +52,7 @@ struct ContentView: View {
                     }
                 }
             }
-            .navigationBarTitle("Leetcode Tracker")
+            .navigationBarTitle("Questions")
             
         }
         

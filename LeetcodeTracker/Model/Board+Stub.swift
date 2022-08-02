@@ -12,7 +12,8 @@ extension Board{
         let board = Board(name: "Progress Tracker")
         let todoList = BoardList(name: "Todo List", boardID: board.id)
         let todoListCards = [
-            "Test card"
+            "Test card",
+            "Another Test Card"
         ].map{ Card(content: $0, boardListId: todoList.id)}
         todoList.cards = todoListCards
         //todoList.cards = todoListCards

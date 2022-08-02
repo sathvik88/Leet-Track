@@ -29,6 +29,7 @@
 		2CE25D092897800E009FABA7 /* BoardListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE25D082897800E009FABA7 /* BoardListView.swift */; };
 		2CE25D0B28978616009FABA7 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE25D0A28978615009FABA7 /* CardView.swift */; };
 		2CE25D0E2898C647009FABA7 /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = 2CE25D0D2898C647009FABA7 /* Introspect */; };
+		2CE25D102898D1B7009FABA7 /* AlertTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE25D0F2898D1B7009FABA7 /* AlertTextView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,7 @@
 		2CE25D0328977CC4009FABA7 /* Board+Stub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Board+Stub.swift"; sourceTree = "<group>"; };
 		2CE25D082897800E009FABA7 /* BoardListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardListView.swift; sourceTree = "<group>"; };
 		2CE25D0A28978615009FABA7 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		2CE25D0F2898D1B7009FABA7 /* AlertTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertTextView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +195,7 @@
 				2CE25CF42897187E009FABA7 /* BoardView.swift */,
 				2CE25D082897800E009FABA7 /* BoardListView.swift */,
 				2CE25D0A28978615009FABA7 /* CardView.swift */,
+				2CE25D0F2898D1B7009FABA7 /* AlertTextView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -340,6 +343,7 @@
 				2CE25C3F2891E47F009FABA7 /* ContentView.swift in Sources */,
 				2CE25D0B28978616009FABA7 /* CardView.swift in Sources */,
 				2CE25C3D2891E47F009FABA7 /* LeetcodeTrackerApp.swift in Sources */,
+				2CE25D102898D1B7009FABA7 /* AlertTextView.swift in Sources */,
 				2CE25CF7289718B5009FABA7 /* DSAlgoView.swift in Sources */,
 				2CE25CF32897171E009FABA7 /* TabView.swift in Sources */,
 				2CE25CFF28977539009FABA7 /* BoardList.swift in Sources */,

@@ -29,6 +29,7 @@ struct BoardView: View {
 struct BoardView_Previews: PreviewProvider {
     static var previews: some View {
         BoardView()
-            .previewInterfaceOrientation(.landscapeRight)
+            .previewInterfaceOrientation(.portrait)
+            
     }
 }
