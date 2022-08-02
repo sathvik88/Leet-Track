@@ -28,6 +28,7 @@
 		2CE25D0428977CC4009FABA7 /* Board+Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE25D0328977CC4009FABA7 /* Board+Stub.swift */; };
 		2CE25D092897800E009FABA7 /* BoardListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE25D082897800E009FABA7 /* BoardListView.swift */; };
 		2CE25D0B28978616009FABA7 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE25D0A28978615009FABA7 /* CardView.swift */; };
+		2CE25D0E2898C647009FABA7 /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = 2CE25D0D2898C647009FABA7 /* Introspect */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CE25D0E2898C647009FABA7 /* Introspect in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,6 +213,9 @@
 			dependencies = (
 			);
 			name = LeetcodeTracker;
+			packageProductDependencies = (
+				2CE25D0D2898C647009FABA7 /* Introspect */,
+			);
 			productName = LeetcodeTracker;
 			productReference = 2CE25C392891E47F009FABA7 /* LeetcodeTracker.app */;
 			productType = "com.apple.product-type.application";
@@ -283,6 +288,9 @@
 				Base,
 			);
 			mainGroup = 2CE25C302891E47F009FABA7;
+			packageReferences = (
+				2CE25D0C2898C647009FABA7 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
+			);
 			productRefGroup = 2CE25C3A2891E47F009FABA7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -667,6 +675,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2CE25D0C2898C647009FABA7 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/siteline/SwiftUI-Introspect";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2CE25D0D2898C647009FABA7 /* Introspect */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2CE25D0C2898C647009FABA7 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
+			productName = Introspect;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		2CE25C472891E481009FABA7 /* LeetcodeTracker.xcdatamodeld */ = {

@@ -23,7 +23,7 @@ struct TabViewScreen: View {
             DSAlgoView()
                 .tabItem{
                     Image(systemName: "book")
-                    Text("Board")
+                    Text("Learn")
                 }
         }
     }

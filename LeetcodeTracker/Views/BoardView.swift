@@ -16,7 +16,7 @@ struct BoardView: View {
             ScrollView(.horizontal){
                 LazyHStack(alignment: .top, spacing: 24){
                     ForEach(board.lists){ BoardList in
-                        Text(BoardList.name)
+                        BoardListView(board: board, boardList: BoardList)
                     }
                     
                 }
@@ -29,5 +29,6 @@ struct BoardView: View {
 struct BoardView_Previews: PreviewProvider {
     static var previews: some View {
         BoardView()
+            .previewInterfaceOrientation(.landscapeRight)
     }
 }
