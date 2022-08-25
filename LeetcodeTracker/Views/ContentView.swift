@@ -30,7 +30,7 @@ struct ContentView: View {
                         }
                         Spacer()
                         
-                        VStack(alignment: .trailing){
+                        VStack(alignment: .center){
                             
                             if(list.difficulty == "Easy"){
                                 Text(list.difficulty)
@@ -49,6 +49,12 @@ struct ContentView: View {
                             }
                             
                         }
+                        Spacer()
+                        Image(systemName: data.contains(list) ? "star.fill" : "star")
+                            .foregroundColor(.yellow)
+                            .onTapGesture{
+                                data.toggleFavs(question: list)
+                            }
                     }
                 }
             }

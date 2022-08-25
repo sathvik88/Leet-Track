@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C3D6FF828B7EAFD00709EEF /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3D6FF728B7EAFD00709EEF /* Database.swift */; };
 		2CE25C3D2891E47F009FABA7 /* LeetcodeTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE25C3C2891E47F009FABA7 /* LeetcodeTrackerApp.swift */; };
 		2CE25C3F2891E47F009FABA7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE25C3E2891E47F009FABA7 /* ContentView.swift */; };
 		2CE25C412891E481009FABA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CE25C402891E481009FABA7 /* Assets.xcassets */; };
@@ -50,6 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2C3D6FF728B7EAFD00709EEF /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		2CE25C392891E47F009FABA7 /* LeetcodeTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeetcodeTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CE25C3C2891E47F009FABA7 /* LeetcodeTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetcodeTrackerApp.swift; sourceTree = "<group>"; };
 		2CE25C3E2891E47F009FABA7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -169,7 +171,7 @@
 		2CE25C712891E625009FABA7 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				2CE25C6F2891E614009FABA7 /* DataModel.swift */,
+				2C3D6FF728B7EAFD00709EEF /* Database.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -177,6 +179,7 @@
 		2CE25CFB28977474009FABA7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2CE25C6F2891E614009FABA7 /* DataModel.swift */,
 				2CE25C6D2891E548009FABA7 /* LeetCodeContent.swift */,
 				2CE25CFC28977487009FABA7 /* Card.swift */,
 				2CE25CFE28977539009FABA7 /* BoardList.swift */,
@@ -350,6 +353,7 @@
 				2CE25CF52897187E009FABA7 /* BoardView.swift in Sources */,
 				2CE25CFD28977487009FABA7 /* Card.swift in Sources */,
 				2CE25D0428977CC4009FABA7 /* Board+Stub.swift in Sources */,
+				2C3D6FF828B7EAFD00709EEF /* Database.swift in Sources */,
 				2CE25D092897800E009FABA7 /* BoardListView.swift in Sources */,
 				2CE25C6E2891E548009FABA7 /* LeetCodeContent.swift in Sources */,
 				2CE25C702891E614009FABA7 /* DataModel.swift in Sources */,

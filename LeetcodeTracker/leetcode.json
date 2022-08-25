@@ -92,4 +92,79 @@
   {
     "Question" : "Find Min in Rotated Sorted Array", "Categorie" : "Binary Search", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/217-Contains-Duplicate.py"
   },
+  {
+    "Question" : "Time Based Key-Value Store", "Categorie" : "Binary Search", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/981-Time-Based-Key-Value-Store.py"
+  },
+  {
+    "Question" : "Reverse Linked List", "Categorie" : "Linked List", "Difficulty": "Easy", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/206-Reverse-Linked-List.py"
+  },
+  {
+    "Question" : "Merge Two Linked Lists", "Categorie" : "Linked List", "Difficulty": "Easy", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/21-Merge-Two-Sorted-Lists.py"
+  },
+  {
+    "Question" : "Reorder List", "Categorie" : "Linked List", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/143-Reorder-List.py"
+  },
+  {
+    "Question" : "Remove Nth Node from End of List", "Categorie" : "Linked List", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/19-Remove-Nth-node-from-end-of-List.py"
+  },
+  {
+    "Question" : "Copy List with Random Pointer", "Categorie" : "Linked List", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/138-Copy-List-With-Random-Pointer.py"
+  },
+  {
+    "Question" : "Add Two Numbers", "Categorie" : "Linked List", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/2-Add-Two-Numbers.py"
+  },
+  {
+    "Question" : "Linked Listy Cycle", "Categorie" : "Linked List", "Difficulty": "Easy", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/141-Linked-List-Cycle.py"
+  },
+  {
+    "Question" : "Find the Duplicate Number", "Categorie" : "Linked List", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/287-Find-The-Duplicate-Number.py"
+  },
+  {
+    "Question" : "LRU Cache", "Categorie" : "Linked List", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/146-LRU-Cache.py"
+  },
+  {
+    "Question" : "Merge K Sorted Lists", "Categorie" : "Linked List", "Difficulty": "Hard", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/23-Merge-K-Sorted-Lists.py"
+  },
+  {
+    "Question" : "Reverse Nodes in K-Group", "Categorie" : "Linked List", "Difficulty": "Hard", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/25-Reverse-Nodes-in-K-Group.py"
+  },
+  {
+    "Question" : "Invert Binary Tree", "Categorie" : "Trees", "Difficulty": "Easy", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/226-Invert-Binary-Tree.py"
+  },
+  {
+    "Question" : "Maximum Depth of Binary Tree", "Categorie" : "Trees", "Difficulty": "Easy", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/226-Invert-Binary-Tree.py"
+  },
+  {
+    "Question" : "Diameter of a Binary Tree", "Categorie" : "Trees", "Difficulty": "Easy", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/226-Invert-Binary-Tree.py"
+  },
+  {
+    "Question" : "Balanced Binary Tree", "Categorie" : "Trees", "Difficulty": "Easy", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/226-Invert-Binary-Tree.py"
+  },
+  {
+    "Question" : "Same Tree", "Categorie" : "Trees", "Difficulty": "Easy", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/226-Invert-Binary-Tree.py"
+  },
+  {
+    "Question" : "Subtree of Another Tree", "Categorie" : "Trees", "Difficulty": "Easy", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/226-Invert-Binary-Tree.py"
+  },
+  {
+    "Question" : "Lowest Common Ancestor of a BST", "Categorie" : "Trees", "Difficulty": "Easy", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/226-Invert-Binary-Tree.py"
+  },
+  {
+    "Question" : "Binary Tree Level Order Traversal", "Categorie" : "Trees", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/226-Invert-Binary-Tree.py"
+  },
+  {
+    "Question" : "Binary Tree Right Side View", "Categorie" : "Trees", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/199-Binary-Tree-Right-Side-View.py"
+  },
+  {
+    "Question" : "Count Good Nodes in a Binary Tree", "Categorie" : "Trees", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/1448-Count-Good-Nodes-in-Binary-Tree.py"
+  },
+  {
+    "Question" : "Validate a BST", "Categorie" : "Trees", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/98-Validate-Binary-Search-Tree.py"
+  },
+  {
+    "Question" : "Kth Smallest Element in a BST", "Categorie" : "Trees", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/230-Kth-Smallest-Element-in-a-BST.py"
+  },
+  {
+    "Question" : "Construct Tree from Pre and Inorder Tree", "Categorie" : "Trees", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/105-Construct-Binary-Tree-from-Preorder-and-Inorder-Traversal.py"
+  },
 ]
