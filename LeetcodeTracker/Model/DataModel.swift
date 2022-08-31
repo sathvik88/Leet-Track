@@ -11,6 +11,7 @@ import Combine
 
 final class DataModel: ObservableObject{
     @Published var jsonData = [LeetCodeContent]()
+    @Published var searchData = [LeetCodeContent]()
     @Published var showingFaves = true
     @Published var savedItems: Set<String>
     var filteredItems: [LeetCodeContent] {
@@ -70,6 +71,8 @@ final class DataModel: ObservableObject{
         }
         db.save(questions: savedItems)
     }
+    
+    
     
         
 }

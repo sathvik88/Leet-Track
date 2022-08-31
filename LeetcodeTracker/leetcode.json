@@ -9,91 +9,97 @@
     "Question" : "Two Sum", "Categorie" : "Arrays and Hashing", "Difficulty": "Easy", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/1-Two-Sum.py"
   },
   {
-    "Question" : "Group Anagrams", "Categorie" : "Arrays and Hashing", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/217-Contains-Duplicate.py"
+    "Question" : "Group Anagrams", "Categorie" : "Arrays and Hashing", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/49-Group-Anagrams.py"
   },
   {
-    "Question" : "Top K Frequent Elements", "Categorie" : "Arrays and Hashing", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/217-Contains-Duplicate.py"
+    "Question" : "Top K Frequent Elements", "Categorie" : "Arrays and Hashing", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/347-Top-k-frequent-elements.py"
   },
   {
-    "Question" : "Product of Array Except Self", "Categorie" : "Arrays and Hashing", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/217-Contains-Duplicate.py"
+    "Question" : "Product of Array Except Self", "Categorie" : "Arrays and Hashing", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/238-Product-of-array-except-self.py"
   },
   {
-    "Question" : "Valid Sudoku", "Categorie" : "Arrays and Hashing", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/217-Contains-Duplicate.py"
+    "Question" : "Valid Sudoku", "Categorie" : "Arrays and Hashing", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/36-Valid-Sudoku.py"
   },
   {
-    "Question" : "Encode and Decode Strings", "Categorie" : "Arrays and Hashing", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/217-Contains-Duplicate.py"
+    "Question" : "Encode and Decode Strings", "Categorie" : "Arrays and Hashing", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/271-Encode-and-Decode-Strings.py"
   },
   {
-    "Question" : "Longest Consecutive Sequence", "Categorie" : "Arrays and Hashing", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/217-Contains-Duplicate.py"
+    "Question" : "Longest Consecutive Sequence", "Categorie" : "Arrays and Hashing", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/128-Longest-consecutive-sequence.py"
   },
   {
-    "Question" : "Valid Palindrome", "Categorie" : "Two Pointers", "Difficulty": "Easy", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/217-Contains-Duplicate.py"
+    "Question" : "Valid Palindrome", "Categorie" : "Two Pointers", "Difficulty": "Easy", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/125-Valid-Palindrome.py"
   },
   {
-    "Question" : "Two Sum II", "Categorie" : "Two Pointers", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/217-Contains-Duplicate.py"
+    "Question" : "Two Sum II", "Categorie" : "Two Pointers", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/167-Two-Sum-II.py"
   },
   {
-    "Question" : "3Sum", "Categorie" : "Two Pointers", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/217-Contains-Duplicate.py"
+    "Question" : "3Sum", "Categorie" : "Two Pointers", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/15-3Sum.py"
   },
   {
-    "Question" : "Container with Most Water", "Categorie" : "Two Pointers", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/217-Contains-Duplicate.py"
+    "Question" : "Container with Most Water", "Categorie" : "Two Pointers", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/11-Container-With-Most-Water.py"
   },
   {
-    "Question" : "Trapping Rain Water", "Categorie" : "Two Pointers", "Difficulty": "Hard", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/217-Contains-Duplicate.py"
+    "Question" : "Trapping Rain Water", "Categorie" : "Two Pointers", "Difficulty": "Hard", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/42-Trapping-Rain-Water.py"
   },
   {
-    "Question" : "Best Time to Buy & Sell Stocks", "Categorie" : "Sliding Window", "Difficulty": "Easy", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/217-Contains-Duplicate.py"
+    "Question" : "Best Time to Buy & Sell Stocks", "Categorie" : "Sliding Window", "Difficulty": "Easy", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/121-Best-Time-To-Buy-and-Sell-Stock.py"
   },
   {
-    "Question" : "Longest Substring W/O Repeating Chars", "Categorie" : "Sliding Window", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/217-Contains-Duplicate.py"
+    "Question" : "Longest Substring W/O Repeating Chars", "Categorie" : "Sliding Window", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/3-Longest-Substring-Without-Repeating-Characters.py"
   },
   {
-    "Question" : "Longest Repeating Char Replacement", "Categorie" : "Sliding Window", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/217-Contains-Duplicate.py"
+    "Question" : "Longest Repeating Char Replacement", "Categorie" : "Sliding Window", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/424-Longest-Repeating-Character-Replacement.py"
   },
   {
-    "Question" : "Permutation In String", "Categorie" : "Sliding Window", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/217-Contains-Duplicate.py"
+    "Question" : "Permutation In String", "Categorie" : "Sliding Window", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/567-Permutation-in-String.py"
   },
   {
-    "Question" : "Minimum Window Substring", "Categorie" : "Sliding Window", "Difficulty": "Hard", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/217-Contains-Duplicate.py"
+    "Question" : "Minimum Window Substring", "Categorie" : "Sliding Window", "Difficulty": "Hard", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/76-Minimum-Window-Substring.py"
   },
   {
-    "Question" : "Sliding Window Maximum", "Categorie" : "Sliding Window", "Difficulty": "Hard", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/217-Contains-Duplicate.py"
+    "Question" : "Sliding Window Maximum", "Categorie" : "Sliding Window", "Difficulty": "Hard", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/239-Sliding-Window-Maximum.py"
   },
   {
-    "Question" : "Valid Parentheses", "Categorie" : "Stack", "Difficulty": "Easy", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/217-Contains-Duplicate.py"
+    "Question" : "Valid Parentheses", "Categorie" : "Stack", "Difficulty": "Easy", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/20-Valid-Parentheses.py"
   },
   {
-    "Question" : "Min Stack", "Categorie" : "Stack", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/217-Contains-Duplicate.py"
+    "Question" : "Min Stack", "Categorie" : "Stack", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/155-Min-Stack.py"
   },
   {
-    "Question" : "Car Fleet", "Categorie" : "Stack", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/217-Contains-Duplicate.py"
+    "Question" : "Evaluate Reverse Polish Notation", "Categorie" : "Stack", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/150-Evaluate-Reverse-Polish-Notation.py"
   },
   {
-    "Question" : "Daily Temperatures", "Categorie" : "Stack", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/217-Contains-Duplicate.py"
+    "Question" : "Car Fleet", "Categorie" : "Stack", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/853-Car-Fleet.py"
   },
   {
-    "Question" : "Generate Parentheses", "Categorie" : "Stack", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/217-Contains-Duplicate.py"
+    "Question" : "Daily Temperatures", "Categorie" : "Stack", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/739-Daily-Temperatures.py"
   },
   {
-    "Question" : "Largest Rectangle in Histogram", "Categorie" : "Stack", "Difficulty": "Hard", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/217-Contains-Duplicate.py"
+    "Question" : "Generate Parentheses", "Categorie" : "Stack", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/22-Generate-Parentheses.py"
   },
   {
-    "Question" : "Binary Search", "Categorie" : "Binary Search", "Difficulty": "Easy", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/217-Contains-Duplicate.py"
+    "Question" : "Largest Rectangle in Histogram", "Categorie" : "Stack", "Difficulty": "Hard", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/84-Largest-Rectangle-in-Histogram.py"
   },
   {
-    "Question" : "Search 2D Matrix", "Categorie" : "Binary Search", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/217-Contains-Duplicate.py"
+    "Question" : "Binary Search", "Categorie" : "Binary Search", "Difficulty": "Easy", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/704-Binary-Search.py"
   },
   {
-    "Question" : "Koko Eating Bananas", "Categorie" : "Binary Search", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/217-Contains-Duplicate.py"
+    "Question" : "Search 2D Matrix", "Categorie" : "Binary Search", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/74-Search-a-2D-Matrix.py"
   },
   {
-    "Question" : "Search Rotated Sorted Array", "Categorie" : "Binary Search", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/217-Contains-Duplicate.py"
+    "Question" : "Koko Eating Bananas", "Categorie" : "Binary Search", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/875-Koko-Eating-Bananas.py"
   },
   {
-    "Question" : "Find Min in Rotated Sorted Array", "Categorie" : "Binary Search", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/217-Contains-Duplicate.py"
+    "Question" : "Search Rotated Sorted Array", "Categorie" : "Binary Search", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/33-Search-In-Rotated-Sorted-Array.py"
+  },
+  {
+    "Question" : "Find Min in Rotated Sorted Array", "Categorie" : "Binary Search", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/153-Find-Minimum-in-Rotated-Sorted-Array.py"
   },
   {
     "Question" : "Time Based Key-Value Store", "Categorie" : "Binary Search", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/981-Time-Based-Key-Value-Store.py"
+  },
+  {
+    "Question" : "Find Median of Two Sorted Arrays", "Categorie" : "Binary Search", "Difficulty": "Hard", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/4-median-of-two-sorted-arrays.py"
   },
   {
     "Question" : "Reverse Linked List", "Categorie" : "Linked List", "Difficulty": "Easy", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/206-Reverse-Linked-List.py"
@@ -132,25 +138,25 @@
     "Question" : "Invert Binary Tree", "Categorie" : "Trees", "Difficulty": "Easy", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/226-Invert-Binary-Tree.py"
   },
   {
-    "Question" : "Maximum Depth of Binary Tree", "Categorie" : "Trees", "Difficulty": "Easy", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/226-Invert-Binary-Tree.py"
+    "Question" : "Maximum Depth of Binary Tree", "Categorie" : "Trees", "Difficulty": "Easy", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/104-Maximum-Depth-of-Binary-Tree.py"
   },
   {
-    "Question" : "Diameter of a Binary Tree", "Categorie" : "Trees", "Difficulty": "Easy", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/226-Invert-Binary-Tree.py"
+    "Question" : "Diameter of a Binary Tree", "Categorie" : "Trees", "Difficulty": "Easy", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/543-Diameter-of-Binary-Tree.py"
   },
   {
-    "Question" : "Balanced Binary Tree", "Categorie" : "Trees", "Difficulty": "Easy", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/226-Invert-Binary-Tree.py"
+    "Question" : "Balanced Binary Tree", "Categorie" : "Trees", "Difficulty": "Easy", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/110-Balanced-Binary-Tree.py"
   },
   {
-    "Question" : "Same Tree", "Categorie" : "Trees", "Difficulty": "Easy", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/226-Invert-Binary-Tree.py"
+    "Question" : "Same Tree", "Categorie" : "Trees", "Difficulty": "Easy", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/100-Same-Tree.py"
   },
   {
-    "Question" : "Subtree of Another Tree", "Categorie" : "Trees", "Difficulty": "Easy", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/226-Invert-Binary-Tree.py"
+    "Question" : "Subtree of Another Tree", "Categorie" : "Trees", "Difficulty": "Easy", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/572-Subtree-of-Another-Tree.py"
   },
   {
-    "Question" : "Lowest Common Ancestor of a BST", "Categorie" : "Trees", "Difficulty": "Easy", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/226-Invert-Binary-Tree.py"
+    "Question" : "Lowest Common Ancestor of a BST", "Categorie" : "Trees", "Difficulty": "Easy", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/235-lowest-common-ancestor-of-a-binary-search-tree.py"
   },
   {
-    "Question" : "Binary Tree Level Order Traversal", "Categorie" : "Trees", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/226-Invert-Binary-Tree.py"
+    "Question" : "Binary Tree Level Order Traversal", "Categorie" : "Trees", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/102-Binary-Tree-Level-Order-Traversal.py"
   },
   {
     "Question" : "Binary Tree Right Side View", "Categorie" : "Trees", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/199-Binary-Tree-Right-Side-View.py"
@@ -167,4 +173,230 @@
   {
     "Question" : "Construct Tree from Pre and Inorder Tree", "Categorie" : "Trees", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/105-Construct-Binary-Tree-from-Preorder-and-Inorder-Traversal.py"
   },
+  {
+    "Question" : "Implement Trie", "Categorie" : "Tries", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/208-Implement-Trie.py"
+  },
+  {
+    "Question" : "Design Add and Search Word DS", "Categorie" : "Tries", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/211-Design-Add-and-Search-Words-Data-Structure.py"
+  },
+  {
+    "Question" : "Word Search II", "Categorie" : "Tries", "Difficulty": "Hard", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/212-Word-Search-II.py"
+  },
+  {
+    "Question" : "Kth Largest Element in a Stream", "Categorie" : "Heap", "Difficulty": "Easy", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/703-Kth-Largest-Element-in-a-Stream.py"
+  },
+  {
+    "Question" : "Last Stone Weight", "Categorie" : "Heap", "Difficulty": "Easy", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/1046-Last-Stone-Weight.py"
+  },
+  {
+    "Question" : "K Closest Points to Origin", "Categorie" : "Heap", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/973-K-Closest-Points-to-Origin.py"
+  },
+  {
+    "Question" : "Kth Largest Element in an Array", "Categorie" : "Heap", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/215-Kth-Largest-Element-in-an-Array.py"
+  },
+  {
+    "Question" : "Task Scheduler", "Categorie" : "Heap", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/621-Task-Scheduler.py"
+  },
+  {
+    "Question" : "Design Twitter", "Categorie" : "Heap", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/355-Design-Twitter.py"
+  },
+  {
+    "Question" : "Find Median from Data Stream", "Categorie" : "Heap", "Difficulty": "Hard", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/295-Find-Median-from-Data-Stream.py"
+  },
+  {
+    "Question" : "Subsets", "Categorie" : "Backtracking", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/78-Subsets.py"
+  },
+  {
+    "Question" : "Combination Sum", "Categorie" : "Backtracking", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/39-Combination-Sum.py"
+  },
+  {
+    "Question" : "Permutations", "Categorie" : "Backtracking", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/46-Permutations.py"
+  },
+  {
+    "Question" : "Subsets II", "Categorie" : "Backtracking", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/90-Subsets-II.py"
+  },
+  {
+    "Question" : "Combination Sum II", "Categorie" : "Backtracking", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/40-Combination-Sum-II.py"
+  },
+  {
+    "Question" : "Word Search", "Categorie" : "Backtracking", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/79-Word-Search.py"
+  },
+  {
+    "Question" : "Palindrome Partitioning", "Categorie" : "Backtracking", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/131-Palindrome-Partitioning.py"
+  },
+  {
+    "Question" : "Letter Combinations of a Phone Number", "Categorie" : "Backtracking", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/17-Letter-Combinations-of-a-Phone-Number.py"
+  },
+  {
+    "Question" : "N-Queens", "Categorie" : "Backtracking", "Difficulty": "Hard", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/51-N-Queens.py"
+  },
+  {
+    "Question" : "Number of Islands", "Categorie" : "Graphs", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/200-Number-of-Islands.py"
+  },
+  {
+    "Question" : "Clone Graph", "Categorie" : "Graphs", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/133-Clone-Graph.py"
+  },
+  {
+    "Question" : "Max Area of Island", "Categorie" : "Graphs", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/695-Max-Area-of-Island.py"
+  },
+  {
+    "Question" : "Pacific Atlantic Waterflow", "Categorie" : "Graphs", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/417-Pacific-Atlantic-Waterflow.py"
+  },
+  {
+    "Question" : "Surrounded Regions", "Categorie" : "Graphs", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/130-Surrounded-Regions.py"
+  },
+  {
+    "Question" : "Rotting Oranges", "Categorie" : "Graphs", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/994-Rotting-Oranges.py"
+  },
+  {
+    "Question" : "Walls and Gates", "Categorie" : "Graphs", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/286-Walls-and-Gates.py"
+  },
+  {
+    "Question" : "Course Schedule", "Categorie" : "Graphs", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/207-Course-Schedule.py"
+  },
+  {
+    "Question" : "Course Schedule II", "Categorie" : "Graphs", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/210-Course-Schedule-II.py"
+  },
+  {
+    "Question" : "Redundant Connection", "Categorie" : "Graphs", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/684-Redundant-Connection.py"
+  },
+  {
+    "Question" : "Number of Connected Components in Graph", "Categorie" : "Graphs", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/323-Number-of-Connected-Components-in-an-Undirected-Graph.py"
+  },
+  {
+    "Question" : "Graph Valid Tree", "Categorie" : "Graphs", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/261-Graph-Valid-Tree.py"
+  },
+  {
+    "Question" : "Word Ladder", "Categorie" : "Graphs", "Difficulty": "Hard", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/127-Word-Ladder.py"
+  },
+  {
+    "Question" : "Reconstruct Itinerary", "Categorie" : "Advanced Graphs", "Difficulty": "Hard", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/332-Reconstruct-Itinerary.py"
+  },
+  {
+    "Question" : "Min Cost to Connect all Points", "Categorie" : "Advanced Graphs", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/1584-Min-Cost-to-Connect-all-Points.py"
+  },
+  {
+    "Question" : "Network Delay Time", "Categorie" : "Advanced Graphs", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/743-Network-Delay-Time.py"
+  },
+  {
+    "Question" : "Swim in Rising Water", "Categorie" : "Advanced Graphs", "Difficulty": "Hard", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/778-Swim-in-Rising-Water.py"
+  },
+  {
+    "Question" : "Alien Dictionary", "Categorie" : "Advanced Graphs", "Difficulty": "Hard", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/269-Alien-Dictionary.py"
+  },
+  {
+    "Question" : "Cheapest Flights Within K Stops", "Categorie" : "Advanced Graphs", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/787-Cheapest-Flights-within-K-stops.py"
+  },
+  {
+    "Question" : "Climbing Stairs", "Categorie" : "1-D Dynamic Programming", "Difficulty": "Easy", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/70-Climbing-Stairs.py"
+  },
+  {
+    "Question" : "Min Cost Climbing Stairs", "Categorie" : "1-D Dynamic Programming", "Difficulty": "Easy", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/746-Min-Cost-Climbing-Stairs.py"
+  },
+  {
+    "Question" : "House Robber", "Categorie" : "1-D Dynamic Programming", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/198-House-Robber.py"
+  },
+  {
+    "Question" : "House Robber II", "Categorie" : "1-D Dynamic Programming", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/213-House-Robber-II.py"
+  },
+  {
+    "Question" : "Longest Palindromic Substring", "Categorie" : "1-D Dynamic Programming", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/5-Longest-Palindromic-Substring.py"
+  },
+  {
+    "Question" : "Palindromic Substrings", "Categorie" : "1-D Dynamic Programming", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/647-Palindromic-Substrings.py"
+  },
+  {
+    "Question" : "Decode Ways", "Categorie" : "1-D Dynamic Programming", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/91-Decode-ways.py"
+  },
+  {
+    "Question" : "Coin Change", "Categorie" : "1-D Dynamic Programming", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/322-Coin-Change.py"
+  },
+  {
+    "Question" : "Maximum Product Subarray", "Categorie" : "1-D Dynamic Programming", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/152-Maximum-Product-Subarray.py"
+  },
+  {
+    "Question" : "Word Break", "Categorie" : "1-D Dynamic Programming", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/139-Word-Break.py"
+  },
+  {
+    "Question" : "Longest Increasing Subsequence", "Categorie" : "1-D Dynamic Programming", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/300-Longest-Increasing-Subsequence.py"
+  },
+  {
+    "Question" : "Partial Equal Subset Sum", "Categorie" : "1-D Dynamic Programming", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/416-Partition-Equal-Subset-Sum.py"
+  },
+  {
+    "Question" : "Unique Paths", "Categorie" : "2-D Dynamic Programming", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/62-Unique-Paths.py"
+  },
+  {
+    "Question" : "Longest Common Subsequence", "Categorie" : "2-D Dynamic Programming", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/1143-Longest-Common-Subsequence.py"
+  },
+  {
+    "Question" : "Best Time to Buy/Sell Stock Cooldown", "Categorie" : "2-D Dynamic Programming", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/309-Best-Time-To-Buy-and-Sell-Stock-With-Cooldown.py"
+  },
+  {
+    "Question" : "Coin Change II", "Categorie" : "2-D Dynamic Programming", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/518-coin-change-2.py"
+  },
+  {
+    "Question" : "Target Sum", "Categorie" : "2-D Dynamic Programming", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/494-Target-Sum.py"
+  },
+  {
+    "Question" : "Interleaving String", "Categorie" : "2-D Dynamic Programming", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/97-Interleaving-Strings.py"
+  },
+  {
+    "Question" : "Longest Increasing Path in a Matrix", "Categorie" : "2-D Dynamic Programming", "Difficulty": "Hard", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/329-Longest-Increasing-Path-in-a-Matrix.py"
+  },
+  {
+    "Question" : "Distinct Subsequences", "Categorie" : "2-D Dynamic Programming", "Difficulty": "Hard", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/115-Distinct-Subsequences.py"
+  },
+  {
+    "Question" : "Edit Distance", "Categorie" : "2-D Dynamic Programming", "Difficulty": "Hard", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/72-Edit-Distance.py"
+  },
+  {
+    "Question" : "Burst Balloons", "Categorie" : "2-D Dynamic Programming", "Difficulty": "Hard", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/312-Burst-Balloons.py"
+  },
+  {
+    "Question" : "Regular Expression Matching", "Categorie" : "2-D Dynamic Programming", "Difficulty": "Hard", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/10-Regular-Expression-Matching.py"
+  },
+  {
+    "Question" : "Maximum Subarray", "Categorie" : "Greedy", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/53-Maximum-Subarray.py"
+  },
+  {
+    "Question" : "Jump Game", "Categorie" : "Greedy", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/55-Jump-Game.py"
+  },
+  {
+    "Question" : "Jump Game II", "Categorie" : "Greedy", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/45-Jump-Game-II.py"
+  },
+  {
+    "Question" : "Gas Station", "Categorie" : "Greedy", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/134-Gas-Station.py"
+  },
+  {
+    "Question" : "Hand of Striaght", "Categorie" : "Greedy", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/846-Hand-of-Straights.py"
+  },
+  {
+    "Question" : "Merge Triplets to From Target Triplet", "Categorie" : "Greedy", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/1899-Merge-Triplets-to-Form-Target-Triplet.py"
+  },
+  {
+    "Question" : "Partition Labels", "Categorie" : "Greedy", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/763-Partition-Labels.py"
+  },
+  {
+    "Question" : "Valid Parenthesis String", "Categorie" : "Greedy", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/678-Valid-Parenthesis-String.py"
+  },
+  {
+    "Question" : "Insert Interval", "Categorie" : "Intervals", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/57-Insert-Interval.py"
+  },
+  {
+    "Question" : "Merge Intervals", "Categorie" : "Intervals", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/56-Merge-Intervals.py"
+  },
+  {
+    "Question" : "Non-Overlapping Intervals", "Categorie" : "Intervals", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/435-Non-Overlapping-Intervals.py"
+  },
+  {
+    "Question" : "Meeting Rooms", "Categorie" : "Intervals", "Difficulty": "Easy", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/252-Meeting-Rooms.py"
+  },
+  {
+    "Question" : "Meeting Rooms II", "Categorie" : "Intervals", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/253-Meeting-Rooms-ii.py"
+  },
+  {
+    "Question" : "Minimum Interval to Include Each Query", "Categorie" : "Intervals", "Difficulty": "Hard", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/1851-Minimum-Interval-to-Include-Each-Query.py"
+  },
+  
 ]

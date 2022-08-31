@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2C3D6FF828B7EAFD00709EEF /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3D6FF728B7EAFD00709EEF /* Database.swift */; };
+		2C3D6FFC28BFBDFC00709EEF /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3D6FFB28BFBDFB00709EEF /* FavoritesView.swift */; };
 		2CE25C3D2891E47F009FABA7 /* LeetcodeTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE25C3C2891E47F009FABA7 /* LeetcodeTrackerApp.swift */; };
 		2CE25C3F2891E47F009FABA7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE25C3E2891E47F009FABA7 /* ContentView.swift */; };
 		2CE25C412891E481009FABA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CE25C402891E481009FABA7 /* Assets.xcassets */; };
@@ -52,6 +53,7 @@
 
 /* Begin PBXFileReference section */
 		2C3D6FF728B7EAFD00709EEF /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		2C3D6FFB28BFBDFB00709EEF /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 		2CE25C392891E47F009FABA7 /* LeetcodeTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeetcodeTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CE25C3C2891E47F009FABA7 /* LeetcodeTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetcodeTrackerApp.swift; sourceTree = "<group>"; };
 		2CE25C3E2891E47F009FABA7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -199,6 +201,7 @@
 				2CE25D082897800E009FABA7 /* BoardListView.swift */,
 				2CE25D0A28978615009FABA7 /* CardView.swift */,
 				2CE25D0F2898D1B7009FABA7 /* AlertTextView.swift */,
+				2C3D6FFB28BFBDFB00709EEF /* FavoritesView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -348,6 +351,7 @@
 				2CE25C3D2891E47F009FABA7 /* LeetcodeTrackerApp.swift in Sources */,
 				2CE25D102898D1B7009FABA7 /* AlertTextView.swift in Sources */,
 				2CE25CF7289718B5009FABA7 /* DSAlgoView.swift in Sources */,
+				2C3D6FFC28BFBDFC00709EEF /* FavoritesView.swift in Sources */,
 				2CE25CF32897171E009FABA7 /* TabView.swift in Sources */,
 				2CE25CFF28977539009FABA7 /* BoardList.swift in Sources */,
 				2CE25CF52897187E009FABA7 /* BoardView.swift in Sources */,

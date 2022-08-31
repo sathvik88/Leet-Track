@@ -13,11 +13,13 @@ struct ContentView: View {
     
     @ObservedObject var data = DataModel()
     @State var showSafari = false
+    @State private var searchText = ""
+
     
     var body: some View {
         NavigationView {
             List{
-                ForEach(data.jsonData) { list in
+                ForEach(data.jsonData.filter({ "\($0)".contains(searchText) || searchText.isEmpty})) { list in
                     HStack{
                         Button {
                             self.showSafari = true
@@ -59,11 +61,22 @@ struct ContentView: View {
                 }
             }
             .navigationBarTitle("Questions")
+            .toolbar{
+                Button(action: {}, label: {
+                    NavigationLink(destination: FavoritesView()) {
+                                  Text("Favorites")
+                             }
+                })
+            }
             
         }
+        .searchable(text: $searchText)
         
     }
+    
 
+    
+    
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
