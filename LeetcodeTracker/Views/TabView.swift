@@ -26,6 +26,10 @@ struct TabViewScreen: View {
                     Text("Learn")
                 }
         }
+        .onAppear{
+            UIApplication.shared.applicationIconBadgeNumber = 0
+            UNUserNotificationCenter.current().removeAllDeliveredNotifications()
+        }
     }
 }
 

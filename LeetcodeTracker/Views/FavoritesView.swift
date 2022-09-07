@@ -17,6 +17,7 @@ struct FavoritesView: View {
                 HStack{
                     Button {
                         self.showSafari = true
+                        
                     } label: {
                         Text(list.question)
                             .fontWeight(.medium)

@@ -29,6 +29,7 @@ struct ContentView: View {
                         }
                         .sheet(isPresented: $showSafari){
                             SafariView(url:URL(string: list.solution)!)
+                            
                         }
                         Spacer()
                         

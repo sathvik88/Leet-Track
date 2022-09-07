@@ -398,5 +398,50 @@
   {
     "Question" : "Minimum Interval to Include Each Query", "Categorie" : "Intervals", "Difficulty": "Hard", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/1851-Minimum-Interval-to-Include-Each-Query.py"
   },
+  {
+    "Question" : "Rotate Image", "Categorie" : "Math & Geometery", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/48-Rotate-Image.py"
+  },
+  {
+    "Question" : "Spiral Matrix", "Categorie" : "Math & Geometery", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/54-Spiral-Matrix.py"
+  },
+  {
+    "Question" : "Set Matrix Zeros", "Categorie" : "Math & Geometery", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/73-Set-Matrix-Zeroes.py"
+  },
+  {
+    "Question" : "Happy Number", "Categorie" : "Math & Geometery", "Difficulty": "Easy", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/202-Happy-Number.py"
+  },
+  {
+    "Question" : "Plus One", "Categorie" : "Math & Geometery", "Difficulty": "Easy", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/66-Plus-One.py"
+  },
+  {
+    "Question" : "Pow(x,n)", "Categorie" : "Math & Geometery", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/50-Pow(x,%20n).py"
+  },
+  {
+    "Question" : "Multiply Strings", "Categorie" : "Math & Geometery", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/43-Multiply-Strings.py"
+  },
+  {
+    "Question" : "Detect Squares", "Categorie" : "Math & Geometery", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/2013-Detect-Squares.py"
+  },
+  {
+    "Question" : "Single Number", "Categorie" : "Bit Manipulation", "Difficulty": "Easy", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/136-Single-Number.py"
+  },
+  {
+    "Question" : "Number of 1 Bits", "Categorie" : "Bit Manipulation", "Difficulty": "Easy", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/191-Number-of-1-Bits.py"
+  },
+  {
+    "Question" : "Counting Bits", "Categorie" : "Bit Manipulation", "Difficulty": "Easy", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/338-Counting-Bits.py"
+  },
+  {
+    "Question" : "Reverse Bits", "Categorie" : "Bit Manipulation", "Difficulty": "Easy", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/190-Reverse-Bits.py"
+  },
+  {
+    "Question" : "Missing Number", "Categorie" : "Bit Manipulation", "Difficulty": "Easy", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/268-Missing-Number.py"
+  },
+  {
+    "Question" : "Sum of Two Integers", "Categorie" : "Bit Manipulation", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/371-Sum-of-Two-Integers.py"
+  },
+  {
+    "Question" : "Reverse Integer", "Categorie" : "Bit Manipulation", "Difficulty": "Medium", "Solution": "https://github.com/neetcode-gh/leetcode/blob/main/python/7-Reverse-Integer.py"
+  }
   
 ]
