@@ -23,6 +23,9 @@ struct ContentView: View {
                     HStack{
                         Button {
                             self.showSafari = true
+                            UNUserNotificationCenter.current().removeAllDeliveredNotifications()
+                            
+                            UIApplication.shared.applicationIconBadgeNumber = 0
                         } label: {
                             Text(list.question)
                                 .fontWeight(.medium)
@@ -63,7 +66,9 @@ struct ContentView: View {
             }
             .navigationBarTitle("Questions")
             .toolbar{
-                Button(action: {}, label: {
+                Button(action: {UNUserNotificationCenter.current().removeAllDeliveredNotifications()
+                    
+                    UIApplication.shared.applicationIconBadgeNumber = 0}, label: {
                     NavigationLink(destination: FavoritesView()) {
                                   Text("Favorites")
                              }

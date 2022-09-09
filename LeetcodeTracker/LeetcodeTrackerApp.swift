@@ -39,8 +39,8 @@ struct LeetcodeTrackerApp: App {
         content.badge = 1
         
         var dateComponents = DateComponents()
-        dateComponents.hour = 19
-        dateComponents.minute = 37
+        dateComponents.hour = 15
+        dateComponents.minute = 00
         
         
         let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
