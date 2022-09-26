@@ -10,20 +10,16 @@ import SafariServices
 
 struct FavoritesView: View {
     @ObservedObject var data = DataModel()
-    @State var showSafari = false
+    @Environment(\.openURL) var openURL
     var body: some View {
         List{
             ForEach(data.filteredItems) { list in
                 HStack{
                     Button {
-                        self.showSafari = true
-                        
+                        openURL(URL(string: list.solution)!)
                     } label: {
                         Text(list.question)
                             .fontWeight(.medium)
-                    }
-                    .sheet(isPresented: $showSafari){
-                        SafariView(url:URL(string: list.solution)!)
                     }
                     Spacer()
                     

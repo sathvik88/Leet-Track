@@ -7,14 +7,12 @@
 
 import SwiftUI
 import CoreData
-import SafariServices
+
 
 struct ContentView: View {
     
     @ObservedObject var data = DataModel()
-    @State var showSafari = false
     @State private var searchText = ""
-    @State var urlString = ""
     @Environment(\.openURL) var openURL
 
     
@@ -29,7 +27,6 @@ struct ContentView: View {
                             Text(list.question)
                                 .fontWeight(.medium)
                         }
-
 
                         Spacer()
                         
@@ -86,16 +83,4 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 }
-struct SafariView: UIViewControllerRepresentable {
 
-    let url: URL
-
-    func makeUIViewController(context: UIViewControllerRepresentableContext<SafariView>) -> SFSafariViewController {
-        return SFSafariViewController(url: url)
-    }
-
-    func updateUIViewController(_ uiViewController: SFSafariViewController, context: UIViewControllerRepresentableContext<SafariView>) {
-
-    }
-
-}
