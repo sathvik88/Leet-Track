@@ -14,6 +14,8 @@ struct ContentView: View {
     @ObservedObject var data = DataModel()
     @State var showSafari = false
     @State private var searchText = ""
+    @State var urlString = ""
+    @Environment(\.openURL) var openURL
 
     
     var body: some View {
@@ -22,18 +24,13 @@ struct ContentView: View {
                 ForEach(data.jsonData.filter({ "\($0)".contains(searchText) || searchText.isEmpty})) { list in
                     HStack{
                         Button {
-                            self.showSafari = true
-                            UNUserNotificationCenter.current().removeAllDeliveredNotifications()
-                            
-                            UIApplication.shared.applicationIconBadgeNumber = 0
+                            openURL(URL(string: list.solution)!)
                         } label: {
                             Text(list.question)
                                 .fontWeight(.medium)
                         }
-                        .sheet(isPresented: $showSafari){
-                            SafariView(url:URL(string: list.solution)!)
-                            
-                        }
+
+
                         Spacer()
                         
                         VStack(alignment: .center){
