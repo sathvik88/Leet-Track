@@ -14,7 +14,7 @@ struct DSAlgoView: View {
             "Fast and Slow Pointers",
             "Merge Intervals",
             "Cyclic Sort",
-            "In-place Reversal of Linked List",
+            "In-Place Reversal of Linked List",
             "Tree BFS",
             "Tree DFS",
             "Two Heaps",
