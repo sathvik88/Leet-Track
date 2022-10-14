@@ -15,7 +15,7 @@ struct TabViewScreen: View {
                     Image(systemName: "house")
                     Text("Home")
                 }
-            BoardView()
+            SetsView()
                 .tabItem{
                     Image(systemName: "square.and.pencil")
                     Text("Board")
@@ -24,6 +24,7 @@ struct TabViewScreen: View {
                 .tabItem{
                     Image(systemName: "book")
                     Text("Learn")
+                        
                 }
         }
     }

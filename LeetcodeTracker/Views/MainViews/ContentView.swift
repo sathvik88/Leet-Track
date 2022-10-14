@@ -17,60 +17,67 @@ struct ContentView: View {
 
     
     var body: some View {
-        NavigationView {
-            List{
-                ForEach(data.jsonData.filter({ "\($0)".contains(searchText) || searchText.isEmpty})) { list in
-                    HStack{
-                        Button {
-                            openURL(URL(string: list.solution)!)
-                        } label: {
-                            Text(list.question)
-                                .fontWeight(.medium)
-                        }
-
-                        Spacer()
-                        
-                        VStack(alignment: .center){
-                            
-                            if(list.difficulty == "Easy"){
-                                Text(list.difficulty)
-                                    .foregroundColor(.green)
-                                    .fontWeight(.medium)
-                            }
-                            else if(list.difficulty == "Medium"){
-                                Text(list.difficulty)
-                                    .foregroundColor(.orange)
-                                    .fontWeight(.medium)
-                            }
-                            else{
-                                Text(list.difficulty)
-                                    .foregroundColor(.red)
+        if #available(iOS 16.0, *) {
+            NavigationStack {
+                List{
+                    ForEach(data.jsonData.filter({ "\($0)".contains(searchText) || searchText.isEmpty})) { list in
+                        HStack{
+                            Button {
+                                openURL(URL(string: list.solution)!)
+                                UNUserNotificationCenter.current().removeAllDeliveredNotifications()
+                                UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+                                UNUserNotificationCenter.current().setBadgeCount(0)
+                            } label: {
+                                Text(list.question)
                                     .fontWeight(.medium)
                             }
                             
-                        }
-                        Spacer()
-                        Image(systemName: data.contains(list) ? "star.fill" : "star")
-                            .foregroundColor(.yellow)
-                            .onTapGesture{
-                                data.toggleFavs(question: list)
+                            Spacer()
+                            
+                            VStack(alignment: .center){
+                                
+                                if(list.difficulty == "Easy"){
+                                    Text(list.difficulty)
+                                        .foregroundColor(.green)
+                                        .fontWeight(.medium)
+                                }
+                                else if(list.difficulty == "Medium"){
+                                    Text(list.difficulty)
+                                        .foregroundColor(.orange)
+                                        .fontWeight(.medium)
+                                }
+                                else{
+                                    Text(list.difficulty)
+                                        .foregroundColor(.red)
+                                        .fontWeight(.medium)
+                                }
+                                
                             }
+                            Spacer()
+                            Image(systemName: data.contains(list) ? "star.fill" : "star")
+                                .foregroundColor(.yellow)
+                                .onTapGesture{
+                                    data.toggleFavs(question: list)
+                                }
+                        }
                     }
                 }
+                .navigationBarTitle("Questions")
+                .toolbar{
+                    Button(action: {}, label: {
+                            NavigationLink(destination: FavoritesView()) {
+                                Text("Favorites")
+                            }
+                        })
+                }
+                
             }
-            .navigationBarTitle("Questions")
-            .toolbar{
-                Button(action: {UNUserNotificationCenter.current().removeAllDeliveredNotifications()
-                    
-                    UIApplication.shared.applicationIconBadgeNumber = 0}, label: {
-                    NavigationLink(destination: FavoritesView()) {
-                                  Text("Favorites")
-                             }
-                })
-            }
-            
+            .searchable(text: $searchText)
+        } else {
+            // Fallback on earlier versions
         }
-        .searchable(text: $searchText)
+        
+        }
         
     }
     
@@ -82,5 +89,5 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
-}
+
 

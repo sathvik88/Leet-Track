@@ -25,48 +25,52 @@ struct DSAlgoView: View {
             "Topological sort"
         ]
     var body: some View {
-        NavigationView{
-            List(patterns, id: \.self){ list in
-                
-                NavigationLink {
-                    switch list{
-                    case "Sliding Window":
-                        SlidingWindowView()
-                    case "Two Pointers":
-                        TwoPointersView()
-                    case "Fast and Slow Pointers":
-                        FSView()
-                    case "Merge Intervals":
-                        MergeIntervalsView()
-                    case "Cyclic Sort":
-                        CyclicSortView()
-                    case "In-Place Reversal of Linked List":
-                        InPlaceView()
-                    case "Tree BFS":
-                        TreeBFSView()
-                    case "Tree DFS":
-                        TreeDFSView()
-                    case "Two Heaps":
-                        TwoHeapsView()
-                    case "Subsets":
-                        SubsetsView()
-                    case "Modified Binary Search":
-                        ModifiedBinaryView()
-                    case "Top K Elements":
-                        TopKView()
-                    case "K-way Merge":
-                        KWayView()
-                    case "Topological sort":
-                        TopologicalView()
-                    default:
-                        ContentView()
+        if #available(iOS 16.0, *) {
+            NavigationStack{
+                List(patterns, id: \.self){ list in
+                    
+                    NavigationLink {
+                        switch list{
+                        case "Sliding Window":
+                            SlidingWindowView()
+                        case "Two Pointers":
+                            TwoPointersView()
+                        case "Fast and Slow Pointers":
+                            FSView()
+                        case "Merge Intervals":
+                            MergeIntervalsView()
+                        case "Cyclic Sort":
+                            CyclicSortView()
+                        case "In-Place Reversal of Linked List":
+                            InPlaceView()
+                        case "Tree BFS":
+                            TreeBFSView()
+                        case "Tree DFS":
+                            TreeDFSView()
+                        case "Two Heaps":
+                            TwoHeapsView()
+                        case "Subsets":
+                            SubsetsView()
+                        case "Modified Binary Search":
+                            ModifiedBinaryView()
+                        case "Top K Elements":
+                            TopKView()
+                        case "K-way Merge":
+                            KWayView()
+                        case "Topological sort":
+                            TopologicalView()
+                        default:
+                            ContentView()
+                        }
+                    } label: {
+                        Text(list)
                     }
-                } label: {
-                    Text(list)
+                    
                 }
-
+                .navigationTitle("Patterns")
             }
-            .navigationTitle("Patterns")
+        } else {
+            // Fallback on earlier versions
         }
     }
 }

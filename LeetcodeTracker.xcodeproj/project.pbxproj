@@ -23,6 +23,7 @@
 		2C42626F28E22C0D003F1D9D /* TopKView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C42626E28E22C0D003F1D9D /* TopKView.swift */; };
 		2C42627228E22C2C003F1D9D /* KWayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C42627128E22C2C003F1D9D /* KWayView.swift */; };
 		2C42627428E22C59003F1D9D /* TopologicalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C42627328E22C59003F1D9D /* TopologicalView.swift */; };
+		2C9787A728F9E6D900388CF4 /* SetsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9787A628F9E6D900388CF4 /* SetsView.swift */; };
 		2CE25C3D2891E47F009FABA7 /* LeetcodeTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE25C3C2891E47F009FABA7 /* LeetcodeTrackerApp.swift */; };
 		2CE25C3F2891E47F009FABA7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE25C3E2891E47F009FABA7 /* ContentView.swift */; };
 		2CE25C412891E481009FABA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CE25C402891E481009FABA7 /* Assets.xcassets */; };
@@ -82,6 +83,7 @@
 		2C42626E28E22C0D003F1D9D /* TopKView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopKView.swift; sourceTree = "<group>"; };
 		2C42627128E22C2C003F1D9D /* KWayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KWayView.swift; sourceTree = "<group>"; };
 		2C42627328E22C59003F1D9D /* TopologicalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopologicalView.swift; sourceTree = "<group>"; };
+		2C9787A628F9E6D900388CF4 /* SetsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetsView.swift; sourceTree = "<group>"; };
 		2CE25C392891E47F009FABA7 /* LeetcodeTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeetcodeTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CE25C3C2891E47F009FABA7 /* LeetcodeTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetcodeTrackerApp.swift; sourceTree = "<group>"; };
 		2CE25C3E2891E47F009FABA7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 				2CE25C3E2891E47F009FABA7 /* ContentView.swift */,
 				2CE25CF6289718B5009FABA7 /* DSAlgoView.swift */,
 				2CE25CF42897187E009FABA7 /* BoardView.swift */,
+				2C9787A628F9E6D900388CF4 /* SetsView.swift */,
 			);
 			path = MainViews;
 			sourceTree = "<group>";
@@ -426,6 +429,7 @@
 				2C42625D28E22B21003F1D9D /* MergeIntervalsView.swift in Sources */,
 				2C42625728E2299C003F1D9D /* TwoPointersView.swift in Sources */,
 				2CE25D0428977CC4009FABA7 /* Board+Stub.swift in Sources */,
+				2C9787A728F9E6D900388CF4 /* SetsView.swift in Sources */,
 				2C3D6FF828B7EAFD00709EEF /* Database.swift in Sources */,
 				2CE25D092897800E009FABA7 /* BoardListView.swift in Sources */,
 				2CE25C6E2891E548009FABA7 /* LeetCodeContent.swift in Sources */,
