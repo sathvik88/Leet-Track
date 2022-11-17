@@ -15,10 +15,10 @@ struct TabViewScreen: View {
                     Image(systemName: "house")
                     Text("Home")
                 }
-            SetsView()
+            LoginView()
                 .tabItem{
-                    Image(systemName: "square.and.pencil")
-                    Text("Board")
+                    Image(systemName: "person.fill")
+                    Text("My Stats")
                 }
             DSAlgoView()
                 .tabItem{

@@ -9,6 +9,7 @@ import SwiftUI
 
 @main
 struct LeetcodeTrackerApp: App {
+    @StateObject private var userAuth = UserAuth()
     let persistenceController = PersistenceController.shared
     let center = UNUserNotificationCenter.current()
     
@@ -56,6 +57,7 @@ struct LeetcodeTrackerApp: App {
         WindowGroup {
             TabViewScreen()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                .environmentObject(userAuth)
         }
         
     }
