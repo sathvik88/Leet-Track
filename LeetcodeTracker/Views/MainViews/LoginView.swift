@@ -6,34 +6,48 @@
 //
 
 import SwiftUI
-
 import Combine
+
+
+
 struct LoginView: View {
     @StateObject var data = DataModel()
-    @State private var login = false
-    @State private var username: String = ""
+    @AppStorage("login") private var login: Bool = false
+    @AppStorage("username") private var username: String = ""
     @EnvironmentObject  var userAuth: UserAuth
+    @FocusState private var isFocused: Bool
+    @State var isDisabled = false
+    
     var body: some View {
-        NavigationView {
-            VStack {
-                TextField("Username", text: $username)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                
-                NavigationLink(destination: StatsView(username: username), isActive: $login) {
-                     Text("Go")
-                }.buttonStyle(PlainButtonStyle())
-                    .simultaneousGesture(TapGesture().onEnded{
-
-                        self.userAuth.login()
-                        
-                    })
-            }
+        
+        if login{
             
+            StatsView( stats: data.stats)
+                .task {
+                    await data.loadStats(name: username)
+                }
+        } else{
+
+                VStack {
+                    TextField("Username", text: $username)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .focused($isFocused)
+                    Button("Go") {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                            login = true
+                        }
+                        
+                        isFocused = false
+                        
+                    }
+      
+                }
         }
         
-
     }
+   
 }
+
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
