@@ -1,5 +1,5 @@
 # Smart Coder
-Application that allows users to track their progress for Leetcode questions and helps users learn Data Structure and Algorithms
+Smart Coder is an application that allows users to help study the fundamentals of Algorithms and Data Sctructures. The app conists of a Home page where the user is able to view multiple questions from Leetcode and see the optimal solution as well as favorite certain questions and search for different question within the table. Users are also able to connect their Leetcode account to the app where they are able to see a visually appealing representation of their stats (the number of questions they have solved in Leetcode). Lastly, the app consists of a Learning page where the user is able to study different coding patterns and referesh on core algorithms and data sctructures fundamentals through the different learning topics. 
 
 Preview of current progress:
 ![Simulator Screen Shot - iPhone SE (3rd generation) - 2022-09-07 at 19 43 56](https://user-images.githubusercontent.com/55303890/189001894-2b9b3710-b587-42a8-a158-0019eb741b2e.png)
