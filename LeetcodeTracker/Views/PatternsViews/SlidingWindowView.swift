@@ -9,34 +9,45 @@ import SwiftUI
 
 struct SlidingWindowView: View {
     var body: some View {
-        if #available(iOS 16.0, *) {
-            NavigationStack{
-                ScrollView{
-                    Image("slidingwindow")
-                        .resizable()
-                        .scaledToFit()
-                    if #available(iOS 16.0, *) {
-                        
+        ZStack{
+            NavigationView{
+                VStack{
+                    ScrollView{
+                        Image("slidingwindow")
+                            .resizable()
+                            .scaledToFit()
+                            .cornerRadius(10)
+                            .padding()
                         Text("The Sliding Window pattern is used to perform a required operation on a specific window size of a given array or linked list, such as finding the longest subarray containing all 1s. Sliding Windows start from the 1st element and keep shifting right by one element and adjust the length of the window according to the problem that you are solving. In some cases, the window size remains constant and in other the sizes grows or shrinks.")
+                            .padding()
+                        Text("Following are some ways you can identify that the given problem might require a sliding window:")
+                            .font(.headline)
+                         
+                        HStack{
+                            Text("•")
+                                .padding()
+                                .font(.system(size: 30))
+                                .frame(alignment: .trailing)
+                            Text("The problem input is a linear data structure such as a linked list, array, or string")
+                                
+                        }
+                        HStack{
+                            Text("•")
+                                .padding()
+                                .font(.system(size: 30))
+                                .frame(alignment: .trailing)
+                            Text("You’re asked to find the longest/shortest substring, subarray, or a desired value")
+                                
+                        }
                         
-                    } else {
-                        // Fallback on earlier versions
-                        Text("The Sliding Window pattern is used to perform a required operation on a specific window size of a given array or linked list, such as finding the longest subarray containing all 1s. Sliding Windows start from the 1st element and keep shifting right by one element and adjust the length of the window according to the problem that you are solving. In some cases, the window size remains constant and in other the sizes grows or shrinks.")
-                            .lineSpacing(10)
-                            .multilineTextAlignment(.leading)
                         
-                            .font(Font.body.bold())
-                            
                     }
-                    
                 }
-                .navigationTitle("Sliding Window")
+                .navigationBarHidden(true)
+
             }
-        } else {
-            // Fallback on earlier versions
+            
         }
-        
-        
     }
     
         
