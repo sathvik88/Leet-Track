@@ -14,8 +14,8 @@ struct LeetcodeTrackerApp: App {
     let center = UNUserNotificationCenter.current()
     
     init(){
-        registerForNotification()
-        scheduelNotification()
+//        registerForNotification()
+//        scheduelNotification()
     }
     
     func registerForNotification(){

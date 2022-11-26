@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2C19AE51291984EC00701707 /* UserAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C19AE50291984EC00701707 /* UserAuth.swift */; };
-		2C19AE53291EF70D00701707 /* DecideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C19AE52291EF70D00701707 /* DecideView.swift */; };
 		2C3D6FF828B7EAFD00709EEF /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3D6FF728B7EAFD00709EEF /* Database.swift */; };
 		2C3D6FFC28BFBDFC00709EEF /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3D6FFB28BFBDFB00709EEF /* FavoritesView.swift */; };
 		2C42625528E2238A003F1D9D /* SlidingWindowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C42625428E2238A003F1D9D /* SlidingWindowView.swift */; };
@@ -25,6 +24,7 @@
 		2C42626F28E22C0D003F1D9D /* TopKView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C42626E28E22C0D003F1D9D /* TopKView.swift */; };
 		2C42627228E22C2C003F1D9D /* KWayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C42627128E22C2C003F1D9D /* KWayView.swift */; };
 		2C42627428E22C59003F1D9D /* TopologicalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C42627328E22C59003F1D9D /* TopologicalView.swift */; };
+		2C4E0E45292E953C00EAD778 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4E0E44292E953C00EAD778 /* NotificationManager.swift */; };
 		2C88320D2918254700D35F96 /* UserStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C88320C2918254700D35F96 /* UserStats.swift */; };
 		2C8832112919600800D35F96 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8832102919600800D35F96 /* LoginView.swift */; };
 		2C9787A728F9E6D900388CF4 /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9787A628F9E6D900388CF4 /* StatsView.swift */; };
@@ -41,14 +41,7 @@
 		2CE25C6E2891E548009FABA7 /* LeetCodeContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE25C6D2891E548009FABA7 /* LeetCodeContent.swift */; };
 		2CE25C702891E614009FABA7 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE25C6F2891E614009FABA7 /* DataModel.swift */; };
 		2CE25CF32897171E009FABA7 /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE25CF22897171E009FABA7 /* TabView.swift */; };
-		2CE25CF52897187E009FABA7 /* BoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE25CF42897187E009FABA7 /* BoardView.swift */; };
 		2CE25CF7289718B5009FABA7 /* DSAlgoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE25CF6289718B5009FABA7 /* DSAlgoView.swift */; };
-		2CE25CFD28977487009FABA7 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE25CFC28977487009FABA7 /* Card.swift */; };
-		2CE25CFF28977539009FABA7 /* BoardList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE25CFE28977539009FABA7 /* BoardList.swift */; };
-		2CE25D01289775C5009FABA7 /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE25D00289775C5009FABA7 /* Board.swift */; };
-		2CE25D0428977CC4009FABA7 /* Board+Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE25D0328977CC4009FABA7 /* Board+Stub.swift */; };
-		2CE25D092897800E009FABA7 /* BoardListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE25D082897800E009FABA7 /* BoardListView.swift */; };
-		2CE25D0B28978616009FABA7 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE25D0A28978615009FABA7 /* CardView.swift */; };
 		2CE25D0E2898C647009FABA7 /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = 2CE25D0D2898C647009FABA7 /* Introspect */; };
 		2CE25D102898D1B7009FABA7 /* AlertTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE25D0F2898D1B7009FABA7 /* AlertTextView.swift */; };
 /* End PBXBuildFile section */
@@ -72,7 +65,6 @@
 
 /* Begin PBXFileReference section */
 		2C19AE50291984EC00701707 /* UserAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuth.swift; sourceTree = "<group>"; };
-		2C19AE52291EF70D00701707 /* DecideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecideView.swift; sourceTree = "<group>"; };
 		2C3D6FF728B7EAFD00709EEF /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		2C3D6FFB28BFBDFB00709EEF /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 		2C42625428E2238A003F1D9D /* SlidingWindowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlidingWindowView.swift; sourceTree = "<group>"; };
@@ -89,6 +81,7 @@
 		2C42626E28E22C0D003F1D9D /* TopKView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopKView.swift; sourceTree = "<group>"; };
 		2C42627128E22C2C003F1D9D /* KWayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KWayView.swift; sourceTree = "<group>"; };
 		2C42627328E22C59003F1D9D /* TopologicalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopologicalView.swift; sourceTree = "<group>"; };
+		2C4E0E44292E953C00EAD778 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		2C88320C2918254700D35F96 /* UserStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStats.swift; sourceTree = "<group>"; };
 		2C8832102919600800D35F96 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		2C9787A628F9E6D900388CF4 /* StatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
@@ -108,15 +101,8 @@
 		2CE25C6D2891E548009FABA7 /* LeetCodeContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetCodeContent.swift; sourceTree = "<group>"; };
 		2CE25C6F2891E614009FABA7 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		2CE25CF22897171E009FABA7 /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
-		2CE25CF42897187E009FABA7 /* BoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardView.swift; sourceTree = "<group>"; };
 		2CE25CF6289718B5009FABA7 /* DSAlgoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSAlgoView.swift; sourceTree = "<group>"; };
-		2CE25CFC28977487009FABA7 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
-		2CE25CFE28977539009FABA7 /* BoardList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardList.swift; sourceTree = "<group>"; };
-		2CE25D00289775C5009FABA7 /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
 		2CE25D0228977BC5009FABA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		2CE25D0328977CC4009FABA7 /* Board+Stub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Board+Stub.swift"; sourceTree = "<group>"; };
-		2CE25D082897800E009FABA7 /* BoardListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardListView.swift; sourceTree = "<group>"; };
-		2CE25D0A28978615009FABA7 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		2CE25D0F2898D1B7009FABA7 /* AlertTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertTextView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -172,10 +158,8 @@
 			children = (
 				2CE25C3E2891E47F009FABA7 /* ContentView.swift */,
 				2CE25CF6289718B5009FABA7 /* DSAlgoView.swift */,
-				2CE25CF42897187E009FABA7 /* BoardView.swift */,
 				2C9787A628F9E6D900388CF4 /* StatsView.swift */,
 				2C8832102919600800D35F96 /* LoginView.swift */,
-				2C19AE52291EF70D00701707 /* DecideView.swift */,
 			);
 			path = MainViews;
 			sourceTree = "<group>";
@@ -247,6 +231,7 @@
 			children = (
 				2C3D6FF728B7EAFD00709EEF /* Database.swift */,
 				2C19AE50291984EC00701707 /* UserAuth.swift */,
+				2C4E0E44292E953C00EAD778 /* NotificationManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -256,10 +241,6 @@
 			children = (
 				2CE25C6F2891E614009FABA7 /* DataModel.swift */,
 				2CE25C6D2891E548009FABA7 /* LeetCodeContent.swift */,
-				2CE25CFC28977487009FABA7 /* Card.swift */,
-				2CE25CFE28977539009FABA7 /* BoardList.swift */,
-				2CE25D00289775C5009FABA7 /* Board.swift */,
-				2CE25D0328977CC4009FABA7 /* Board+Stub.swift */,
 				2C88320C2918254700D35F96 /* UserStats.swift */,
 			);
 			path = Model;
@@ -271,8 +252,6 @@
 				2C42625B28E22AC7003F1D9D /* MainViews */,
 				2C42625A28E22AB8003F1D9D /* PatternsViews */,
 				2CE25CF22897171E009FABA7 /* TabView.swift */,
-				2CE25D082897800E009FABA7 /* BoardListView.swift */,
-				2CE25D0A28978615009FABA7 /* CardView.swift */,
 				2CE25D0F2898D1B7009FABA7 /* AlertTextView.swift */,
 				2C3D6FFB28BFBDFB00709EEF /* FavoritesView.swift */,
 			);
@@ -419,9 +398,7 @@
 				2C42626328E22B6C003F1D9D /* TreeBFSView.swift in Sources */,
 				2CE25C462891E481009FABA7 /* Persistence.swift in Sources */,
 				2CE25C492891E481009FABA7 /* LeetcodeTracker.xcdatamodeld in Sources */,
-				2CE25D01289775C5009FABA7 /* Board.swift in Sources */,
 				2CE25C3F2891E47F009FABA7 /* ContentView.swift in Sources */,
-				2CE25D0B28978616009FABA7 /* CardView.swift in Sources */,
 				2CE25C3D2891E47F009FABA7 /* LeetcodeTrackerApp.swift in Sources */,
 				2CE25D102898D1B7009FABA7 /* AlertTextView.swift in Sources */,
 				2C8832112919600800D35F96 /* LoginView.swift in Sources */,
@@ -435,22 +412,17 @@
 				2CE25CF32897171E009FABA7 /* TabView.swift in Sources */,
 				2C42626F28E22C0D003F1D9D /* TopKView.swift in Sources */,
 				2C19AE51291984EC00701707 /* UserAuth.swift in Sources */,
-				2CE25CFF28977539009FABA7 /* BoardList.swift in Sources */,
 				2C42626128E22B5A003F1D9D /* InPlaceView.swift in Sources */,
-				2CE25CF52897187E009FABA7 /* BoardView.swift in Sources */,
 				2C42625F28E22B49003F1D9D /* CyclicSortView.swift in Sources */,
 				2C42625928E22AB3003F1D9D /* FSView.swift in Sources */,
-				2CE25CFD28977487009FABA7 /* Card.swift in Sources */,
 				2C42625D28E22B21003F1D9D /* MergeIntervalsView.swift in Sources */,
 				2C42625728E2299C003F1D9D /* TwoPointersView.swift in Sources */,
-				2CE25D0428977CC4009FABA7 /* Board+Stub.swift in Sources */,
 				2C9787A728F9E6D900388CF4 /* StatsView.swift in Sources */,
 				2C3D6FF828B7EAFD00709EEF /* Database.swift in Sources */,
-				2CE25D092897800E009FABA7 /* BoardListView.swift in Sources */,
 				2CE25C6E2891E548009FABA7 /* LeetCodeContent.swift in Sources */,
 				2C42626728E22BB3003F1D9D /* TwoHeapsView.swift in Sources */,
 				2CE25C702891E614009FABA7 /* DataModel.swift in Sources */,
-				2C19AE53291EF70D00701707 /* DecideView.swift in Sources */,
+				2C4E0E45292E953C00EAD778 /* NotificationManager.swift in Sources */,
 				2C42627228E22C2C003F1D9D /* KWayView.swift in Sources */,
 				2C42625528E2238A003F1D9D /* SlidingWindowView.swift in Sources */,
 			);

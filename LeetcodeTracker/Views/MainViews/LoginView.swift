@@ -17,6 +17,7 @@ struct LoginView: View {
     @EnvironmentObject  var userAuth: UserAuth
     @FocusState private var isFocused: Bool
     @State var isDisabled = false
+    @Environment(\.openURL) var openURL
     
     var body: some View {
         
@@ -27,40 +28,37 @@ struct LoginView: View {
                     await data.loadStats(name: username)
                 }
         } else{
-            NavigationView{
-                ZStack{
-                    Color.cyan
-                        .ignoresSafeArea()
-                    Circle()
-                        .scale(1.7)
-                        .foregroundColor(.white.opacity(0.15))
-                    Circle()
-                        .scale(1.35)
-                        .foregroundColor(.white)
-                    VStack{
-                        Text("Login to Leetcode!")
-                            .font(.largeTitle)
-                            .bold()
-                            .padding()
-                        TextField("Username", text: $username)
-                            .focused($isFocused)
-                            .padding()
-                            .frame(width: 300, height: 50)
-                            .background(Color.black.opacity(0.05))
-                            .cornerRadius(10)
-                        Button("Login"){
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 1){
-                                login = true
-                            }
-                            isFocused = false
-                        }
-                        .foregroundColor(.white)
+            ZStack{
+                
+                VStack{
+                    Text("Login to Leetcode!")
+                        .font(.largeTitle)
+                        .bold()
+                        .padding()
+                    TextField("Username", text: $username)
+                        .focused($isFocused)
+                        .padding()
                         .frame(width: 300, height: 50)
-                        .background(Color.blue)
+                        .background(Color.black.opacity(0.05))
                         .cornerRadius(10)
+                    Button("Login"){
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 1){
+                            login = true
+                        }
+                        isFocused = false
                     }
+                    .foregroundColor(.white)
+                    .frame(width: 300, height: 50)
+                    .background(Color.blue)
+                    .cornerRadius(10)
+                    Button("Register"){
+                        openURL(URL(string: "https://leetcode.com/accounts/signup/")!)
+                    }
+                    .padding()
+                    
                 }
             }
+
 
 //                VStack {
 //                    TextField("Username", text: $username)

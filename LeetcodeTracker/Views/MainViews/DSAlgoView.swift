@@ -25,10 +25,10 @@ struct DSAlgoView: View {
             "Topological sort"
         ]
     var body: some View {
-        if #available(iOS 16.0, *) {
-            NavigationStack{
+        
+            NavigationView{
                 List(patterns, id: \.self){ list in
-                    
+
                     NavigationLink {
                         switch list{
                         case "Sliding Window":
@@ -65,15 +65,12 @@ struct DSAlgoView: View {
                     } label: {
                         Text(list)
                     }
-                    
+
                 }
                 .navigationTitle("Patterns")
             }
-        } else {
-            // Fallback on earlier versions
         }
     }
-}
 
 struct DSAlgoView_Previews: PreviewProvider {
     static var previews: some View {
