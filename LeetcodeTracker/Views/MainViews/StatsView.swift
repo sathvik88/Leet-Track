@@ -19,7 +19,9 @@ struct StatsView: View {
     
     
     var body: some View {
+        NavigationView{
             ZStack{
+                
                 
                 ZStack{
                     Circle()
@@ -33,15 +35,15 @@ struct StatsView: View {
                             })
                         .foregroundColor(Color.gray)
                         .frame(width: 150, height: 150)
-                        .padding()
-                        .offset(y: -260)
+                        
+                        .offset(y: -200)
                     Circle()
                         .trim(from: 0.0, to: CGFloat(Float(stats?.totalSolved ?? 0)/Float(stats?.totalQuestions ?? 1)))
                         
                         .stroke(style: StrokeStyle(lineWidth: 5, lineCap: .round, lineJoin: .round))
                         .foregroundColor(Color.yellow)
                         .frame(width: 150, height: 150)
-                        .offset(x: 260, y: 0)
+                        .offset(x: 200, y: 0)
                         .rotationEffect(.degrees(-90))
                         .animation(.easeOut, value: (Float(stats?.totalSolved ?? 0)/Float(stats?.totalQuestions ?? 1)))
                     
@@ -60,13 +62,14 @@ struct StatsView: View {
                                 })
                             .foregroundColor(Color.gray)
                             .frame(width: 100, height: 100)
-                            .offset(y: -100)
+                            
+                            .offset(y: -50)
                         Circle()
                             .trim(from: 0.0, to: CGFloat(Float(stats?.easySolved ?? 0)/Float(stats?.totalEasy ?? 1)))
                             .stroke(style: StrokeStyle(lineWidth: 5, lineCap: .round, lineJoin: .round))
                             .foregroundColor(Color.green)
                             .frame(width: 100, height: 100)
-                            .offset(x: 100, y: 0)
+                            .offset(x: 50, y: 0)
                             .rotationEffect(.degrees(-90))
                             .animation(.easeOut, value: (Float(stats?.easySolved ?? 0)/Float(stats?.totalEasy ?? 1)))
                     }
@@ -86,13 +89,13 @@ struct StatsView: View {
                             .foregroundColor(Color.gray)
                             .frame(width: 100, height: 100)
                             .padding()
-                            .offset(y: -100)
+                            .offset(y: -50)
                         Circle()
                             .trim(from: 0.0, to: CGFloat(Float(stats?.mediumSolved ?? 0)/Float(stats?.totalMedium ?? 1)))
                             .stroke(style: StrokeStyle(lineWidth: 5, lineCap: .round, lineJoin: .round))
                             .foregroundColor(Color.orange)
                             .frame(width: 100, height: 100)
-                            .offset(x: 100, y: 0)
+                            .offset(x: 50, y: 0)
                             .rotationEffect(.degrees(-90))
                             .animation(.easeOut, value: (Float(stats?.mediumSolved ?? 0)/Float(stats?.totalMedium ?? 1)))
                     }
@@ -108,24 +111,32 @@ struct StatsView: View {
                                 })
                             .foregroundColor(Color.gray)
                             .frame(width: 100, height: 100)
-                            .offset(y: -100)
+                            .offset(y: -50)
                         Circle()
                             .trim(from: 0.0, to: CGFloat(Float(stats?.hardSolved ?? 0)/Float(stats?.totalHard ?? 1)))
                             .stroke(style: StrokeStyle(lineWidth: 5, lineCap: .round, lineJoin: .round))
                             .foregroundColor(Color.red)
                             .frame(width: 100, height: 100)
-                            .offset(x: 100, y: 0)
+                            .offset(x: 50, y: 0)
                             .rotationEffect(.degrees(-90))
                             .animation(.easeOut, value: (Float(stats?.hardSolved ?? 0)/Float(stats?.totalHard ?? 1)))
                     }
                     
-                    
                 }
                 
+                Text("Acceptance Rate: "+"\(stats?.acceptanceRate ?? 0.0)" + "%")
+                    .padding(.top, 50)
+                    
+                    
+                
             }
+            .navigationBarTitle(username+"'s Stats")
+        }
+        
+        
                               
             
-        }
+    }
                             
             
     }

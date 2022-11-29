@@ -25,6 +25,7 @@
 		2C42627228E22C2C003F1D9D /* KWayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C42627128E22C2C003F1D9D /* KWayView.swift */; };
 		2C42627428E22C59003F1D9D /* TopologicalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C42627328E22C59003F1D9D /* TopologicalView.swift */; };
 		2C4E0E45292E953C00EAD778 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4E0E44292E953C00EAD778 /* NotificationManager.swift */; };
+		2C4E0E482936820400EAD778 /* BubbleSortView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4E0E472936820400EAD778 /* BubbleSortView.swift */; };
 		2C88320D2918254700D35F96 /* UserStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C88320C2918254700D35F96 /* UserStats.swift */; };
 		2C8832112919600800D35F96 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8832102919600800D35F96 /* LoginView.swift */; };
 		2C9787A728F9E6D900388CF4 /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9787A628F9E6D900388CF4 /* StatsView.swift */; };
@@ -43,7 +44,6 @@
 		2CE25CF32897171E009FABA7 /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE25CF22897171E009FABA7 /* TabView.swift */; };
 		2CE25CF7289718B5009FABA7 /* DSAlgoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE25CF6289718B5009FABA7 /* DSAlgoView.swift */; };
 		2CE25D0E2898C647009FABA7 /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = 2CE25D0D2898C647009FABA7 /* Introspect */; };
-		2CE25D102898D1B7009FABA7 /* AlertTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE25D0F2898D1B7009FABA7 /* AlertTextView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +82,7 @@
 		2C42627128E22C2C003F1D9D /* KWayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KWayView.swift; sourceTree = "<group>"; };
 		2C42627328E22C59003F1D9D /* TopologicalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopologicalView.swift; sourceTree = "<group>"; };
 		2C4E0E44292E953C00EAD778 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		2C4E0E472936820400EAD778 /* BubbleSortView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleSortView.swift; sourceTree = "<group>"; };
 		2C88320C2918254700D35F96 /* UserStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStats.swift; sourceTree = "<group>"; };
 		2C8832102919600800D35F96 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		2C9787A628F9E6D900388CF4 /* StatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
@@ -103,7 +104,6 @@
 		2CE25CF22897171E009FABA7 /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
 		2CE25CF6289718B5009FABA7 /* DSAlgoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSAlgoView.swift; sourceTree = "<group>"; };
 		2CE25D0228977BC5009FABA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		2CE25D0F2898D1B7009FABA7 /* AlertTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertTextView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,12 +156,23 @@
 		2C42625B28E22AC7003F1D9D /* MainViews */ = {
 			isa = PBXGroup;
 			children = (
+				2C4E0E46293681F000EAD778 /* Sort Views */,
+				2C3D6FFB28BFBDFB00709EEF /* FavoritesView.swift */,
+				2CE25CF22897171E009FABA7 /* TabView.swift */,
 				2CE25C3E2891E47F009FABA7 /* ContentView.swift */,
 				2CE25CF6289718B5009FABA7 /* DSAlgoView.swift */,
 				2C9787A628F9E6D900388CF4 /* StatsView.swift */,
 				2C8832102919600800D35F96 /* LoginView.swift */,
 			);
 			path = MainViews;
+			sourceTree = "<group>";
+		};
+		2C4E0E46293681F000EAD778 /* Sort Views */ = {
+			isa = PBXGroup;
+			children = (
+				2C4E0E472936820400EAD778 /* BubbleSortView.swift */,
+			);
+			path = "Sort Views";
 			sourceTree = "<group>";
 		};
 		2CE25C302891E47F009FABA7 = {
@@ -251,9 +262,6 @@
 			children = (
 				2C42625B28E22AC7003F1D9D /* MainViews */,
 				2C42625A28E22AB8003F1D9D /* PatternsViews */,
-				2CE25CF22897171E009FABA7 /* TabView.swift */,
-				2CE25D0F2898D1B7009FABA7 /* AlertTextView.swift */,
-				2C3D6FFB28BFBDFB00709EEF /* FavoritesView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -400,8 +408,8 @@
 				2CE25C492891E481009FABA7 /* LeetcodeTracker.xcdatamodeld in Sources */,
 				2CE25C3F2891E47F009FABA7 /* ContentView.swift in Sources */,
 				2CE25C3D2891E47F009FABA7 /* LeetcodeTrackerApp.swift in Sources */,
-				2CE25D102898D1B7009FABA7 /* AlertTextView.swift in Sources */,
 				2C8832112919600800D35F96 /* LoginView.swift in Sources */,
+				2C4E0E482936820400EAD778 /* BubbleSortView.swift in Sources */,
 				2C42627428E22C59003F1D9D /* TopologicalView.swift in Sources */,
 				2C42626B28E22BDB003F1D9D /* SubsetsView.swift in Sources */,
 				2C42626528E22B78003F1D9D /* TreeDFSView.swift in Sources */,

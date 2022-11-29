@@ -60,6 +60,7 @@ struct FSView: View {
                     }
                 }
                 .navigationBarHidden(true)
+                
 
             }
             
