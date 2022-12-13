@@ -6,15 +6,22 @@
 //
 
 import SwiftUI
+import Charts
 let userDefaults = UserDefaults.standard
 
 struct StatsView: View {
     @StateObject var data = DataModel()
+    @AppStorage("login") private var login: Bool = false
     @EnvironmentObject  var userAuth: UserAuth
     @AppStorage("username") private var username: String = ""
     @State private var showingSheet = false
     let stats: Stats?
+    let subs: [submissions]
     @State private var easyPerc: Float = 1.0
+    var responseMessages = ["200": 12]
+    
+    
+    
     
     
     
@@ -123,20 +130,51 @@ struct StatsView: View {
                     }
                     
                 }
-                
-                Text("Acceptance Rate: "+"\(stats?.acceptanceRate ?? 0.0)" + "%")
+                ProgressView("Acceptance Rate: \(Int(stats?.acceptanceRate ?? 0)) %", value: stats?.acceptanceRate ?? 0.0, total: 100)
                     .padding(.top, 50)
+
+                Text("Submission Activity")
+                    .padding(.top, 130)
+                    .frame(alignment: .leading)
+                VStack{
+                    
+                    if #available(iOS 16.0, *) {
+                        Chart(subs){ item in
+                            BarMark(x: .value("Month", item.subDay, unit: .month), y: .value("Subs", item.sub))
+                            
+                        }
+                        .frame(height: 200)
+                        .padding(.top, 380)
+                        
+                    } else {
+                        // Fallback on earlier versions
+                        
+                    }
+                }
                     
                     
                 
             }
             .navigationBarTitle(username+"'s Stats")
+            .toolbar{
+                ToolbarItem(placement: .navigationBarTrailing){
+                    Button(action: {
+                        login = false
+                    }, label: {
+                        Text("Log out")
+                    })
+                }
+            }
+        }
+        .onAppear(){
+            
+            print(stats?.submissionCalendar.values ?? 0)
+            
         }
         
-        
-                              
-            
+    
     }
+    
                             
             
     }

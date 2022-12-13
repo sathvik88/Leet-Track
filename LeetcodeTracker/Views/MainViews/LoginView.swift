@@ -22,10 +22,13 @@ struct LoginView: View {
     var body: some View {
         
         if login{
-            
-            StatsView( stats: data.stats)
+                        
+            StatsView( stats: data.stats, subs: data.subs)
                 .task {
                     await data.loadStats(name: username)
+                    print(data.subs)
+                    
+                    
                 }
         } else{
             ZStack{
@@ -45,6 +48,7 @@ struct LoginView: View {
                         DispatchQueue.main.asyncAfter(deadline: .now() + 1){
                             login = true
                         }
+                        
                         isFocused = false
                     }
                     .foregroundColor(.white)
@@ -53,27 +57,12 @@ struct LoginView: View {
                     .cornerRadius(10)
                     Button("Register"){
                         openURL(URL(string: "https://leetcode.com/accounts/signup/")!)
+                        
                     }
                     .padding()
                     
                 }
             }
-
-
-//                VStack {
-//                    TextField("Username", text: $username)
-//                        .textFieldStyle(RoundedBorderTextFieldStyle())
-//                        .focused($isFocused)
-//                    Button("Go") {
-//                        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-//                            login = true
-//                        }
-//
-//                        isFocused = false
-//
-//                    }
-//
-//                }
         }
         
     }

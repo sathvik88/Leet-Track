@@ -12,10 +12,12 @@ import Combine
 final class DataModel: ObservableObject{
     @Published var jsonData = [LeetCodeContent]()
     @Published var stats: Stats?
+    @Published var subs = [submissions]()
     @Published var username: String = ""
     var archEnemies = [Int: Int]()
     @Published var showingFaves = true
     @Published var savedItems: Set<String>
+    
     var filteredItems: [LeetCodeContent] {
         if showingFaves{
             return jsonData.filter {
@@ -57,19 +59,40 @@ final class DataModel: ObservableObject{
         }.resume()
         
     }
+
     func loadStats(name: String) async{
-        
-        guard let url = URL(string: "https://leetcode-stats-api.herokuapp.com/\(name)")
+        var days = 0
+        guard let url = URL(string: "https://stats-production-a126.up.railway.app/\(name)")
         else{return}
         do{
             let (data, response) = try await URLSession.shared.data(from: url)
             let res = try JSONDecoder().decode(Stats.self, from: data)
             DispatchQueue.main.async{
                 self.stats = res
+                
             }
+            
+            //Submission activity (fix with dates later)
+            for (key,val) in res.submissionCalendar{
+                DispatchQueue.main.async{
+//                    if(index <= 30){
+//
+//                    }
+                    //days = Int(key) ?? 0
+                    
+                    
+                    self.subs.append(submissions(subDay: Date(timeIntervalSince1970: Double(key) ?? 0.0), sub: val))
+                    
+                    
+                }
+                
+                
+            }
+
+                        
         }
         catch{
-            print("Error decoding")
+            print("Network Error")
         }
     }
     

@@ -6,7 +6,6 @@
 //
 
 import Foundation
-
 struct Stats: Codable, Identifiable{
     let id = UUID()
     let status: String
@@ -23,5 +22,13 @@ struct Stats: Codable, Identifiable{
     let ranking: Int
     let contributionPoints: Int
     let reputation: Int
+    let submissionCalendar: [String: Int]
+    
     
 }
+struct submissions: Identifiable{
+    let id = UUID()
+    let subDay: Date
+    let sub: Int
+}
+
