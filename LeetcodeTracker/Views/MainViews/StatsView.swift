@@ -16,7 +16,7 @@ struct StatsView: View {
     @AppStorage("username") private var username: String = ""
     @State private var showingSheet = false
     let stats: Stats?
-    let subs: [submissions]
+    var subs: [submissions]
     @State private var easyPerc: Float = 1.0
     var responseMessages = ["200": 12]
     
@@ -146,6 +146,7 @@ struct StatsView: View {
                         .frame(height: 200)
                         .padding(.top, 380)
                         
+                        
                     } else {
                         // Fallback on earlier versions
                         
@@ -160,16 +161,12 @@ struct StatsView: View {
                 ToolbarItem(placement: .navigationBarTrailing){
                     Button(action: {
                         login = false
+                        
                     }, label: {
                         Text("Log out")
                     })
                 }
             }
-        }
-        .onAppear(){
-            
-            print(stats?.submissionCalendar.values ?? 0)
-            
         }
         
     

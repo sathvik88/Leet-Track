@@ -25,8 +25,8 @@ struct LoginView: View {
                         
             StatsView( stats: data.stats, subs: data.subs)
                 .task {
+                    data.subs.removeAll()
                     await data.loadStats(name: username)
-                    print(data.subs)
                     
                     
                 }
@@ -47,6 +47,7 @@ struct LoginView: View {
                     Button("Login"){
                         DispatchQueue.main.asyncAfter(deadline: .now() + 1){
                             login = true
+                            data.subs.removeAll()
                         }
                         
                         isFocused = false

@@ -80,9 +80,7 @@ final class DataModel: ObservableObject{
 //                    }
                     //days = Int(key) ?? 0
                     
-                    
                     self.subs.append(submissions(subDay: Date(timeIntervalSince1970: Double(key) ?? 0.0), sub: val))
-                    
                     
                 }
                 
