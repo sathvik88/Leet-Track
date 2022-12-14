@@ -61,7 +61,7 @@ final class DataModel: ObservableObject{
     }
 
     func loadStats(name: String) async{
-        var days = 0
+        
         guard let url = URL(string: "https://stats-production-a126.up.railway.app/\(name)")
         else{return}
         do{
@@ -75,10 +75,6 @@ final class DataModel: ObservableObject{
             //Submission activity (fix with dates later)
             for (key,val) in res.submissionCalendar{
                 DispatchQueue.main.async{
-//                    if(index <= 30){
-//
-//                    }
-                    //days = Int(key) ?? 0
                     
                     self.subs.append(submissions(subDay: Date(timeIntervalSince1970: Double(key) ?? 0.0), sub: val))
                     

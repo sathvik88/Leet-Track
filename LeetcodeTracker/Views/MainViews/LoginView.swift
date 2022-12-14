@@ -24,12 +24,7 @@ struct LoginView: View {
         if login{
                         
             StatsView( stats: data.stats, subs: data.subs)
-                .task {
-                    data.subs.removeAll()
-                    await data.loadStats(name: username)
-                    
-                    
-                }
+                
         } else{
             ZStack{
                 
@@ -45,9 +40,13 @@ struct LoginView: View {
                         .background(Color.black.opacity(0.05))
                         .cornerRadius(10)
                     Button("Login"){
+                        Task{
+                            await data.loadStats(name: username)
+                        }
+                        
                         DispatchQueue.main.asyncAfter(deadline: .now() + 1){
                             login = true
-                            data.subs.removeAll()
+                            
                         }
                         
                         isFocused = false
