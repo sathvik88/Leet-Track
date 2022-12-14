@@ -39,6 +39,9 @@ struct LoginView: View {
                         .frame(width: 300, height: 50)
                         .background(Color.black.opacity(0.05))
                         .cornerRadius(10)
+                        .onChange(of: username) { newValue in
+                                        username = newValue.replacingOccurrences(of: " ", with: "")
+                                    }
                     Button("Login"){
                         Task{
                             await data.loadStats(name: username)
