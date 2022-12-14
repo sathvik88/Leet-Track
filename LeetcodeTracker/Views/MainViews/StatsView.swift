@@ -14,23 +14,13 @@ struct StatsView: View {
     @AppStorage("login") private var login: Bool = false
     @EnvironmentObject  var userAuth: UserAuth
     @AppStorage("username") private var username: String = ""
-    @State private var showingSheet = false
     let stats: Stats?
     @State var subs: [submissions]
-    @State var animate: Bool = false
-    @State private var easyPerc: Float = 1.0
-    var responseMessages = ["200": 12]
-    
-    
-    
-    
     
     
     var body: some View {
         NavigationView{
             ZStack{
-                
-                
                 ZStack{
                     Circle()
                         .stroke(lineWidth: 5)
@@ -142,20 +132,16 @@ struct StatsView: View {
                     if #available(iOS 16.0, *) {
                         Chart(data.subs){ item in
                             BarMark(x: .value("Month", item.subDay, unit: .month), y: .value("Subs", item.sub))
-                                
-                            
+   
                         }
                         .frame(height: 200)
                         .padding(.top, 380)
                            
                     } else {
-                        // Fallback on earlier versions
-                        
+                        // Don't display chart
                     }
                 }
-                    
-                    
-                
+
             }
             .onAppear{
                 Task{
@@ -200,8 +186,8 @@ struct StatsView: View {
         
     }
     
-            
-    }
+    
+}
 
 
 
