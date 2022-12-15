@@ -151,6 +151,7 @@ struct StatsView: View {
                     }
   
                 }
+                UIApplication.shared.applicationIconBadgeNumber = 0
                 
             }
             .navigationBarTitle(username+"'s Stats")
