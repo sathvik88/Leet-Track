@@ -7,15 +7,12 @@
 
 import SwiftUI
 import Charts
-let userDefaults = UserDefaults.standard
 
 struct StatsView: View {
     @StateObject var data = DataModel()
     @AppStorage("login") private var login: Bool = false
-    @EnvironmentObject  var userAuth: UserAuth
     @AppStorage("username") private var username: String = ""
     let stats: Stats?
-    @State var subs: [submissions]
     
     
     var body: some View {

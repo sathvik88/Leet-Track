@@ -20,6 +20,8 @@ struct BubbleSortView: View {
                             .scaledToFit()
                             .cornerRadius(10)
                             .padding()
+                        
+                        
                         HStack{
                             Text("Time Complexity: ")
                                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
@@ -38,15 +40,10 @@ struct BubbleSortView: View {
                                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
                             
                         }
-                        
-                        
-                        
-                        
-                        
+
                     }
                 }
                 .navigationBarHidden(true)
-                
 
             }
             

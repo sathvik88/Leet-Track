@@ -35,7 +35,7 @@ struct DSAlgoView: View {
                                myPatterns(name: "Topological sort", destination: AnyView(TopologicalView()))
     ]
     let sortingViews: [mySortingViews] = [ mySortingViews(name: "Bubble Sort", destination: AnyView(BubbleSortView())),
-                               mySortingViews(name: "Two Pointers", destination: AnyView(TwoPointersView())),
+                               mySortingViews(name: "Quick Sort", destination: AnyView(QuickSortView())),
                                mySortingViews(name: "Fast and Slow Pointers", destination: AnyView(FSView())),
                                mySortingViews(name: "Merge Intervals", destination: AnyView(MergeIntervalsView())),
                                mySortingViews(name: "Cyclic Sort", destination: AnyView(CyclicSortView())),

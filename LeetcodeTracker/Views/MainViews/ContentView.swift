@@ -34,24 +34,21 @@ struct ContentView: View {
                             
                             Spacer()
                             
-                            VStack(alignment: .center){
-                                
-                                if(list.difficulty == "Easy"){
-                                    Text(list.difficulty)
-                                        .foregroundColor(.green)
-                                        .fontWeight(.medium)
-                                }
-                                else if(list.difficulty == "Medium"){
-                                    Text(list.difficulty)
-                                        .foregroundColor(.orange)
-                                        .fontWeight(.medium)
-                                }
-                                else{
-                                    Text(list.difficulty)
-                                        .foregroundColor(.red)
-                                        .fontWeight(.medium)
-                                }
-                                
+                            if(list.difficulty == "Easy"){
+                                Text(list.difficulty)
+                                    .foregroundColor(.green)
+                                    .fontWeight(.medium)
+                                    
+                            }
+                            else if(list.difficulty == "Medium"){
+                                Text(list.difficulty)
+                                    .foregroundColor(.orange)
+                                    .fontWeight(.medium)
+                            }
+                            else{
+                                Text(list.difficulty)
+                                    .foregroundColor(.red)
+                                    .fontWeight(.medium)
                             }
                             Spacer()
                             Image(systemName: data.contains(list) ? "star.fill" : "star")

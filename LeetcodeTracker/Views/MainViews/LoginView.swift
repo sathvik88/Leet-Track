@@ -23,7 +23,7 @@ struct LoginView: View {
         
         if login{
                         
-            StatsView( stats: data.stats, subs: data.subs)
+            StatsView( stats: data.stats)
                 
         } else{
             ZStack{
