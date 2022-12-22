@@ -36,18 +36,12 @@ struct DSAlgoView: View {
     ]
     let sortingViews: [mySortingViews] = [ mySortingViews(name: "Bubble Sort", destination: AnyView(BubbleSortView())),
                                mySortingViews(name: "Quick Sort", destination: AnyView(QuickSortView())),
-                               mySortingViews(name: "Fast and Slow Pointers", destination: AnyView(FSView())),
-                               mySortingViews(name: "Merge Intervals", destination: AnyView(MergeIntervalsView())),
-                               mySortingViews(name: "Cyclic Sort", destination: AnyView(CyclicSortView())),
-                               mySortingViews(name: "In-Place Reversal of Linked List", destination: AnyView(InPlaceView())),
-                               mySortingViews(name: "Tree BFS", destination: AnyView(TreeBFSView())),
-                               mySortingViews(name: "Tree DFS", destination: AnyView(TreeDFSView())),
-                               mySortingViews(name: "Two Heaps", destination: AnyView(TwoHeapsView())),
-                               mySortingViews(name: "Subsets", destination: AnyView(SubsetsView())),
-                               mySortingViews(name: "Modified Binary Search", destination: AnyView(ModifiedBinaryView())),
-                               mySortingViews(name: "Top K Elements", destination: AnyView(TopKView())),
-                               mySortingViews(name: "K-way Merge", destination: AnyView(KWayView())),
-                               mySortingViews(name: "Topological sort", destination: AnyView(TopologicalView()))
+                               mySortingViews(name: "Top-down Merge Sort", destination: AnyView(MergeSortView())),
+                               mySortingViews(name: "Bottom-up Merge Sort", destination: AnyView(MergeIntervalsView())),
+                               mySortingViews(name: "Heap Sort", destination: AnyView(HeapSortView())),
+                               mySortingViews(name: "Selection Sort", destination: AnyView(InPlaceView())),
+                               mySortingViews(name: "Insertion Sort", destination: AnyView(TreeBFSView())),
+                               
     ]
     var body: some View {
         

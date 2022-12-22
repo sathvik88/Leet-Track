@@ -42,7 +42,9 @@ struct LoginView: View {
                         .onChange(of: username) { newValue in
                                         username = newValue.replacingOccurrences(of: " ", with: "")
                                     }
+                    
                     Button("Login"){
+                        
                         Task{
                             await data.loadStats(name: username)
                         }

@@ -29,6 +29,10 @@
 		2C4E0E4F294AE02100EAD778 /* bubbleSort.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2C4E0E4E294AE02100EAD778 /* bubbleSort.gif */; };
 		2C4E0E51294BC78000EAD778 /* QuickSortView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4E0E50294BC78000EAD778 /* QuickSortView.swift */; };
 		2C4E0E53294BC83F00EAD778 /* quickSort.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2C4E0E52294BC83F00EAD778 /* quickSort.gif */; };
+		2C4E0E5529523DBD00EAD778 /* MergeSort.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2C4E0E5429523DBC00EAD778 /* MergeSort.gif */; };
+		2C4E0E5729523DD900EAD778 /* MergeSortView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4E0E5629523DD900EAD778 /* MergeSortView.swift */; };
+		2C4E0E592952447700EAD778 /* heapSort.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2C4E0E582952447700EAD778 /* heapSort.gif */; };
+		2C4E0E5B295244CD00EAD778 /* HeapSortView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4E0E5A295244CD00EAD778 /* HeapSortView.swift */; };
 		2C88320D2918254700D35F96 /* UserStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C88320C2918254700D35F96 /* UserStats.swift */; };
 		2C8832112919600800D35F96 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8832102919600800D35F96 /* LoginView.swift */; };
 		2C9787A728F9E6D900388CF4 /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9787A628F9E6D900388CF4 /* StatsView.swift */; };
@@ -90,6 +94,10 @@
 		2C4E0E4E294AE02100EAD778 /* bubbleSort.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = bubbleSort.gif; sourceTree = "<group>"; };
 		2C4E0E50294BC78000EAD778 /* QuickSortView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickSortView.swift; sourceTree = "<group>"; };
 		2C4E0E52294BC83F00EAD778 /* quickSort.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = quickSort.gif; sourceTree = "<group>"; };
+		2C4E0E5429523DBC00EAD778 /* MergeSort.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = MergeSort.gif; sourceTree = "<group>"; };
+		2C4E0E5629523DD900EAD778 /* MergeSortView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MergeSortView.swift; sourceTree = "<group>"; };
+		2C4E0E582952447700EAD778 /* heapSort.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = heapSort.gif; sourceTree = "<group>"; };
+		2C4E0E5A295244CD00EAD778 /* HeapSortView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeapSortView.swift; sourceTree = "<group>"; };
 		2C88320C2918254700D35F96 /* UserStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStats.swift; sourceTree = "<group>"; };
 		2C8832102919600800D35F96 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		2C9787A628F9E6D900388CF4 /* StatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
@@ -192,6 +200,8 @@
 			children = (
 				2C4E0E472936820400EAD778 /* BubbleSortView.swift */,
 				2C4E0E50294BC78000EAD778 /* QuickSortView.swift */,
+				2C4E0E5629523DD900EAD778 /* MergeSortView.swift */,
+				2C4E0E5A295244CD00EAD778 /* HeapSortView.swift */,
 			);
 			path = "Sort Views";
 			sourceTree = "<group>";
@@ -199,6 +209,8 @@
 		2C4E0E4D294ADFFF00EAD778 /* Gifs */ = {
 			isa = PBXGroup;
 			children = (
+				2C4E0E5429523DBC00EAD778 /* MergeSort.gif */,
+				2C4E0E582952447700EAD778 /* heapSort.gif */,
 				2C4E0E52294BC83F00EAD778 /* quickSort.gif */,
 				2C4E0E4E294AE02100EAD778 /* bubbleSort.gif */,
 			);
@@ -420,10 +432,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C4E0E53294BC83F00EAD778 /* quickSort.gif in Resources */,
+				2C4E0E5529523DBD00EAD778 /* MergeSort.gif in Resources */,
 				2CE25C442891E481009FABA7 /* Preview Assets.xcassets in Resources */,
 				2CE25C412891E481009FABA7 /* Assets.xcassets in Resources */,
 				2C4E0E4F294AE02100EAD778 /* bubbleSort.gif in Resources */,
 				2CE25C6C2891E4A1009FABA7 /* leetcode.json in Resources */,
+				2C4E0E592952447700EAD778 /* heapSort.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -491,6 +505,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C42626328E22B6C003F1D9D /* TreeBFSView.swift in Sources */,
+				2C4E0E5729523DD900EAD778 /* MergeSortView.swift in Sources */,
 				2CE25C462891E481009FABA7 /* Persistence.swift in Sources */,
 				2CE25C492891E481009FABA7 /* LeetcodeTracker.xcdatamodeld in Sources */,
 				2CE25C3F2891E47F009FABA7 /* ContentView.swift in Sources */,
@@ -509,6 +524,7 @@
 				2C19AE51291984EC00701707 /* UserAuth.swift in Sources */,
 				2C42626128E22B5A003F1D9D /* InPlaceView.swift in Sources */,
 				2C42625F28E22B49003F1D9D /* CyclicSortView.swift in Sources */,
+				2C4E0E5B295244CD00EAD778 /* HeapSortView.swift in Sources */,
 				2C42625928E22AB3003F1D9D /* FSView.swift in Sources */,
 				2C42625D28E22B21003F1D9D /* MergeIntervalsView.swift in Sources */,
 				2C42625728E2299C003F1D9D /* TwoPointersView.swift in Sources */,

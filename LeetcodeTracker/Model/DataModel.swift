@@ -62,7 +62,7 @@ final class DataModel: ObservableObject{
 
     func loadStats(name: String) async{
         
-        guard let url = URL(string: "https://stats-production-a126.up.railway.app/\(name)")
+        guard let url = URL(string: "https://leetcode-stats-api.herokuapp.com/\(name)")
         else{return}
         do{
             let (data, response) = try await URLSession.shared.data(from: url)
