@@ -36,11 +36,10 @@ struct DSAlgoView: View {
     ]
     let sortingViews: [mySortingViews] = [ mySortingViews(name: "Bubble Sort", destination: AnyView(BubbleSortView())),
                                mySortingViews(name: "Quick Sort", destination: AnyView(QuickSortView())),
-                               mySortingViews(name: "Top-down Merge Sort", destination: AnyView(MergeSortView())),
-                               mySortingViews(name: "Bottom-up Merge Sort", destination: AnyView(MergeIntervalsView())),
+                               mySortingViews(name: "Merge Sort", destination: AnyView(MergeSortView())),
                                mySortingViews(name: "Heap Sort", destination: AnyView(HeapSortView())),
-                               mySortingViews(name: "Selection Sort", destination: AnyView(InPlaceView())),
-                               mySortingViews(name: "Insertion Sort", destination: AnyView(TreeBFSView())),
+                               mySortingViews(name: "Selection Sort", destination: AnyView(SelectionSortView())),
+                               mySortingViews(name: "Insertion Sort", destination: AnyView(InsertionSortView())),
                                
     ]
     var body: some View {

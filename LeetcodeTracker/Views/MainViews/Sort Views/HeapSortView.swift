@@ -33,7 +33,7 @@ struct HeapSortView: View {
                         HStack{
                             Text("Time Complexity: ")
                                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
-                                .font(.system(size: 20, weight: .bold, design: .default))
+                                .font(.system(size: 17, weight: .bold, design: .default))
                                 .padding(.leading,10)
                             Text("O(nlog(n)")
                                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
@@ -42,7 +42,7 @@ struct HeapSortView: View {
                         HStack{
                             Text("Space Complexity: ")
                                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
-                                .font(.system(size: 20, weight: .bold, design: .default))
+                                .font(.system(size: 17, weight: .bold, design: .default))
                                 .padding(.leading,10)
                             Text("O(1)")
                                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)

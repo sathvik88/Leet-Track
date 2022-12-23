@@ -14,9 +14,18 @@ struct BubbleSortView: View {
                 VStack{
                     ScrollView{
                         
-                        Text("Bubble Sort is the simplest sorting algorithm that works by repeatedly swapping the adjacent elements if they are in the wrong order. This algorithm is not suitable for large data sets as its average and worst-case time complexity is quite high.")
+                        Text("Bubble sort is a simple sorting algorithm that works by repeatedly iterating through the elements of a list and swapping adjacent elements that are out of order. The algorithm repeats this process until the list is sorted.")
+                            .padding()
+                        Text("Overall, bubble sort is not a particularly efficient sorting algorithm, especially when compared to more advanced algorithms such as quicksort or merge sort. However, it can be useful in certain situations where the list to be sorted is small or partially sorted, as it has a relatively low overhead and is easy to implement.")
                             .padding()
                         SwiftUIGIFPlayerView(gifName: "bubbleSort")
+                            .scaledToFit()
+                            .cornerRadius(10)
+                            .padding()
+                        Text("Python implementation")
+                            .font(.headline)
+                        Image("BubbleSort")
+                            .resizable()
                             .scaledToFit()
                             .cornerRadius(10)
                             .padding()
@@ -25,7 +34,7 @@ struct BubbleSortView: View {
                         HStack{
                             Text("Time Complexity: ")
                                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
-                                .font(.system(size: 20, weight: .bold, design: .default))
+                                .font(.system(size: 17, weight: .bold, design: .default))
                                 .padding(.leading,10)
                             Text("O(n^2)")
                                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
@@ -34,7 +43,7 @@ struct BubbleSortView: View {
                         HStack{
                             Text("Space Complexity: ")
                                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
-                                .font(.system(size: 20, weight: .bold, design: .default))
+                                .font(.system(size: 17, weight: .bold, design: .default))
                                 .padding(.leading,10)
                             Text("O(1)")
                                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)

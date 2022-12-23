@@ -1,32 +1,35 @@
 //
-//  QuickSortView.swift
+//  SelectionSortView.swift
 //  LeetcodeTracker
 //
-//  Created by Sathvik Konuganti on 12/15/22.
+//  Created by Sathvik Konuganti on 12/22/22.
 //
 
 import SwiftUI
 import SSSwiftUIGIFView
-struct QuickSortView: View {
+struct SelectionSortView: View {
     var body: some View {
         ZStack{
             NavigationView{
                 VStack{
                     ScrollView{
                         
-                        Text("Quicksort is a divide-and-conquer sorting algorithm that works by selecting a pivot element from the list and partitioning the other elements into two sublists based on whether they are less than or greater than the pivot. The algorithm then recursively sorts the sublists.")
+                        Text("Selection sort is a simple sorting algorithm that works by repeatedly selecting the smallest element from the unsorted portion of the list and placing it at the end of the sorted portion of the list.")
                             .padding()
-                        SwiftUIGIFPlayerView(gifName: "quickSort")
+                        Text("It's worth noting that selection sort has the advantage of being an in-place sorting algorithm, which means it does not require any additional space beyond the input list to sort the list. This can be useful in cases where space is limited or memory allocation is expensive. However, selection sort has a relatively slow time complexity compared to other sorting algorithms, so it may not be the best choice for large lists or lists that need to be sorted frequently.")
+                            .padding()
+                        SwiftUIGIFPlayerView(gifName: "selectionSort")
                             .scaledToFit()
-                            .padding([.top,.bottom],-100)
+                            .cornerRadius(10)
+                            .padding([.bottom],-100)
                         Text("Python implementation")
                             .font(.headline)
-                        Image("quickSort")
+                            .padding()
+                        Image("SelectionSort")
                             .resizable()
                             .scaledToFit()
                             .cornerRadius(10)
                             .padding()
-                        
                         
                         
                         HStack{
@@ -34,7 +37,7 @@ struct QuickSortView: View {
                                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
                                 .font(.system(size: 17, weight: .bold, design: .default))
                                 .padding(.leading,10)
-                            Text("O(nlogn)")
+                            Text("O(n^2)")
                                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
                             
                         }
@@ -43,11 +46,11 @@ struct QuickSortView: View {
                                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
                                 .font(.system(size: 17, weight: .bold, design: .default))
                                 .padding(.leading,10)
-                            Text("O(n)")
+                            Text("O(1)")
                                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
                             
                         }
-                        
+
                     }
                 }
                 .navigationBarHidden(true)
@@ -58,8 +61,8 @@ struct QuickSortView: View {
     }
 }
 
-struct QuickSortView_Previews: PreviewProvider {
+struct SelectionSortView_Previews: PreviewProvider {
     static var previews: some View {
-        QuickSortView()
+        SelectionSortView()
     }
 }
