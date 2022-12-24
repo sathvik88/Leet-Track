@@ -13,7 +13,6 @@ struct BubbleSortView: View {
             NavigationView{
                 VStack{
                     ScrollView{
-                        
                         Text("Bubble sort is a simple sorting algorithm that works by repeatedly iterating through the elements of a list and swapping adjacent elements that are out of order. The algorithm repeats this process until the list is sorted.")
                             .padding()
                         Text("Overall, bubble sort is not a particularly efficient sorting algorithm, especially when compared to more advanced algorithms such as quicksort or merge sort. However, it can be useful in certain situations where the list to be sorted is small or partially sorted, as it has a relatively low overhead and is easy to implement.")

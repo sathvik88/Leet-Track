@@ -17,6 +17,7 @@ struct TabViewScreen: View {
                 .tabItem{
                     Image(systemName: "house")
                     Text("Home")
+                    
                 }
             LoginView()
                 .tabItem{
@@ -34,6 +35,7 @@ struct TabViewScreen: View {
             if !notification{
                 NotificationManager.instance.scheduelNotification()
             }
+            notification = true
             
             NotificationManager.instance.requestAuthorization()
             UIApplication.shared.applicationIconBadgeNumber = 0
