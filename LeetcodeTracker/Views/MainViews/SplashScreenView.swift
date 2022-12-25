@@ -12,13 +12,31 @@ struct SplashScreenView: View {
     @State private var size = 0.8
     @State private var opacity = 0.5
     var body: some View {
-        VStack{
+        if isActive{
+            TabViewScreen()
+        } else{
             VStack{
-                Image(systemName: "chevron.left.forwardslash.chevron.right")
-                    .font(.system(size:80))
-                Text("Smart Coders")
-                    .font(.system(size: 30))
+                VStack{
+                    Image(systemName: "chevron.left.forwardslash.chevron.right")
+                        .font(.system(size:80))
+                    Text("Leet Track")
+                        .font(.system(size: 30))
+                }
+                .scaleEffect(size)
+                .opacity(opacity)
+                .onAppear{
+                    withAnimation(.easeIn(duration: 1.2)){
+                        self.size = 0.9
+                        self.opacity = 1.0
+                    }
+                }
             }
+            .onAppear{
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2.0){
+                    self.isActive = true
+                }
+            }
+            
         }
     }
 }

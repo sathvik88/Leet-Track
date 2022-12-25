@@ -55,7 +55,7 @@ struct LeetcodeTrackerApp: App {
 
     var body: some Scene {
         WindowGroup {
-            TabViewScreen()
+            SplashScreenView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
                 .environmentObject(userAuth)
         }
