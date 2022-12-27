@@ -27,6 +27,7 @@ struct ContentView: View {
                                 UNUserNotificationCenter.current().removeAllDeliveredNotifications()
                                 UNUserNotificationCenter.current().setBadgeCount(0)
                                 
+                                
                             } label: {
                                 Text(list.question)
                                     .fontWeight(.medium)

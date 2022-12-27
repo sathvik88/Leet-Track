@@ -153,7 +153,15 @@ struct StatsView: View {
                     }
                     UIApplication.shared.applicationIconBadgeNumber = 0
                     
+                    UIDevice.current.setValue(UIInterfaceOrientation.portrait.rawValue, forKey: "orientation") // Forcing the rotation to portrait
+                    AppDelegate.orientationLock = .portrait
+                    
+                    
                 }
+                .onDisappear {
+                    AppDelegate.orientationLock = .all // Unlocking the rotation when leaving the view
+                }
+                
                 .navigationBarTitle(username+"'s Stats")
                 
                 //Log user out

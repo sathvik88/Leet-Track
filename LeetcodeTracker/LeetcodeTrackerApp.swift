@@ -8,19 +8,25 @@
 import SwiftUI
 
 @main
+
 struct LeetcodeTrackerApp: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     @StateObject private var userAuth = UserAuth()
     let persistenceController = PersistenceController.shared
     let center = UNUserNotificationCenter.current()
     
-    init(){
-
+    
+    class AppDelegate: NSObject, UIApplicationDelegate {
+        static var orientationLock = UIInterfaceOrientationMask.portrait
+        func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
+            return AppDelegate.orientationLock
+        }
     }
     
     
-    
-    
-    
+    init(){
+
+    }
 
     var body: some Scene {
         WindowGroup {
