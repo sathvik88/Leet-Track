@@ -8,7 +8,7 @@
 import SwiftUI
 import CoreData
 struct TabViewScreen: View {
-    @AppStorage("notication") private var notification: Bool = false
+    @State var notification: Bool = false
     
     
     var body: some View {
@@ -32,13 +32,15 @@ struct TabViewScreen: View {
                 }
         }
         .onAppear(){
-            if !notification{
+            if notification == false{
                 NotificationManager.instance.scheduelNotification()
+                NotificationManager.instance.requestAuthorization()
+                print("Scheduled")
+                print(notification)
             }
-            notification = true
-            
-            NotificationManager.instance.requestAuthorization()
+            self.notification = true
             UIApplication.shared.applicationIconBadgeNumber = 0
+            
            
         }
     }

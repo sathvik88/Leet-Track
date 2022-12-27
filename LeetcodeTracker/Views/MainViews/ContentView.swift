@@ -25,9 +25,8 @@ struct ContentView: View {
                             Button {
                                 openURL(URL(string: list.solution)!)
                                 UNUserNotificationCenter.current().removeAllDeliveredNotifications()
-                                UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
-//                                UNUserNotificationCenter
                                 UNUserNotificationCenter.current().setBadgeCount(0)
+                                
                             } label: {
                                 Text(list.question)
                                     .fontWeight(.medium)
