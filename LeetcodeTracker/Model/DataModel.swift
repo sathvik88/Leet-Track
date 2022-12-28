@@ -14,7 +14,6 @@ final class DataModel: ObservableObject{
     @Published var stats: Stats?
     @Published var subs = [submissions]()
     @Published var username: String = ""
-    var archEnemies = [Int: Int]()
     @Published var showingFaves = true
     @Published var savedItems: Set<String>
     
@@ -30,12 +29,10 @@ final class DataModel: ObservableObject{
 
     private var db = Database()
     
-    
     init(){
         self.savedItems = db.load()
         load()
- 
-        
+
     }
     
     func load(){
@@ -75,26 +72,16 @@ final class DataModel: ObservableObject{
             //Submission activity (fix with dates later)
             for (key,val) in res.submissionCalendar{
                 DispatchQueue.main.async{
-                    
                     self.subs.append(submissions(subDay: Date(timeIntervalSince1970: Double(key) ?? 0.0), sub: val))
-                    
                 }
-                
-                
+ 
             }
-
-                        
         }
         catch{
             print("Network Error")
         }
     }
-    
-   
-    
-    
-    
-    
+
     func sortFaves() {
         withAnimation{
             showingFaves.toggle()
@@ -113,8 +100,5 @@ final class DataModel: ObservableObject{
         }
         db.save(questions: savedItems)
     }
-    
-    
-    
-        
+   
 }
