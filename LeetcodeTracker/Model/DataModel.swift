@@ -39,8 +39,8 @@ final class DataModel: ObservableObject{
     }
     
     func load(){
-        let path = Bundle.main.path(forResource: "leetcode", ofType: "json")
-        let url = URL(fileURLWithPath: path!)
+        guard let url = URL(string: "https://sathvik88.github.io/LeetcodeQuestionsAPI/leetcode.json")
+        else{return}
         
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             do {

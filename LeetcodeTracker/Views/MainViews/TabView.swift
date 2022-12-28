@@ -33,8 +33,8 @@ struct TabViewScreen: View {
         }
         .onAppear(){
             if notification == false{
-                NotificationManager.instance.scheduelNotification()
                 NotificationManager.instance.requestAuthorization()
+                NotificationManager.instance.scheduelNotification()
                 print("Scheduled")
                 print(notification)
             }

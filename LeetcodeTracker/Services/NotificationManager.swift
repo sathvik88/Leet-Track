@@ -10,6 +10,7 @@ import UserNotifications
 class NotificationManager{
     
     static let instance = NotificationManager() //Singleton
+    @Published var pendingRequests: [UNNotificationRequest] = []
     
     func requestAuthorization(){
         let options: UNAuthorizationOptions = [.alert, .sound, .badge]
@@ -32,8 +33,8 @@ class NotificationManager{
         content.badge = 1
         
         var dateComponents = DateComponents()
-        dateComponents.hour = 13
-        dateComponents.minute = 00
+        dateComponents.hour = 15
+        dateComponents.minute = 54
         
         let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
         
@@ -42,5 +43,7 @@ class NotificationManager{
             content: content,
             trigger: trigger)
         UNUserNotificationCenter.current().add(request)
+        
     }
+
 }
