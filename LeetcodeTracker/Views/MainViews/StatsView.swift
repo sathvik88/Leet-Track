@@ -16,7 +16,7 @@ struct StatsView: View {
     
     
     var body: some View {
-        if data.stats?.totalEasy == 0{
+        if Float(data.stats?.totalSolved ?? 0)/Float(data.stats?.totalQuestions ?? 1) == 0{
             Text("API is currently down. Please check back later!")
         }else{
             NavigationView{

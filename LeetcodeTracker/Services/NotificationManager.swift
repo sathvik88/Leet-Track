@@ -32,9 +32,10 @@ class NotificationManager{
         content.sound = .default
         content.badge = 1
         
+        //Send notification at 13:00 (1:00 PM) everyday
         var dateComponents = DateComponents()
-        dateComponents.hour = 18
-        dateComponents.minute = 07
+        dateComponents.hour = 13
+        dateComponents.minute = 00
         
         let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
         

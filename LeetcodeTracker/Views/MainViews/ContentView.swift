@@ -68,6 +68,9 @@ struct ContentView: View {
                     }
                 })
             }
+            .refreshable {
+                data.load()
+            }
             
         }
         .searchable(text: $searchText)
