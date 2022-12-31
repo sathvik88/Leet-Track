@@ -1,5 +1,8 @@
-# Smart Coder
-Smart Coder is an application that allows users to help study the fundamentals of Algorithms and Data Sctructures. The app conists of a Home page where the user is able to view multiple questions from Leetcode and see the optimal solution as well as favorite certain questions and search for different question within the table. Users are also able to connect their Leetcode account to the app where they are able to see a visually appealing representation of their stats (the number of questions they have solved in Leetcode). Lastly, the app consists of a Learning page where the user is able to study different coding patterns and referesh on core algorithms and data sctructures fundamentals through the different learning topics. 
+# Leet Track
+Leet Track is an application that allows users to help study the fundamentals of Algorithms and Data Sctructure as well helping the user be able to track their LeetCode process and be able to quickly look at solutions for problems that they are reviewing. Users will also be able to login to LeetCode and look at their account statistics.
+
+Leet Track is now in beta!
+Download: https://testflight.apple.com/join/gH4PFwon
 
 
 
