@@ -16,6 +16,7 @@ final class DataModel: ObservableObject{
     @Published var username: String = ""
     @Published var showingFaves = true
     @Published var savedItems: Set<String>
+    @Published var isAPIDown = false
     
     var filteredItems: [LeetCodeContent] {
         if showingFaves{
@@ -79,6 +80,7 @@ final class DataModel: ObservableObject{
         }
         catch{
             print("Network Error")
+            isAPIDown = true
         }
     }
 

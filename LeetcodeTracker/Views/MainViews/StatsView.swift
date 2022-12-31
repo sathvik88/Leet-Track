@@ -16,8 +16,9 @@ struct StatsView: View {
     
     
     var body: some View {
-        if Float(data.stats?.totalSolved ?? 0)/Float(data.stats?.totalQuestions ?? 1) == 0{
-            Text("API is currently down. Please check back later!")
+        if data.isAPIDown{
+            Text("API is currently down, please check back later!")
+            
         }else{
             NavigationView{
                 ZStack{
@@ -72,6 +73,7 @@ struct StatsView: View {
                                 .animation(.easeOut, value: (Float(data.stats?.easySolved ?? 0)/Float(data.stats?.totalEasy ?? 1)))
                         }
                         
+                        //Medium Circle
                         ZStack{
                             Circle()
                                 .stroke(lineWidth: 5)
@@ -97,6 +99,7 @@ struct StatsView: View {
                                 .rotationEffect(.degrees(-90))
                                 .animation(.easeOut, value: (Float(data.stats?.mediumSolved ?? 0)/Float(data.stats?.totalMedium ?? 1)))
                         }
+                        //Hard circle
                         ZStack{
                             Circle()
                                 .stroke(lineWidth: 5)
@@ -123,9 +126,11 @@ struct StatsView: View {
                     }
                     ProgressView("Acceptance Rate: \(Int(data.stats?.acceptanceRate ?? 0)) %", value: data.stats?.acceptanceRate ?? 0.0, total: 100)
                         .padding(.top, 50)
+                        .padding([.leading,.trailing], 10)
                     
                     Text("Submission Activity")
                         .padding(.top, 130)
+                        
                         .frame(alignment: .leading)
                     VStack{
                         
