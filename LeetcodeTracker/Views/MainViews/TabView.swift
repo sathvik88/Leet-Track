@@ -30,13 +30,11 @@ struct TabViewScreen: View {
                     Text("Learn")
                         
                 }
+            
         }
         .onAppear(){
             if notification == false{
                 NotificationManager.instance.requestAuthorization()
-                NotificationManager.instance.scheduelNotification()
-                print("Scheduled")
-                print(notification)
             }
             self.notification = true
             UIApplication.shared.applicationIconBadgeNumber = 0

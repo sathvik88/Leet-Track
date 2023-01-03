@@ -19,6 +19,8 @@ struct mySortingViews: Identifiable{
 }
 struct DSAlgoView: View {
     
+        
+    
     let patterns: [myPatterns] = [ myPatterns(name: "Sliding Window", destination: AnyView(SlidingWindowView())),
                                myPatterns(name: "Two Pointers", destination: AnyView(TwoPointersView())),
                                myPatterns(name: "Fast and Slow Pointers", destination: AnyView(FSView())),
@@ -62,8 +64,8 @@ struct DSAlgoView: View {
                     }
                 }
 
+                .navigationTitle("")
                 
-                .navigationTitle("Learn")
             }
         }
     }

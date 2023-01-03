@@ -62,11 +62,22 @@ struct ContentView: View {
             }
             .navigationBarTitle("Questions")
             .toolbar{
-                Button(action: {}, label: {
-                    NavigationLink(destination: FavoritesView()) {
-                        Text("Favorites")
-                    }
-                })
+                ToolbarItem(placement: .navigationBarTrailing){
+                    Button(action: {}, label: {
+                        NavigationLink(destination: FavoritesView()) {
+                            Image(systemName: "star")
+                        }
+                    })
+                }
+                ToolbarItem(placement: .navigationBarTrailing){
+                    Button(action: {}, label: {
+                        NavigationLink(destination: SettingsView()) {
+                            Image(systemName: "gear")
+                        }
+                    })
+                }
+
+                
             }
             .refreshable {
                 data.load()

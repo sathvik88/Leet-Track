@@ -42,6 +42,9 @@
 		2C9C37C0295576EA00C40AB0 /* insertionSort.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2C9C37BF295576EA00C40AB0 /* insertionSort.gif */; };
 		2C9C37C22956329D00C40AB0 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9C37C12956329D00C40AB0 /* SplashScreenView.swift */; };
 		2C9C37FA295ABF6D00C40AB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9C37F9295ABF6D00C40AB0 /* AppDelegate.swift */; };
+		2C9C37FF2962160300C40AB0 /* SwiftUIX in Frameworks */ = {isa = PBXBuildFile; productRef = 2C9C37FE2962160300C40AB0 /* SwiftUIX */; };
+		2C9C380129635F6900C40AB0 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9C380029635F6900C40AB0 /* SettingsView.swift */; };
+		2C9C3804296375D300C40AB0 /* NotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9C3803296375D300C40AB0 /* NotificationsView.swift */; };
 		2CE25C3D2891E47F009FABA7 /* LeetcodeTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE25C3C2891E47F009FABA7 /* LeetcodeTrackerApp.swift */; };
 		2CE25C3F2891E47F009FABA7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE25C3E2891E47F009FABA7 /* ContentView.swift */; };
 		2CE25C412891E481009FABA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CE25C402891E481009FABA7 /* Assets.xcassets */; };
@@ -112,6 +115,8 @@
 		2C9C37BF295576EA00C40AB0 /* insertionSort.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = insertionSort.gif; sourceTree = "<group>"; };
 		2C9C37C12956329D00C40AB0 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		2C9C37F9295ABF6D00C40AB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2C9C380029635F6900C40AB0 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		2C9C3803296375D300C40AB0 /* NotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsView.swift; sourceTree = "<group>"; };
 		2CE25C392891E47F009FABA7 /* LeetcodeTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeetcodeTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CE25C3C2891E47F009FABA7 /* LeetcodeTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetcodeTrackerApp.swift; sourceTree = "<group>"; };
 		2CE25C3E2891E47F009FABA7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -139,6 +144,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C9C37FF2962160300C40AB0 /* SwiftUIX in Frameworks */,
 				2CE25D0E2898C647009FABA7 /* Introspect in Frameworks */,
 				376762561F13194A0BB07891 /* Pods_LeetcodeTracker.framework in Frameworks */,
 			);
@@ -202,6 +208,7 @@
 				2C9787A628F9E6D900388CF4 /* StatsView.swift */,
 				2C8832102919600800D35F96 /* LoginView.swift */,
 				2C9C37C12956329D00C40AB0 /* SplashScreenView.swift */,
+				2C9C380029635F6900C40AB0 /* SettingsView.swift */,
 			);
 			path = MainViews;
 			sourceTree = "<group>";
@@ -230,6 +237,14 @@
 				2C4E0E4E294AE02100EAD778 /* bubbleSort.gif */,
 			);
 			path = Gifs;
+			sourceTree = "<group>";
+		};
+		2C9C3802296375A100C40AB0 /* SettingsViews */ = {
+			isa = PBXGroup;
+			children = (
+				2C9C3803296375D300C40AB0 /* NotificationsView.swift */,
+			);
+			path = SettingsViews;
 			sourceTree = "<group>";
 		};
 		2CE25C302891E47F009FABA7 = {
@@ -320,6 +335,7 @@
 		2CE25D0528977E4D009FABA7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2C9C3802296375A100C40AB0 /* SettingsViews */,
 				2C42625B28E22AC7003F1D9D /* MainViews */,
 				2C42625A28E22AB8003F1D9D /* PatternsViews */,
 			);
@@ -354,6 +370,7 @@
 			name = LeetcodeTracker;
 			packageProductDependencies = (
 				2CE25D0D2898C647009FABA7 /* Introspect */,
+				2C9C37FE2962160300C40AB0 /* SwiftUIX */,
 			);
 			productName = LeetcodeTracker;
 			productReference = 2CE25C392891E47F009FABA7 /* LeetcodeTracker.app */;
@@ -429,6 +446,7 @@
 			mainGroup = 2CE25C302891E47F009FABA7;
 			packageReferences = (
 				2CE25D0C2898C647009FABA7 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
+				2C9C37FD2962160300C40AB0 /* XCRemoteSwiftPackageReference "SwiftUIX" */,
 			);
 			productRefGroup = 2CE25C3A2891E47F009FABA7 /* Products */;
 			projectDirPath = "";
@@ -543,6 +561,7 @@
 				2C9C37BC2954F63800C40AB0 /* InsertionSortView.swift in Sources */,
 				2C19AE51291984EC00701707 /* UserAuth.swift in Sources */,
 				2C42626128E22B5A003F1D9D /* InPlaceView.swift in Sources */,
+				2C9C3804296375D300C40AB0 /* NotificationsView.swift in Sources */,
 				2C42625F28E22B49003F1D9D /* CyclicSortView.swift in Sources */,
 				2C4E0E5B295244CD00EAD778 /* HeapSortView.swift in Sources */,
 				2C42625928E22AB3003F1D9D /* FSView.swift in Sources */,
@@ -557,6 +576,7 @@
 				2C4E0E45292E953C00EAD778 /* NotificationManager.swift in Sources */,
 				2C42627228E22C2C003F1D9D /* KWayView.swift in Sources */,
 				2C42625528E2238A003F1D9D /* SlidingWindowView.swift in Sources */,
+				2C9C380129635F6900C40AB0 /* SettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -891,6 +911,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		2C9C37FD2962160300C40AB0 /* XCRemoteSwiftPackageReference "SwiftUIX" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftUIX/SwiftUIX";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.3;
+			};
+		};
 		2CE25D0C2898C647009FABA7 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/siteline/SwiftUI-Introspect";
@@ -902,6 +930,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		2C9C37FE2962160300C40AB0 /* SwiftUIX */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2C9C37FD2962160300C40AB0 /* XCRemoteSwiftPackageReference "SwiftUIX" */;
+			productName = SwiftUIX;
+		};
 		2CE25D0D2898C647009FABA7 /* Introspect */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 2CE25D0C2898C647009FABA7 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;

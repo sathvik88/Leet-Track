@@ -135,12 +135,22 @@ struct StatsView: View {
                     VStack{
                         
                         if #available(iOS 16.0, *) {
-                            Chart(data.subs){ item in
-                                BarMark(x: .value("Month", item.subDay, unit: .month), y: .value("Subs", item.sub))
-                                
+                            if data.subs.count < 50{
+                                Chart(data.subs){ item in
+                                    BarMark(x: .value("Month", item.subDay, unit: .weekday), y: .value("Subs", item.sub))
+                                    
+                                }
+                                .frame(height: 200)
+                                .padding(.top, 380)
+                            }else{
+                                Chart(data.subs){ item in
+                                    BarMark(x: .value("Month", item.subDay, unit: .month), y: .value("Subs", item.sub))
+                                    
+                                }
+                                .frame(height: 200)
+                                .padding(.top, 380)
                             }
-                            .frame(height: 200)
-                            .padding(.top, 380)
+                            
                             
                         } else {
                             // Don't display chart
@@ -153,6 +163,7 @@ struct StatsView: View {
                         
                         if(data.subs.isEmpty){
                             await data.loadStats(name: username)
+                            
                         }
                         
                     }
