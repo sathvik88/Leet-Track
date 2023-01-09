@@ -12,7 +12,6 @@ struct StatsView: View {
     @StateObject var data = DataModel()
     @AppStorage("login") private var login: Bool = false
     @AppStorage("username") private var username: String = ""
-    let stats: Stats?
     
     
     var body: some View {
@@ -212,6 +211,13 @@ struct StatsView: View {
     }
     
     
+}
+struct StatsView_Previews: PreviewProvider {
+    @StateObject var data = DataModel()
+    static var previews: some View {
+        StatsView()
+            .environmentObject(NotificationManager())
+    }
 }
 
 

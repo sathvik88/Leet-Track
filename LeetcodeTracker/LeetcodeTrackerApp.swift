@@ -12,8 +12,8 @@ import SwiftUI
 struct LeetcodeTrackerApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     @StateObject private var userAuth = UserAuth()
+    @StateObject var lnManager = NotificationManager()
     let persistenceController = PersistenceController.shared
-    let center = UNUserNotificationCenter.current()
     
     
     class AppDelegate: NSObject, UIApplicationDelegate {
@@ -33,6 +33,7 @@ struct LeetcodeTrackerApp: App {
             SplashScreenView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
                 .environmentObject(userAuth)
+                .environmentObject(lnManager) 
         }
         
     }

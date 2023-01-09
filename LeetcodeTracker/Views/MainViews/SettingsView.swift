@@ -9,16 +9,18 @@ import SwiftUI
 
 struct SettingsView: View {
     var body: some View {
-        NavigationView{
-            List{
-                Section{
-                    NavigationLink(destination: NotificationsView(), label: {
-                        Text("Notifications")
-                    })
-                }
-            }
+        List{
+            link(icon: "bell", label: "Notifications", destination: NotificationsView())
+        }.navigationBarTitle(Text("Settings"), displayMode: .large)
+    }
+}
+
+private func link<Destination: View>(icon: String, label: String, destination: Destination) -> some View{
+    return NavigationLink(destination: destination){
+        HStack{
+            Image(systemName: icon)
+            Text(label)
         }
-        .navigationBarTitle("Settings")
     }
 }
 

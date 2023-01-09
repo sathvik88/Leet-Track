@@ -14,6 +14,7 @@ struct ContentView: View {
     @ObservedObject var data = DataModel()
     @State private var searchText = ""
     @Environment(\.openURL) var openURL
+    
 
     
     var body: some View {
@@ -23,10 +24,6 @@ struct ContentView: View {
                     HStack{
                         Button {
                             openURL(URL(string: list.solution)!)
-                            UNUserNotificationCenter.current().removeAllDeliveredNotifications()
-                            UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
-                            UIApplication.shared.applicationIconBadgeNumber = 0
-                            NotificationManager.instance.scheduelNotification()
                             
                         } label: {
                             Text(list.question)
@@ -93,6 +90,7 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            
     }
 }
 

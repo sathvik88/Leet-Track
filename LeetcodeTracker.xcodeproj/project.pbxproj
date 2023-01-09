@@ -45,6 +45,7 @@
 		2C9C37FF2962160300C40AB0 /* SwiftUIX in Frameworks */ = {isa = PBXBuildFile; productRef = 2C9C37FE2962160300C40AB0 /* SwiftUIX */; };
 		2C9C380129635F6900C40AB0 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9C380029635F6900C40AB0 /* SettingsView.swift */; };
 		2C9C3804296375D300C40AB0 /* NotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9C3803296375D300C40AB0 /* NotificationsView.swift */; };
+		2C9C3806296BBEDE00C40AB0 /* LocalNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9C3805296BBEDE00C40AB0 /* LocalNotification.swift */; };
 		2CE25C3D2891E47F009FABA7 /* LeetcodeTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE25C3C2891E47F009FABA7 /* LeetcodeTrackerApp.swift */; };
 		2CE25C3F2891E47F009FABA7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE25C3E2891E47F009FABA7 /* ContentView.swift */; };
 		2CE25C412891E481009FABA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CE25C402891E481009FABA7 /* Assets.xcassets */; };
@@ -117,6 +118,7 @@
 		2C9C37F9295ABF6D00C40AB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C9C380029635F6900C40AB0 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		2C9C3803296375D300C40AB0 /* NotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsView.swift; sourceTree = "<group>"; };
+		2C9C3805296BBEDE00C40AB0 /* LocalNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotification.swift; sourceTree = "<group>"; };
 		2CE25C392891E47F009FABA7 /* LeetcodeTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeetcodeTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CE25C3C2891E47F009FABA7 /* LeetcodeTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetcodeTrackerApp.swift; sourceTree = "<group>"; };
 		2CE25C3E2891E47F009FABA7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -318,6 +320,7 @@
 				2C3D6FF728B7EAFD00709EEF /* Database.swift */,
 				2C19AE50291984EC00701707 /* UserAuth.swift */,
 				2C4E0E44292E953C00EAD778 /* NotificationManager.swift */,
+				2C9C3805296BBEDE00C40AB0 /* LocalNotification.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -566,6 +569,7 @@
 				2C4E0E5B295244CD00EAD778 /* HeapSortView.swift in Sources */,
 				2C42625928E22AB3003F1D9D /* FSView.swift in Sources */,
 				2C42625D28E22B21003F1D9D /* MergeIntervalsView.swift in Sources */,
+				2C9C3806296BBEDE00C40AB0 /* LocalNotification.swift in Sources */,
 				2C42625728E2299C003F1D9D /* TwoPointersView.swift in Sources */,
 				2C4E0E51294BC78000EAD778 /* QuickSortView.swift in Sources */,
 				2C9787A728F9E6D900388CF4 /* StatsView.swift in Sources */,

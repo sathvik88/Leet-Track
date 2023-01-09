@@ -73,5 +73,8 @@ struct DSAlgoView: View {
 struct DSAlgoView_Previews: PreviewProvider {
     static var previews: some View {
         DSAlgoView()
+            .environmentObject(NotificationManager())
     }
 }
+
+

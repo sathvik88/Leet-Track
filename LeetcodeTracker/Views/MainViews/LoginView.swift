@@ -23,7 +23,7 @@ struct LoginView: View {
         
         if login{
                         
-            StatsView( stats: data.stats)
+            StatsView()
                 
         } else{
             ZStack{
@@ -77,6 +77,11 @@ struct LoginView: View {
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView().environmentObject(UserAuth())
+        LoginView()
+            .environmentObject(UserAuth())
+            .environmentObject(NotificationManager())
+        
     }
 }
+
+

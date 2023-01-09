@@ -8,8 +8,10 @@
 import SwiftUI
 import CoreData
 struct TabViewScreen: View {
-    @State var notification: Bool = false
     
+    @State var notification: Bool = false
+    @EnvironmentObject var lnManager: NotificationManager
+    @Environment(\.scenePhase) var scenePhase
     
     var body: some View {
         TabView{
@@ -17,7 +19,6 @@ struct TabViewScreen: View {
                 .tabItem{
                     Image(systemName: "house")
                     Text("Home")
-                    
                 }
             LoginView()
                 .tabItem{
@@ -28,18 +29,20 @@ struct TabViewScreen: View {
                 .tabItem{
                     Image(systemName: "book")
                     Text("Learn")
-                        
                 }
-            
         }
-        .onAppear(){
-            if notification == false{
-                NotificationManager.instance.requestAuthorization()
+        .task {
+            try? await lnManager.requestAuthorization()
+        }
+        .onChange(of: scenePhase){newValue in
+            if newValue == .active{
+                Task{
+                    await lnManager.getCurrentSettings()
+                    await lnManager.getPendingRequests() 
+                }
+                lnManager.removeDeliveredNotifications()
             }
-            self.notification = true
-            UIApplication.shared.applicationIconBadgeNumber = 0
             
-           
         }
     }
 }
@@ -47,5 +50,6 @@ struct TabViewScreen: View {
 struct TabView_Previews: PreviewProvider {
     static var previews: some View {
         TabViewScreen()
+            .environmentObject(NotificationManager())
     }
 }
