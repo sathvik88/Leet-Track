@@ -41,6 +41,7 @@ struct TopKView: View {
                 .navigationBarHidden(true)
 
             }
+            .navigationViewStyle(StackNavigationViewStyle())
         }
     }
 }

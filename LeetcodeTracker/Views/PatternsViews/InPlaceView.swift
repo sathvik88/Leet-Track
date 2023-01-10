@@ -42,6 +42,7 @@ struct InPlaceView: View {
                 .navigationBarHidden(true)
 
             }
+            .navigationViewStyle(StackNavigationViewStyle())
         }
     }
 }

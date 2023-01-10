@@ -11,6 +11,7 @@ struct SettingsView: View {
     var body: some View {
         List{
             link(icon: "bell", label: "Notifications", destination: NotificationsView())
+            link(icon: "info.circle", label: "About", destination: AboutView())
         }.navigationBarTitle(Text("Settings"), displayMode: .large)
     }
 }

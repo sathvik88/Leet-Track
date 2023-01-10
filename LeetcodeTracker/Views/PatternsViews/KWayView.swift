@@ -67,6 +67,7 @@ struct KWayView: View {
                 .navigationBarHidden(true)
 
             }
+            .navigationViewStyle(StackNavigationViewStyle())
         }
     }
 }

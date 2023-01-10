@@ -57,6 +57,7 @@ struct TreeDFSView: View {
                 .navigationBarHidden(true)
 
             }
+            .navigationViewStyle(StackNavigationViewStyle())
         }
 
     }

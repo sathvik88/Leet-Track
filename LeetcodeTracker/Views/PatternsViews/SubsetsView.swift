@@ -63,6 +63,7 @@ struct SubsetsView: View {
                 .navigationBarHidden(true)
 
             }
+            .navigationViewStyle(StackNavigationViewStyle())
         }
 
     }

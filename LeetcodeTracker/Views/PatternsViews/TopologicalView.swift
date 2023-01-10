@@ -31,6 +31,7 @@ struct TopologicalView: View {
                 .navigationBarHidden(true)
 
             }
+            .navigationViewStyle(StackNavigationViewStyle())
         }
     }
 }

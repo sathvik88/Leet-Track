@@ -50,6 +50,7 @@ struct TwoPointersView: View {
                 }
                 .navigationBarHidden(true)
             }
+            .navigationViewStyle(StackNavigationViewStyle())
             
         }
     }

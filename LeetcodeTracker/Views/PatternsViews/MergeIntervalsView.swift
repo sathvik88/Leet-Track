@@ -53,6 +53,7 @@ struct MergeIntervalsView: View {
                 .navigationBarHidden(true)
 
             }
+            .navigationViewStyle(StackNavigationViewStyle())
             
         }
     }

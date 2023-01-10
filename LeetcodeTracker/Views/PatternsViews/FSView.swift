@@ -65,6 +65,7 @@ struct FSView: View {
                     
                 }
             }
+            .navigationViewStyle(StackNavigationViewStyle())
             
         }
     }

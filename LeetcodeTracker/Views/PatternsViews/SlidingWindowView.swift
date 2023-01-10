@@ -46,6 +46,7 @@ struct SlidingWindowView: View {
                 .navigationBarHidden(true)
 
             }
+            .navigationViewStyle(StackNavigationViewStyle())
             
         }
     }

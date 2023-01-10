@@ -57,6 +57,7 @@ struct TwoHeapsView: View {
                 .navigationBarHidden(true)
 
             }
+            .navigationViewStyle(StackNavigationViewStyle())
         }
 
     }

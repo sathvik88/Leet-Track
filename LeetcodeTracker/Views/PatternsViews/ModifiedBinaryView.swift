@@ -48,6 +48,7 @@ struct ModifiedBinaryView: View {
                 .navigationBarHidden(true)
 
             }
+            .navigationViewStyle(StackNavigationViewStyle())
         }
     }
 }

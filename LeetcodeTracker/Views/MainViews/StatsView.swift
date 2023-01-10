@@ -136,7 +136,7 @@ struct StatsView: View {
                         if #available(iOS 16.0, *) {
                             if data.subs.count < 50{
                                 Chart(data.subs){ item in
-                                    BarMark(x: .value("Month", item.subDay, unit: .weekday), y: .value("Subs", item.sub))
+                                    BarMark(x: .value("Month", item.subDay, unit: .weekOfMonth), y: .value("Subs", item.sub))
                                     
                                 }
                                 .frame(height: 200)
@@ -207,6 +207,7 @@ struct StatsView: View {
                     }
                 }
             }
+            .navigationViewStyle(StackNavigationViewStyle())
         }
     }
     

@@ -54,6 +54,7 @@ struct MergeSortView: View {
                 .navigationBarHidden(true)
 
             }
+            .navigationViewStyle(StackNavigationViewStyle())
             
         }
     }

@@ -17,6 +17,7 @@ final class DataModel: ObservableObject{
     @Published var showingFaves = true
     @Published var savedItems: Set<String>
     @Published var isAPIDown = false
+    let df = DateFormatter()
     
     var filteredItems: [LeetCodeContent] {
         if showingFaves{
@@ -74,9 +75,11 @@ final class DataModel: ObservableObject{
             for (key,val) in res.submissionCalendar{
                 DispatchQueue.main.async{
                     self.subs.append(submissions(subDay: Date(timeIntervalSince1970: Double(key) ?? 0.0), sub: val))
+                    print()
                 }
  
             }
+            
         }
         catch{
             print("Network Error")

@@ -54,6 +54,7 @@ struct BubbleSortView: View {
                 .navigationBarHidden(true)
 
             }
+            .navigationViewStyle(StackNavigationViewStyle())
             
         }
     }

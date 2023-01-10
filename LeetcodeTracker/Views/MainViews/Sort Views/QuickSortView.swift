@@ -53,6 +53,7 @@ struct QuickSortView: View {
                 .navigationBarHidden(true)
 
             }
+            .navigationViewStyle(StackNavigationViewStyle())
             
         }
     }

@@ -56,6 +56,7 @@ struct InsertionSortView: View {
                 .navigationBarHidden(true)
 
             }
+            .navigationViewStyle(StackNavigationViewStyle())
             
         }
     }

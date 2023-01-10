@@ -63,10 +63,10 @@ struct DSAlgoView: View {
                         }
                     }
                 }
-
                 .navigationTitle("")
-                
+
             }
+            .navigationViewStyle(StackNavigationViewStyle())
         }
     }
 
