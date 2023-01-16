@@ -24,14 +24,9 @@ struct ContentView: View {
             List{
                 ForEach(data.jsonData.filter({ "\($0)".contains(searchText) || searchText.isEmpty})) { list in
                     HStack{
-                        Button(list.question){
-                            //openURL(URL(string: list.solution)!)
-                            selected = list
-                        }
-                        .sheet(item: $selected, content: { item in
-                            PromptView(prompt: item.prompt, solution: item.solution, question: item.question)
-                        })
-                        
+                        Text(list.question)
+                            .fontWeight(.medium)
+                            .foregroundColor(.accentColor)
                         
                         Spacer()
                         
@@ -58,6 +53,16 @@ struct ContentView: View {
                                 data.toggleFavs(question: list)
                             }
                     }
+                    .contentShape(Rectangle())
+                    .onTapGesture {
+                        openURL(URL(string: list.solution)!)
+                    }
+                    .onLongPressGesture(minimumDuration: 0.1) {
+                        selected = list
+                    }
+                    .sheet(item: $selected, content: { item in
+                        PromptView(prompt: item.prompt, solution: item.solution, question: item.question)
+                    })
                 }
             }
             .navigationBarTitle("Questions")

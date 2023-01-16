@@ -12,7 +12,7 @@ struct AboutView: View {
         GroupBox{
             HStack{
                 Text("Version Number:")
-                Text("0.2.0")
+                Text("0.1.0")
             }
         }
     }

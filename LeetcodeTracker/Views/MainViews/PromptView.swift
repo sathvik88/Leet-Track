@@ -20,6 +20,7 @@ struct PromptView: View {
                 Text(prompt)
                     .padding([.bottom],400)
                     .padding([.leading,.trailing],20)
+                    .foregroundColor(.white)
                 
                 Button{
                     UIApplication.shared.open (URL(string: solution)!)
