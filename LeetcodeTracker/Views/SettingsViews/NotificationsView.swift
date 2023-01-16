@@ -20,7 +20,7 @@ struct NotificationsView: View {
                         DatePicker("",selection: $scheduleDate)
                         Button("Schedule Notification"){
                             Task {
-                                let dateComponents = Calendar.current.dateComponents([.year,.month,.day,.hour,.minute], from: scheduleDate)
+                                let dateComponents = Calendar.current.dateComponents([.hour,.minute], from: scheduleDate)
                                 let localNotification = LocalNotification(identifier: UUID().uuidString, title: "Time to code!", body: "Time to go through the list and knock out some quesitons!", dateComponents: dateComponents, repeats: true)
                                 await lnManager.schedule(localNotification: localNotification)
                             }

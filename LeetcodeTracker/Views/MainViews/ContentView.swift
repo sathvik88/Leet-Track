@@ -14,6 +14,8 @@ struct ContentView: View {
     @ObservedObject var data = DataModel()
     @State private var searchText = ""
     @Environment(\.openURL) var openURL
+    @State var showSheet: Bool = false
+    @State var selected: LeetCodeContent?
     
 
     
@@ -22,13 +24,14 @@ struct ContentView: View {
             List{
                 ForEach(data.jsonData.filter({ "\($0)".contains(searchText) || searchText.isEmpty})) { list in
                     HStack{
-                        Button {
-                            openURL(URL(string: list.solution)!)
-                            
-                        } label: {
-                            Text(list.question)
-                                .fontWeight(.medium)
+                        Button(list.question){
+                            //openURL(URL(string: list.solution)!)
+                            selected = list
                         }
+                        .sheet(item: $selected, content: { item in
+                            PromptView(prompt: item.prompt, solution: item.solution, question: item.question)
+                        })
+                        
                         
                         Spacer()
                         

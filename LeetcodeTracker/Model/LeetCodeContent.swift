@@ -14,6 +14,7 @@ struct LeetCodeContent: Codable, Identifiable{
     let categorie: String
     let difficulty: String
     let solution: String
+    let prompt: String
     var favorite: Bool = false
 
   private enum CodingKeys: String, CodingKey {
@@ -21,6 +22,9 @@ struct LeetCodeContent: Codable, Identifiable{
     case categorie = "Categorie"
     case difficulty = "Difficulty"
     case solution = "Solution"
+    case prompt = "Prompt"
+    
+    
   }
     
 }
