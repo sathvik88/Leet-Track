@@ -50,11 +50,12 @@ struct HeapSortView: View {
                         }
 
                     }
+                    .padding(.top, 1)
+                    
                 }
-                .navigationBarHidden(true)
-
-            }
-            .navigationViewStyle(StackNavigationViewStyle())
+        }
+        .navigationViewStyle(StackNavigationViewStyle())
+        .navigationTitle("Heap Sort")
             
         }
     }

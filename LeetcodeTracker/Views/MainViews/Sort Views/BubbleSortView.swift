@@ -50,11 +50,12 @@ struct BubbleSortView: View {
                         }
 
                     }
+                    .padding(.top, 1)
+                    
                 }
-                .navigationBarHidden(true)
-
-            }
-            .navigationViewStyle(StackNavigationViewStyle())
+        }
+        .navigationViewStyle(StackNavigationViewStyle())
+        .navigationTitle("Bubble Sort")
             
         }
     }

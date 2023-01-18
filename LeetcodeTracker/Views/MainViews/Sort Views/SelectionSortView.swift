@@ -52,11 +52,12 @@ struct SelectionSortView: View {
                         }
 
                     }
+                    .padding(.top, 1)
+                    
                 }
-                .navigationBarHidden(true)
-
-            }
-            .navigationViewStyle(StackNavigationViewStyle())
+        }
+        .navigationViewStyle(StackNavigationViewStyle())
+        .navigationTitle("Selection Sort")
             
         }
     }

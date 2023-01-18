@@ -16,18 +16,27 @@ struct PromptView: View {
             VStack{
                 Text(question)
                     .font(.headline)
-                    .padding()
-                Text(prompt)
-                    .padding([.bottom],400)
-                    .padding([.leading,.trailing],20)
-                    .foregroundColor(.white)
+                    .padding([.bottom],80)
+                    .padding([.top],30)
+                    
+                GroupBox{
+                    Text(prompt)
+                        
+                        
+                        .foregroundColor(.white)
+                }
+                .padding([.bottom],200)
+                .padding([.leading,.trailing],20)
+                Spacer()
+                    .frame(height: 100)
+                
                 
                 Button{
                     UIApplication.shared.open (URL(string: solution)!)
                 } label: {
                     Text("View Solution")
                 }
-                
+                .buttonStyle(.borderedProminent)
             }
         }
         

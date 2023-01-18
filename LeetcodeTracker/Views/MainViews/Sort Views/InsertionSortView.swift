@@ -53,13 +53,14 @@ struct InsertionSortView: View {
 
                     }
                 }
-                .navigationBarHidden(true)
-
-            }
-            .navigationViewStyle(StackNavigationViewStyle())
-            
+                .padding(.top, 1)
+                
         }
+        .navigationViewStyle(StackNavigationViewStyle())
+        .navigationTitle("Insertion Sort")
+        
     }
+}
 }
 
 struct InsertionSortView_Previews: PreviewProvider {
