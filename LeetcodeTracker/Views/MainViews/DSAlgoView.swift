@@ -63,7 +63,7 @@ struct DSAlgoView: View {
                         }
                     }
                 }
-                .navigationTitle("")
+                .navigationTitle("Learn")
 
             }
             .navigationViewStyle(StackNavigationViewStyle())

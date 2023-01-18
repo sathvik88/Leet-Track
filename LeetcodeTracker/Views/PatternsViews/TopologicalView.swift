@@ -28,11 +28,12 @@ struct TopologicalView: View {
                         
                     }
                 }
-                .navigationBarHidden(true)
-
+                .padding(.top, 1)
             }
-            .navigationViewStyle(StackNavigationViewStyle())
+            
         }
+        .navigationViewStyle(StackNavigationViewStyle())
+        .navigationTitle("Toplogical Sort")
     }
 }
 

@@ -14,16 +14,15 @@ final class DataModel: ObservableObject{
     @Published var stats: Stats?
     @Published var subs = [submissions]()
     @Published var username: String = ""
-    @Published var showingFaves = true
+    @Published var showingFaves = false
     @Published var savedItems: Set<String>
     @Published var isAPIDown = false
     let df = DateFormatter()
     
     var filteredItems: [LeetCodeContent] {
         if showingFaves{
-            return jsonData.filter {
-                savedItems.contains($0.question)
-            }
+            return jsonData.filter{ savedItems.contains($0.question)}
+            
         } else{
             return jsonData
         }
@@ -75,7 +74,7 @@ final class DataModel: ObservableObject{
             for (key,val) in res.submissionCalendar{
                 DispatchQueue.main.async{
                     self.subs.append(submissions(subDay: Date(timeIntervalSince1970: Double(key) ?? 0.0), sub: val))
-                    print()
+                    
                 }
  
             }

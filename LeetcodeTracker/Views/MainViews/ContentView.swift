@@ -21,8 +21,9 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
+            
             List{
-                ForEach(data.jsonData.filter({ "\($0)".contains(searchText) || searchText.isEmpty})) { list in
+                ForEach(data.filteredItems.filter({ "\($0)".contains(searchText) || searchText.isEmpty})) { list in
                     HStack{
                         Text(list.question)
                             .fontWeight(.medium)
@@ -68,10 +69,8 @@ struct ContentView: View {
             .navigationBarTitle("Questions")
             .toolbar{
                 ToolbarItem(placement: .navigationBarTrailing){
-                    Button(action: {}, label: {
-                        NavigationLink(destination: FavoritesView()) {
-                            Image(systemName: "star")
-                        }
+                    Button(action: {data.sortFaves()}, label: {
+                        Image(systemName: "star")
                     })
                 }
                 ToolbarItem(placement: .navigationBarTrailing){

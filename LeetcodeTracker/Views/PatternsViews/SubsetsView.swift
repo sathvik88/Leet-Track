@@ -60,11 +60,12 @@ struct SubsetsView: View {
                         
                     }
                 }
-                .navigationBarHidden(true)
-
+                .padding(.top, 1)
             }
-            .navigationViewStyle(StackNavigationViewStyle())
+            
         }
+        .navigationViewStyle(StackNavigationViewStyle())
+        .navigationTitle("Subsets")
 
     }
 }

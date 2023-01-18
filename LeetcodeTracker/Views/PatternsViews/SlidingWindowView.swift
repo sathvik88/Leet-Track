@@ -42,11 +42,12 @@ struct SlidingWindowView: View {
                         
                         
                     }
+                    .padding(.top, 1)
                 }
-                .navigationBarHidden(true)
-
+                
             }
             .navigationViewStyle(StackNavigationViewStyle())
+            .navigationTitle("Sliding Window")
             
         }
     }

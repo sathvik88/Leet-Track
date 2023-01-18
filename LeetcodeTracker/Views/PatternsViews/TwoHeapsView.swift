@@ -53,11 +53,12 @@ struct TwoHeapsView: View {
 
                         
                     }
+                    .padding(.top, 1)
                 }
-                .navigationBarHidden(true)
-
+                
             }
             .navigationViewStyle(StackNavigationViewStyle())
+            .navigationTitle("Two Heaps")
         }
 
     }

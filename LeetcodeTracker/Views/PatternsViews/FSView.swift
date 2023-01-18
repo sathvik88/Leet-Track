@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct FSView: View {
+    
     var body: some View {
-        ZStack{
+        
             NavigationView{
                 if #available(iOS 16.0, *) {
                     VStack{
@@ -59,15 +60,16 @@ struct FSView: View {
                             }
                             
                         }
+                        .padding(.top, 1) 
+                        
                     }
-                    .navigationBarHidden(true)
-                    .navigationBarBackButtonHidden(true)
+                   
                     
                 }
             }
             .navigationViewStyle(StackNavigationViewStyle())
+            .navigationTitle("Fast and Slow Pointers")
             
-        }
     }
 }
 

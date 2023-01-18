@@ -47,11 +47,12 @@ struct CyclicSortView: View {
                         
                         
                     }
+                    .padding(.top, 1)
                 }
-                .navigationBarHidden(true)
-
+                
             }
             .navigationViewStyle(StackNavigationViewStyle())
+            .navigationTitle("Cyclic Sort")
         }
     }
 }

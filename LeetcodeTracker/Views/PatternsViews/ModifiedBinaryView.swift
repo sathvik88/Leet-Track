@@ -45,11 +45,12 @@ struct ModifiedBinaryView: View {
                         
                     }
                 }
-                .navigationBarHidden(true)
-
+                .padding(.top, 1)
             }
-            .navigationViewStyle(StackNavigationViewStyle())
+            
         }
+        .navigationViewStyle(StackNavigationViewStyle())
+        .navigationTitle("Modified Binary Search")
     }
 }
 

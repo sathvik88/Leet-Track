@@ -37,11 +37,12 @@ struct TopKView: View {
                             .padding()
                         
                     }
+                    .padding(.top, 1)
                 }
-                .navigationBarHidden(true)
-
+                
             }
             .navigationViewStyle(StackNavigationViewStyle())
+            .navigationTitle("Top K Elements")
         }
     }
 }

@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		2C19AE51291984EC00701707 /* UserAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C19AE50291984EC00701707 /* UserAuth.swift */; };
 		2C3D6FF828B7EAFD00709EEF /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3D6FF728B7EAFD00709EEF /* Database.swift */; };
-		2C3D6FFC28BFBDFC00709EEF /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3D6FFB28BFBDFB00709EEF /* FavoritesView.swift */; };
 		2C42625528E2238A003F1D9D /* SlidingWindowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C42625428E2238A003F1D9D /* SlidingWindowView.swift */; };
 		2C42625728E2299C003F1D9D /* TwoPointersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C42625628E2299C003F1D9D /* TwoPointersView.swift */; };
 		2C42625928E22AB3003F1D9D /* FSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C42625828E22AB3003F1D9D /* FSView.swift */; };
@@ -85,7 +84,6 @@
 /* Begin PBXFileReference section */
 		2C19AE50291984EC00701707 /* UserAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuth.swift; sourceTree = "<group>"; };
 		2C3D6FF728B7EAFD00709EEF /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
-		2C3D6FFB28BFBDFB00709EEF /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 		2C42625428E2238A003F1D9D /* SlidingWindowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlidingWindowView.swift; sourceTree = "<group>"; };
 		2C42625628E2299C003F1D9D /* TwoPointersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoPointersView.swift; sourceTree = "<group>"; };
 		2C42625828E22AB3003F1D9D /* FSView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSView.swift; sourceTree = "<group>"; };
@@ -207,7 +205,6 @@
 			isa = PBXGroup;
 			children = (
 				2C4E0E46293681F000EAD778 /* Sort Views */,
-				2C3D6FFB28BFBDFB00709EEF /* FavoritesView.swift */,
 				2CE25CF22897171E009FABA7 /* TabView.swift */,
 				2CE25C3E2891E47F009FABA7 /* ContentView.swift */,
 				2CE25CF6289718B5009FABA7 /* DSAlgoView.swift */,
@@ -563,7 +560,6 @@
 				2C9C37FA295ABF6D00C40AB0 /* AppDelegate.swift in Sources */,
 				2CE25CF7289718B5009FABA7 /* DSAlgoView.swift in Sources */,
 				2C88320D2918254700D35F96 /* UserStats.swift in Sources */,
-				2C3D6FFC28BFBDFC00709EEF /* FavoritesView.swift in Sources */,
 				2C42626D28E22BF8003F1D9D /* ModifiedBinaryView.swift in Sources */,
 				2CE25CF32897171E009FABA7 /* TabView.swift in Sources */,
 				2C42626F28E22C0D003F1D9D /* TopKView.swift in Sources */,
@@ -746,7 +742,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "\"LeetcodeTracker/Preview Content\"";
 				DEVELOPMENT_TEAM = 8M22PYB3ZS;
 				ENABLE_PREVIEWS = YES;
@@ -779,7 +775,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "\"LeetcodeTracker/Preview Content\"";
 				DEVELOPMENT_TEAM = 8M22PYB3ZS;
 				ENABLE_PREVIEWS = YES;
