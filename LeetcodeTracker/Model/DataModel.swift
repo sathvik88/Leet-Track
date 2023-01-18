@@ -27,12 +27,15 @@ final class DataModel: ObservableObject{
             return jsonData
         }
     }
+    
+    
 
     private var db = Database()
     
     init(){
         self.savedItems = db.load()
         load()
+        
 
     }
     

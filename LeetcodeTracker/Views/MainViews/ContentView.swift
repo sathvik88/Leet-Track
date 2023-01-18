@@ -23,7 +23,7 @@ struct ContentView: View {
         NavigationView {
             
             List{
-                ForEach(data.filteredItems.filter({ "\($0)".contains(searchText) || searchText.isEmpty})) { list in
+                ForEach(data.filteredItems.filter({ "\($0)".lowercased().contains(searchText.lowercased()) || searchText.isEmpty})) { list in
                     HStack{
                         Text(list.question)
                             .fontWeight(.medium)
