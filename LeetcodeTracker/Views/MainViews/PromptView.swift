@@ -15,14 +15,12 @@ struct PromptView: View {
         NavigationView{
             VStack{
                 Text(question)
-                    .font(.headline)
+                    .font(Font.title.bold())
                     .padding([.bottom],80)
                     .padding([.top],30)
                     
                 GroupBox{
                     Text(prompt)
-                        
-                        
                         .foregroundColor(.white)
                 }
                 .padding([.bottom],200)

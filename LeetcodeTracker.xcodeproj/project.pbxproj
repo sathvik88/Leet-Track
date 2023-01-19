@@ -47,6 +47,11 @@
 		2C9C3806296BBEDE00C40AB0 /* LocalNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9C3805296BBEDE00C40AB0 /* LocalNotification.swift */; };
 		2C9C3808296CD90400C40AB0 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9C3807296CD90400C40AB0 /* AboutView.swift */; };
 		2C9C380A296DB9CD00C40AB0 /* PromptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9C3809296DB9CD00C40AB0 /* PromptView.swift */; };
+		2C9C380D2978F6B400C40AB0 /* OnboardingTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9C380C2978F6B400C40AB0 /* OnboardingTabView.swift */; };
+		2C9C380F2979EDDA00C40AB0 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9C380E2979EDDA00C40AB0 /* OnboardingView.swift */; };
+		2C9C38112979F4CE00C40AB0 /* promptsPreview.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2C9C38102979F4CD00C40AB0 /* promptsPreview.gif */; };
+		2C9C38132979F8A100C40AB0 /* solutionGif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2C9C38122979F8A100C40AB0 /* solutionGif.gif */; };
+		2C9C3815297A027300C40AB0 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9C3814297A027300C40AB0 /* WelcomeView.swift */; };
 		2CE25C3D2891E47F009FABA7 /* LeetcodeTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE25C3C2891E47F009FABA7 /* LeetcodeTrackerApp.swift */; };
 		2CE25C3F2891E47F009FABA7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE25C3E2891E47F009FABA7 /* ContentView.swift */; };
 		2CE25C412891E481009FABA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CE25C402891E481009FABA7 /* Assets.xcassets */; };
@@ -121,6 +126,11 @@
 		2C9C3805296BBEDE00C40AB0 /* LocalNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotification.swift; sourceTree = "<group>"; };
 		2C9C3807296CD90400C40AB0 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		2C9C3809296DB9CD00C40AB0 /* PromptView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromptView.swift; sourceTree = "<group>"; };
+		2C9C380C2978F6B400C40AB0 /* OnboardingTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingTabView.swift; sourceTree = "<group>"; };
+		2C9C380E2979EDDA00C40AB0 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		2C9C38102979F4CD00C40AB0 /* promptsPreview.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = promptsPreview.gif; sourceTree = "<group>"; };
+		2C9C38122979F8A100C40AB0 /* solutionGif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = solutionGif.gif; sourceTree = "<group>"; };
+		2C9C3814297A027300C40AB0 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		2CE25C392891E47F009FABA7 /* LeetcodeTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeetcodeTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CE25C3C2891E47F009FABA7 /* LeetcodeTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetcodeTrackerApp.swift; sourceTree = "<group>"; };
 		2CE25C3E2891E47F009FABA7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -204,6 +214,7 @@
 		2C42625B28E22AC7003F1D9D /* MainViews */ = {
 			isa = PBXGroup;
 			children = (
+				2C9C380B2978F68B00C40AB0 /* OnboardingViews */,
 				2C4E0E46293681F000EAD778 /* Sort Views */,
 				2CE25CF22897171E009FABA7 /* TabView.swift */,
 				2CE25C3E2891E47F009FABA7 /* ContentView.swift */,
@@ -234,6 +245,8 @@
 		2C4E0E4D294ADFFF00EAD778 /* Gifs */ = {
 			isa = PBXGroup;
 			children = (
+				2C9C38122979F8A100C40AB0 /* solutionGif.gif */,
+				2C9C38102979F4CD00C40AB0 /* promptsPreview.gif */,
 				2C9C37BF295576EA00C40AB0 /* insertionSort.gif */,
 				2C4E0E5429523DBC00EAD778 /* MergeSort.gif */,
 				2C9C37BD2955749F00C40AB0 /* selectionSort.gif */,
@@ -250,6 +263,16 @@
 				2C9C3803296375D300C40AB0 /* NotificationsView.swift */,
 			);
 			path = SettingsViews;
+			sourceTree = "<group>";
+		};
+		2C9C380B2978F68B00C40AB0 /* OnboardingViews */ = {
+			isa = PBXGroup;
+			children = (
+				2C9C380C2978F6B400C40AB0 /* OnboardingTabView.swift */,
+				2C9C380E2979EDDA00C40AB0 /* OnboardingView.swift */,
+				2C9C3814297A027300C40AB0 /* WelcomeView.swift */,
+			);
+			path = OnboardingViews;
 			sourceTree = "<group>";
 		};
 		2CE25C302891E47F009FABA7 = {
@@ -470,7 +493,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C9C38132979F8A100C40AB0 /* solutionGif.gif in Resources */,
 				2C4E0E53294BC83F00EAD778 /* quickSort.gif in Resources */,
+				2C9C38112979F4CE00C40AB0 /* promptsPreview.gif in Resources */,
 				2C4E0E5529523DBD00EAD778 /* MergeSort.gif in Resources */,
 				2C9C37C0295576EA00C40AB0 /* insertionSort.gif in Resources */,
 				2CE25C442891E481009FABA7 /* Preview Assets.xcassets in Resources */,
@@ -568,9 +593,11 @@
 				2C19AE51291984EC00701707 /* UserAuth.swift in Sources */,
 				2C42626128E22B5A003F1D9D /* InPlaceView.swift in Sources */,
 				2C9C3804296375D300C40AB0 /* NotificationsView.swift in Sources */,
+				2C9C380F2979EDDA00C40AB0 /* OnboardingView.swift in Sources */,
 				2C42625F28E22B49003F1D9D /* CyclicSortView.swift in Sources */,
 				2C4E0E5B295244CD00EAD778 /* HeapSortView.swift in Sources */,
 				2C42625928E22AB3003F1D9D /* FSView.swift in Sources */,
+				2C9C380D2978F6B400C40AB0 /* OnboardingTabView.swift in Sources */,
 				2C9C380A296DB9CD00C40AB0 /* PromptView.swift in Sources */,
 				2C42625D28E22B21003F1D9D /* MergeIntervalsView.swift in Sources */,
 				2C9C3806296BBEDE00C40AB0 /* LocalNotification.swift in Sources */,
@@ -581,6 +608,7 @@
 				2CE25C6E2891E548009FABA7 /* LeetCodeContent.swift in Sources */,
 				2C42626728E22BB3003F1D9D /* TwoHeapsView.swift in Sources */,
 				2CE25C702891E614009FABA7 /* DataModel.swift in Sources */,
+				2C9C3815297A027300C40AB0 /* WelcomeView.swift in Sources */,
 				2C4E0E45292E953C00EAD778 /* NotificationManager.swift in Sources */,
 				2C42627228E22C2C003F1D9D /* KWayView.swift in Sources */,
 				2C42625528E2238A003F1D9D /* SlidingWindowView.swift in Sources */,
@@ -742,7 +770,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_ASSET_PATHS = "\"LeetcodeTracker/Preview Content\"";
 				DEVELOPMENT_TEAM = 8M22PYB3ZS;
 				ENABLE_PREVIEWS = YES;
@@ -753,8 +781,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -775,7 +803,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_ASSET_PATHS = "\"LeetcodeTracker/Preview Content\"";
 				DEVELOPMENT_TEAM = 8M22PYB3ZS;
 				ENABLE_PREVIEWS = YES;
@@ -786,8 +814,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -16,6 +16,7 @@ struct ContentView: View {
     @Environment(\.openURL) var openURL
     @State var showSheet: Bool = false
     @State var selected: LeetCodeContent?
+    @AppStorage("showOnboarding") var showOnboarding: Bool = true
     
 
     
@@ -90,6 +91,9 @@ struct ContentView: View {
         }
         .searchable(text: $searchText)
         .navigationViewStyle(StackNavigationViewStyle())
+        .fullScreenCover(isPresented: $showOnboarding, content: {
+            OnboardingTabView(showOnboarding: $showOnboarding)
+        })
     }
     
 }

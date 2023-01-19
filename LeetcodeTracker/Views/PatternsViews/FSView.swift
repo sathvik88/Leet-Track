@@ -60,7 +60,7 @@ struct FSView: View {
                             }
                             
                         }
-                        .padding(.top, 1) 
+                        .padding(.top, 1)
                         
                     }
                    
