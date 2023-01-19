@@ -27,6 +27,10 @@ struct OnboardingTabView: View {
             
         }
         .tabViewStyle(PageTabViewStyle())
+        .onAppear() {
+            UIPageControl.appearance().currentPageIndicatorTintColor = UIColor.label
+            UIPageControl.appearance().pageIndicatorTintColor = UIColor.secondaryLabel
+        }
     }
 }
 
