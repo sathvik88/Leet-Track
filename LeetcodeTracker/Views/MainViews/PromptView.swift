@@ -21,7 +21,7 @@ struct PromptView: View {
                     
                 GroupBox{
                     Text(prompt)
-                        .foregroundColor(.white)
+                        
                 }
                 .padding([.bottom],200)
                 .padding([.leading,.trailing],20)
