@@ -168,9 +168,6 @@ struct StatsView: View {
                     }
                     UIApplication.shared.applicationIconBadgeNumber = 0
                     
-                    UIDevice.current.setValue(UIInterfaceOrientation.portrait.rawValue, forKey: "orientation") // Forcing the rotation to portrait
-                    AppDelegate.orientationLock = .portrait
-                    
                     
                 }
                 .onDisappear {
@@ -202,7 +199,7 @@ struct StatsView: View {
                             }
                             
                         }, label: {
-                            Image(systemName: "gobackward")
+                            Image(systemName: "arrow.triangle.2.circlepath")
                         })
                     }
                 }
