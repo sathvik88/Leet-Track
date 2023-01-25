@@ -1,10 +1,3 @@
-//
-//  LoginView.swift
-//  LeetcodeTracker
-//
-//  Created by Sathvik Konuganti on 11/7/22.
-//
-
 import SwiftUI
 import Combine
 
@@ -43,8 +36,7 @@ struct LoginView: View {
                                         username = newValue.replacingOccurrences(of: " ", with: "")
                                     }
                     
-                    Button("Login"){
-                        
+                    Button(action: {
                         Task{
                             await data.loadStats(name: username)
                         }
@@ -55,11 +47,17 @@ struct LoginView: View {
                         }
                         
                         isFocused = false
-                    }
+                        
+                    }, label: {
+                        Text("Login")
+                            .frame(width: 300, height: 50)
+                    })
+                    
                     .foregroundColor(.white)
-                    .frame(width: 300, height: 50)
+                    
                     .background(Color.blue)
                     .cornerRadius(10)
+                    .padding()
                     Button("Register"){
                         openURL(URL(string: "https://leetcode.com/accounts/signup/")!)
                         
@@ -83,5 +81,3 @@ struct LoginView_Previews: PreviewProvider {
         
     }
 }
-
-

@@ -12,24 +12,28 @@ struct TabViewScreen: View {
     @State var notification: Bool = false
     @EnvironmentObject var lnManager: NotificationManager
     @Environment(\.scenePhase) var scenePhase
+    @State private var selection = 1
     
     var body: some View {
-        TabView{
+        TabView(selection: $selection){
             ContentView()
                 .tabItem{
                     Image(systemName: "house")
                     Text("Home")
                 }
+                .tag(1)
             LoginView()
                 .tabItem{
                     Image(systemName: "person.fill")
                     Text("My Stats")
                 }
+                .tag(2)
             DSAlgoView()
                 .tabItem{
                     Image(systemName: "book")
                     Text("Learn")
                 }
+                .tag(3)
         }
         .task {
             try? await lnManager.requestAuthorization()
