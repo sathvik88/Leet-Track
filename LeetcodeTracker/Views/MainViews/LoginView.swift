@@ -16,7 +16,7 @@ struct LoginView: View {
         
         if login{
                         
-            StatsView()
+            StatsView(lineWidth: 5, fontSize: 15)
                 
         } else{
             ZStack{
