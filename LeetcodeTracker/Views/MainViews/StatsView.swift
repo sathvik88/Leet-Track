@@ -36,15 +36,12 @@ struct StatsView: View {
                                         .font(.system(size: fontSize) .bold())
                                 })
                             .foregroundColor(Color.gray)
-                            //.frame(width: 150, height: 150)
-                            //.offset(y: -200)
+                        
                         Circle()
                             .trim(from: 0.0, to: CGFloat(Float(data.stats?.totalSolved ?? 0)/Float(data.stats?.totalQuestions ?? 1)))
                         
                             .stroke(style: StrokeStyle(lineWidth: lineWidth, lineCap: .round, lineJoin: .round))
                             .foregroundColor(Color.yellow)
-                            //.frame(width: 150, height: 150)
-                            //.offset(x: 200, y: 0)
                             .rotationEffect(.degrees(-90))
                             .animation(.easeOut, value: (Float(data.stats?.totalSolved ?? 0)/Float(data.stats?.totalQuestions ?? 1)))
                         
@@ -63,9 +60,7 @@ struct StatsView: View {
                                             .font(.system(size: fontSize) .bold())
                                     })
                                 .foregroundColor(Color.gray)
-                                //.frame(width: 100, height: 100)
-                            
-                                //.offset(y: -50)
+                             
                             Circle()
                                 .trim(from: 0.0, to: CGFloat(Float(data.stats?.easySolved ?? 0)/Float(data.stats?.totalEasy ?? 1)))
                                 .stroke(style: StrokeStyle(lineWidth: lineWidth, lineCap: .round, lineJoin: .round))
@@ -89,11 +84,8 @@ struct StatsView: View {
                                         Text("Medium")
                                             .font(.system(size: fontSize) .bold())
                                     })
-                            
-                            
                                 .foregroundColor(Color.gray)
-                                //.frame(width: 100, height: 100)
-                                //.offset(y: -50)
+                                
                             Circle()
                                 .trim(from: 0.0, to: CGFloat(Float(data.stats?.mediumSolved ?? 0)/Float(data.stats?.totalMedium ?? 1)))
                                 .stroke(style: StrokeStyle(lineWidth: lineWidth, lineCap: .round, lineJoin: .round))
@@ -117,8 +109,7 @@ struct StatsView: View {
                                             .font(.system(size: fontSize) .bold())
                                     })
                                 .foregroundColor(Color.gray)
-                                //.frame(width: 100, height: 100)
-                                //.offset(y: -50)
+                                
                             Circle()
                                 .trim(from: 0.0, to: CGFloat(Float(data.stats?.hardSolved ?? 0)/Float(data.stats?.totalHard ?? 1)))
                                 .stroke(style: StrokeStyle(lineWidth: lineWidth, lineCap: .round, lineJoin: .round))
@@ -132,12 +123,11 @@ struct StatsView: View {
                         
                     }
                     ProgressView("Acceptance Rate: \(Int(data.stats?.acceptanceRate ?? 0)) %", value: data.stats?.acceptanceRate ?? 0.0, total: 100)
-                       
                         .padding([.leading,.trailing], 10)
+                    
                     Text("Submission Activity")
-                        
-                        
                         .frame(alignment: .leading)
+                    
                     VStack{
                         
                         if #available(iOS 16.0, *) {
@@ -147,14 +137,12 @@ struct StatsView: View {
                                     
                                 }
                                 
-                                //.padding(.top, 380)
                                 
                             }else{
                                 Chart(data.subs){ item in
                                     BarMark(x: .value("Month", item.subDay, unit: .month), y: .value("Subs", item.sub))
                                     
                                 }
-                                //.frame(height: 200)
                                 
                             }
                             
@@ -163,8 +151,7 @@ struct StatsView: View {
                             // Don't display chart
                         }
                     }
-                    //.frame(maxHeight: 400)
-                    
+                   
                 }
                 
                 .onAppear{

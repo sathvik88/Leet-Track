@@ -9,6 +9,7 @@ struct LoginView: View {
     @AppStorage("username") private var username: String = ""
     @EnvironmentObject  var userAuth: UserAuth
     @FocusState private var isFocused: Bool
+    @State private var showWebView = false
     @State var isDisabled = false
     @Environment(\.openURL) var openURL
     
@@ -58,9 +59,13 @@ struct LoginView: View {
                     .background(Color.blue)
                     .cornerRadius(10)
                     .padding()
-                    Button("Register"){
-                        openURL(URL(string: "https://leetcode.com/accounts/signup/")!)
-                        
+                    Button{
+                        showWebView.toggle()
+                    } label: {
+                        Text("Register")
+                    }
+                    .sheet(isPresented: $showWebView){
+                        WebView(url: URL(string: "https://leetcode.com/accounts/signup/")!)
                     }
                     .padding()
                     
