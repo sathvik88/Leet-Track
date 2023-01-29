@@ -9,7 +9,6 @@ struct LoginView: View {
     @AppStorage("username") private var username: String = ""
     @EnvironmentObject  var userAuth: UserAuth
     @FocusState private var isFocused: Bool
-    @State private var showSafari = false
     @State var isDisabled = false
     @Environment(\.openURL) var openURL
     
@@ -23,11 +22,12 @@ struct LoginView: View {
             ZStack{
                 
                 VStack{
-                    Text("Login to Leetcode!")
+                    Text("View Your Stats!")
                         .font(.largeTitle)
                         .bold()
                         .padding()
-                    TextField("Username", text: $username)
+                        .padding(.bottom, 120)
+                    TextField("Leetcode Username", text: $username)
                         .focused($isFocused)
                         .padding()
                         .frame(width: 300, height: 50)
@@ -58,15 +58,6 @@ struct LoginView: View {
                     
                     .background(Color.blue)
                     .cornerRadius(10)
-                    .padding()
-                    Button{
-                        showSafari.toggle()
-                    } label: {
-                        Text("Register")
-                    }
-                    .sheet(isPresented: $showSafari){
-                        SafariView(url: URL(string: "https://leetcode.com/accounts/login/")!)
-                    }
                     .padding()
                     
                 }
