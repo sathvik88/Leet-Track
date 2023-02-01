@@ -29,39 +29,68 @@ struct ContentView: View {
                         Text(list.question)
                             .fontWeight(.medium)
                             .foregroundColor(.accentColor)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            
                         
-                        Spacer()
+//                        Spacer()
                         
                         if(list.difficulty == "Easy"){
-                            Text(list.difficulty)
-                                .foregroundColor(.green)
-                                .fontWeight(.medium)
+                            HStack{
+                                Text(list.difficulty)
+                                    .foregroundColor(.green)
+                                    .fontWeight(.medium)
+                                    .frame(maxWidth: .infinity, alignment: .trailing)
+                                Image(systemName: data.contains(list) ? "star.fill" : "star")
+                                    .foregroundColor(.yellow)
+                                    .onTapGesture{
+                                        data.toggleFavs(question: list)
+                                    }
+                                    .frame(maxWidth: .infinity, alignment: .trailing)
+                            }
+                            
+                                
                             
                         }
                         else if(list.difficulty == "Medium"){
-                            Text(list.difficulty)
-                                .foregroundColor(.orange)
-                                .fontWeight(.medium)
+                            HStack {
+                                Text(list.difficulty)
+                                    .foregroundColor(.orange)
+                                    .fontWeight(.medium)
+                                    .frame(maxWidth: .infinity, alignment: .trailing)
+                                Image(systemName: data.contains(list) ? "star.fill" : "star")
+                                    .foregroundColor(.yellow)
+                                    .onTapGesture{
+                                        data.toggleFavs(question: list)
+                                    }
+                                    .frame(maxWidth: .infinity, alignment: .trailing)
+                            }
+                            
                         }
                         else{
-                            Text(list.difficulty)
-                                .foregroundColor(.red)
-                                .fontWeight(.medium)
-                        }
-                        Spacer()
-                        Image(systemName: data.contains(list) ? "star.fill" : "star")
-                            .foregroundColor(.yellow)
-                            .onTapGesture{
-                                data.toggleFavs(question: list)
+                            HStack{
+                                Text(list.difficulty)
+                                    .foregroundColor(.red)
+                                    .fontWeight(.medium)
+                                    .frame(alignment: .trailing)
+                                    .frame(maxWidth: .infinity, alignment: .trailing)
+                                Image(systemName: data.contains(list) ? "star.fill" : "star")
+                                    .foregroundColor(.yellow)
+                                    .onTapGesture{
+                                        data.toggleFavs(question: list)
+                                    }
+                                    .frame(maxWidth: .infinity, alignment: .trailing)
+                                    
                             }
+                            
+                            
+                        }
+
                     }
                     .contentShape(Rectangle())
                     .onTapGesture {
-                        openURL(URL(string: list.solution)!)
-                    }
-                    .onLongPressGesture(minimumDuration: 0.1) {
                         selected = list
                     }
+                    
                     .sheet(item: $selected, content: { item in
                         PromptView(prompt: item.prompt, solution: item.solution, question: item.question)
                     })
