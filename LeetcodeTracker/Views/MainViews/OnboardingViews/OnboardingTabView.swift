@@ -14,13 +14,7 @@ struct OnboardingTabView: View {
             WelcomeView()
             OnboardingView(
                 title: "View Prompts",
-                gif: "promptsPreview",
-                showDissButton: false,
-                showOnboarding: $showOnboarding
-            )
-            OnboardingView(
-                title: "View Solution",
-                gif: "solutionGif",
+                gif: "promptgif",
                 showDissButton: true,
                 showOnboarding: $showOnboarding
             )
