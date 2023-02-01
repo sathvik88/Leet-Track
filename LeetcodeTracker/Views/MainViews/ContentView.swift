@@ -118,7 +118,7 @@ struct ContentView: View {
             }
             
         }
-        .searchable(text: $searchText)
+        .searchable(text: $searchText, prompt: "Search Questions, Dificulty, Topic...")
         .navigationViewStyle(StackNavigationViewStyle())
         .fullScreenCover(isPresented: $showOnboarding, content: {
             OnboardingTabView(showOnboarding: $showOnboarding)
