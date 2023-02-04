@@ -10,7 +10,6 @@ Leet Track is an application that allows users to help study the fundamentals of
 <img src= "https://user-images.githubusercontent.com/55303890/216792609-d2d04eec-ce23-4fa3-a5d9-55c56a68f3b6.png" width="200" height="400">
 </p>
 
-Leet Track is now on the App Store!
-Download:
-<a href="https://apps.apple.com/us/app/leet-track/id1662188122"><img src="user-images.githubusercontent.com/55303890/216792633-ac9f3faf-a5f6-4df8-906d-0750d6f8f482.png" width="400" height="100"></a>
 
+
+![Download_on_the_App_Store_Badge svg](https://user-images.githubusercontent.com/55303890/216792762-52658032-a331-4abc-a76d-8b485170e0d8.png)
