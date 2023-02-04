@@ -12,5 +12,5 @@ Leet Track is an application that allows users to help study the fundamentals of
 
 
 
-![Download_on_the_App_Store_Badge svg](https://user-images.githubusercontent.com/55303890/216792762-52658032-a331-4abc-a76d-8b485170e0d8.png)
-<img src= "https://user-images.githubusercontent.com/55303890/216792762-52658032-a331-4abc-a76d-8b485170e0d8.png" width="200" height="400">
+
+<img src= "https://user-images.githubusercontent.com/55303890/216792762-52658032-a331-4abc-a76d-8b485170e0d8.png" width="400" height="100">
