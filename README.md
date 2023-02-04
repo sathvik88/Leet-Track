@@ -12,5 +12,5 @@ Leet Track is an application that allows users to help study the fundamentals of
 
 Leet Track is now on the App Store!
 Download:
-<a href="https://apps.apple.com/us/app/leet-track/id1662188122"><img src="user-images.githubusercontent.com/55303890/216792633-ac9f3faf-a5f6-4df8-906d-0750d6f8f482.png"></a>
+<a href="https://apps.apple.com/us/app/leet-track/id1662188122"><img src="user-images.githubusercontent.com/55303890/216792633-ac9f3faf-a5f6-4df8-906d-0750d6f8f482.png" width="400" height="100"></a>
 
