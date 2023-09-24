@@ -9,6 +9,7 @@ import SwiftUI
 import CoreData
 
 
+@available(iOS 16.0, *)
 struct ContentView: View {
     
     @ObservedObject var data = DataModel()
@@ -17,105 +18,121 @@ struct ContentView: View {
     @State var showSheet: Bool = false
     @State var selected: LeetCodeContent?
     @AppStorage("showOnboarding") var showOnboarding: Bool = true
+    @State var toggleFav: Bool = false
     
-
+    
+    
     
     var body: some View {
         NavigationView {
-            
-            List{
-                ForEach(data.filteredItems.filter({ "\($0)".lowercased().contains(searchText.lowercased()) || searchText.isEmpty})) { list in
-                    HStack{
-                        Text(list.question)
-                            .fontWeight(.medium)
-                            .foregroundColor(.accentColor)
-                            .frame(maxWidth: .infinity, alignment: .leading)
+            if data.isApiLoading{
+                ProgressView()
+                    .progressViewStyle(CircularProgressViewStyle())
+            }else{
+                List{
+                    ForEach(data.filteredItems.filter({ "\($0)".lowercased().contains(searchText.lowercased()) || searchText.isEmpty})) { list in
+                        HStack{
+                            Text(list.question)
+                                .bold()
+                                .foregroundColor(.accentColor)
+                                .frame(maxWidth: .infinity, alignment: .leading)
                             
-                        
-//                        Spacer()
-                        
-                        if(list.difficulty == "Easy"){
-                            HStack{
-                                Text(list.difficulty)
-                                    .foregroundColor(.green)
-                                    .fontWeight(.medium)
-                                    .frame(maxWidth: .infinity, alignment: .trailing)
-                                Image(systemName: data.contains(list) ? "star.fill" : "star")
-                                    .foregroundColor(.yellow)
-                                    .onTapGesture{
-                                        data.toggleFavs(question: list)
-                                    }
-                                    .frame(maxWidth: .infinity, alignment: .trailing)
-                            }
                             
+                            //                        Spacer()
+                            
+                            if(list.difficulty == "Easy"){
+                                HStack{
+                                    Text(list.difficulty)
+                                        .foregroundColor(.green)
+                                        .bold()
+                                        .frame(maxWidth: .infinity, alignment: .trailing)
+                                    Image(systemName: data.contains(list) ? "star.fill" : "star")
+                                        .bold()
+                                        .foregroundColor(.yellow)
+                                        .onTapGesture{
+                                            data.toggleFavs(question: list)
+                                            
+                                        }
+                                        .frame(maxWidth: .infinity, alignment: .trailing)
+                                }
                                 
-                            
-                        }
-                        else if(list.difficulty == "Medium"){
-                            HStack {
-                                Text(list.difficulty)
-                                    .foregroundColor(.orange)
-                                    .fontWeight(.medium)
-                                    .frame(maxWidth: .infinity, alignment: .trailing)
-                                Image(systemName: data.contains(list) ? "star.fill" : "star")
-                                    .foregroundColor(.yellow)
-                                    .onTapGesture{
-                                        data.toggleFavs(question: list)
-                                    }
-                                    .frame(maxWidth: .infinity, alignment: .trailing)
+                                
+                                
                             }
-                            
-                        }
-                        else{
-                            HStack{
-                                Text(list.difficulty)
-                                    .foregroundColor(.red)
-                                    .fontWeight(.medium)
-                                    .frame(alignment: .trailing)
-                                    .frame(maxWidth: .infinity, alignment: .trailing)
-                                Image(systemName: data.contains(list) ? "star.fill" : "star")
-                                    .foregroundColor(.yellow)
-                                    .onTapGesture{
-                                        data.toggleFavs(question: list)
-                                    }
-                                    .frame(maxWidth: .infinity, alignment: .trailing)
+                            else if(list.difficulty == "Medium"){
+                                HStack {
+                                    Text(list.difficulty)
                                     
+                                        .foregroundColor(.orange)
+                                        .bold()
+                                        .frame(maxWidth: .infinity, alignment: .trailing)
+                                    Image(systemName: data.contains(list) ? "star.fill" : "star")
+                                        .bold()
+                                        .foregroundColor(.yellow)
+                                        .onTapGesture{
+                                            data.toggleFavs(question: list)
+                                            
+                                        }
+                                        .frame(maxWidth: .infinity, alignment: .trailing)
+                                }
+                                
+                            }
+                            else{
+                                HStack{
+                                    Text(list.difficulty)
+                                        .foregroundColor(.red)
+                                        .bold()
+                                        .frame(alignment: .trailing)
+                                        .frame(maxWidth: .infinity, alignment: .trailing)
+                                    Image(systemName: data.contains(list) ? "star.fill" : "star")
+                                        .bold()
+                                        .foregroundColor(.yellow)
+                                        .onTapGesture{
+                                            data.toggleFavs(question: list)
+                                            
+                                        }
+                                        .frame(maxWidth: .infinity, alignment: .trailing)
+                                    
+                                }
+                                
+                                
                             }
                             
-                            
                         }
-
+                        .contentShape(Rectangle())
+                        .onTapGesture {
+                            selected = list
+                        }
+                        
+                        .sheet(item: $selected, content: { item in
+                            PromptView(prompt: item.prompt, solution: item.solution, question: item.question)
+                        })
                     }
-                    .contentShape(Rectangle())
-                    .onTapGesture {
-                        selected = list
+                }
+                .navigationBarTitle("Questions")
+                .toolbar{
+                    ToolbarItem(placement: .navigationBarTrailing){
+                        Button(action: {data.sortFaves()
+                            toggleFav.toggle()}, label: {
+                            Image(systemName: toggleFav ? "star.fill" : "star")
+                        })
+                    }
+                    ToolbarItem(placement: .navigationBarTrailing){
+                        Button(action: {}, label: {
+                            NavigationLink(destination: SettingsView()) {
+                                Image(systemName: "gear")
+                            }
+                        })
                     }
                     
-                    .sheet(item: $selected, content: { item in
-                        PromptView(prompt: item.prompt, solution: item.solution, question: item.question)
-                    })
+                    
+                }
+                .refreshable {
+                    data.load()
                 }
             }
-            .navigationBarTitle("Questions")
-            .toolbar{
-                ToolbarItem(placement: .navigationBarTrailing){
-                    Button(action: {data.sortFaves()}, label: {
-                        Image(systemName: "star")
-                    })
-                }
-                ToolbarItem(placement: .navigationBarTrailing){
-                    Button(action: {}, label: {
-                        NavigationLink(destination: SettingsView()) {
-                            Image(systemName: "gear")
-                        }
-                    })
-                }
-
+            
                 
-            }
-            .refreshable {
-                data.load()
-            }
             
         }
         .searchable(text: $searchText, prompt: "Search Questions, Dificulty, Topic...")
@@ -130,8 +147,12 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
-            
+        if #available(iOS 16.0, *) {
+            ContentView()
+        } else {
+            // Fallback on earlier versions
+        }
+        
     }
 }
 

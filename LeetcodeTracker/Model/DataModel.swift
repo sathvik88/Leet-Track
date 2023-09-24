@@ -17,6 +17,9 @@ final class DataModel: ObservableObject{
     @Published var showingFaves = false
     @Published var savedItems: Set<String>
     @Published var isAPIDown = false
+    @Published var isApiLoading = true
+    @Published var isStatsApiLoading = true
+    @Published var accentColor: Color = .blue
     let df = DateFormatter()
     
     var filteredItems: [LeetCodeContent] {
@@ -49,6 +52,9 @@ final class DataModel: ObservableObject{
                     let json = try JSONDecoder().decode([LeetCodeContent].self, from: data)
                     DispatchQueue.main.async {
                         self.jsonData = json
+                        if !self.jsonData.isEmpty{
+                            self.isApiLoading.toggle()
+                        }
                     }
                 } else{
                     print("No data")
@@ -70,6 +76,16 @@ final class DataModel: ObservableObject{
             let res = try JSONDecoder().decode(Stats.self, from: data)
             DispatchQueue.main.async{
                 self.stats = res
+                print(res.message)
+                if Int(res.acceptanceRate) < 35{
+                    self.accentColor = .red
+                }else if Int(res.acceptanceRate) > 35 && Int(res.acceptanceRate) < 70{
+                    self.accentColor = .orange
+                }else if Int(res.acceptanceRate ) > 70{
+                    self.accentColor = .green
+                }else{
+                    self.accentColor = .blue
+                }
                 
             }
             
@@ -77,6 +93,7 @@ final class DataModel: ObservableObject{
             for (key,val) in res.submissionCalendar{
                 DispatchQueue.main.async{
                     self.subs.append(submissions(subDay: Date(timeIntervalSince1970: Double(key) ?? 0.0), sub: val))
+                    
                     
                 }
  

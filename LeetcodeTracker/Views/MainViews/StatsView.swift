@@ -17,6 +17,7 @@ struct StatsView: View {
     
     
     
+    
     var body: some View {
         if data.isAPIDown{
             Text("API is currently down, please check back later!")
@@ -26,21 +27,21 @@ struct StatsView: View {
                 VStack{
                     ZStack{
                         Circle()
-                            .stroke(lineWidth: lineWidth)
+                            .stroke(lineWidth: 20)
                             .opacity(0.2)
                             .overlay(
                                 VStack{
                                     Text("\(data.stats?.totalSolved ?? 0)")
-                                        .font(.system(size: fontSize) .bold())
+                                        .font(.system(size: 25) .bold())
                                     Text("Total")
-                                        .font(.system(size: fontSize) .bold())
+                                        .font(.system(size: 20) .bold())
                                 })
                             .foregroundColor(Color.gray)
                         
                         Circle()
                             .trim(from: 0.0, to: CGFloat(Float(data.stats?.totalSolved ?? 0)/Float(data.stats?.totalQuestions ?? 1)))
                         
-                            .stroke(style: StrokeStyle(lineWidth: lineWidth, lineCap: .round, lineJoin: .round))
+                            .stroke(style: StrokeStyle(lineWidth: 20, lineCap: .round, lineJoin: .round))
                             .foregroundColor(Color.yellow)
                             .rotationEffect(.degrees(-90))
                             .animation(.easeOut, value: (Float(data.stats?.totalSolved ?? 0)/Float(data.stats?.totalQuestions ?? 1)))
@@ -65,8 +66,6 @@ struct StatsView: View {
                                 .trim(from: 0.0, to: CGFloat(Float(data.stats?.easySolved ?? 0)/Float(data.stats?.totalEasy ?? 1)))
                                 .stroke(style: StrokeStyle(lineWidth: lineWidth, lineCap: .round, lineJoin: .round))
                                 .foregroundColor(Color.green)
-                                //.frame(width: 100, height: 100)
-                                //.offset(x: 50, y: 0)
                                 .rotationEffect(.degrees(-90))
                                 .animation(.easeOut, value: (Float(data.stats?.easySolved ?? 0)/Float(data.stats?.totalEasy ?? 1)))
                         }
@@ -90,8 +89,7 @@ struct StatsView: View {
                                 .trim(from: 0.0, to: CGFloat(Float(data.stats?.mediumSolved ?? 0)/Float(data.stats?.totalMedium ?? 1)))
                                 .stroke(style: StrokeStyle(lineWidth: lineWidth, lineCap: .round, lineJoin: .round))
                                 .foregroundColor(Color.orange)
-                                //.frame(width: 100, height: 100)
-                                //.offset(x: 50, y: 0)
+                                
                                 .rotationEffect(.degrees(-90))
                                 .animation(.easeOut, value: (Float(data.stats?.mediumSolved ?? 0)/Float(data.stats?.totalMedium ?? 1)))
                         }
@@ -114,8 +112,7 @@ struct StatsView: View {
                                 .trim(from: 0.0, to: CGFloat(Float(data.stats?.hardSolved ?? 0)/Float(data.stats?.totalHard ?? 1)))
                                 .stroke(style: StrokeStyle(lineWidth: lineWidth, lineCap: .round, lineJoin: .round))
                                 .foregroundColor(Color.red)
-                                //.frame(width: 100, height: 100)
-                                //.offset(x: 50, y: 0)
+                                
                                 .rotationEffect(.degrees(-90))
                                 .animation(.easeOut, value: (Float(data.stats?.hardSolved ?? 0)/Float(data.stats?.totalHard ?? 1)))
                         }
@@ -124,9 +121,13 @@ struct StatsView: View {
                     }
                     ProgressView("Acceptance Rate: \(Int(data.stats?.acceptanceRate ?? 0)) %", value: data.stats?.acceptanceRate ?? 0.0, total: 100)
                         .padding([.leading,.trailing], 10)
+                        .accentColor(data.accentColor)
+                        .bold()
+                        
                     
                     Text("Submission Activity")
                         .frame(alignment: .leading)
+                        .bold()
                     
                     VStack{
                         
@@ -134,18 +135,20 @@ struct StatsView: View {
                             if data.subs.count < 50{
                                 Chart(data.subs){ item in
                                     BarMark(x: .value("Month", item.subDay, unit: .weekOfMonth), y: .value("Subs", item.sub))
-                                    
+
                                 }
-                                
+
                                 
                             }else{
                                 Chart(data.subs){ item in
-                                    BarMark(x: .value("Month", item.subDay, unit: .month), y: .value("Subs", item.sub))
+                                    BarMark (x: .value("Month", item.subDay, unit: .month), y: .value("Subs", item.sub))
+                                    
                                     
                                 }
                                 
+                                
+                                
                             }
-                            
                             
                         } else {
                             // Don't display chart
@@ -159,6 +162,8 @@ struct StatsView: View {
                         if(data.subs.isEmpty){
                             await data.loadStats(name: username)
                             
+                        }else{
+                            print(data.subs)
                         }
                     }
                     UIApplication.shared.applicationIconBadgeNumber = 0
@@ -166,9 +171,11 @@ struct StatsView: View {
                         self.lineWidth = 10
                         self.fontSize = 20
                     }else{
-                        self.lineWidth = 5
+                        self.lineWidth = 10
                         self.fontSize = 15
                     }
+                    
+                    
                     
                     
                 }
@@ -187,7 +194,7 @@ struct StatsView: View {
                             data.subs.removeAll()
                             
                         }, label: {
-                            Text("Log out")
+                            Image(systemName: "rectangle.portrait.and.arrow.right")
                         })
                     }
                     

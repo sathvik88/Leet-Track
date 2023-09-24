@@ -10,6 +10,7 @@ struct LoginView: View {
     @EnvironmentObject  var userAuth: UserAuth
     @FocusState private var isFocused: Bool
     @State var isDisabled = false
+    @State var progressLoad = false
     @Environment(\.openURL) var openURL
     
     var body: some View {
@@ -19,49 +20,63 @@ struct LoginView: View {
             StatsView(lineWidth: 5, fontSize: 15)
                 
         } else{
-            ZStack{
-                
-                VStack{
-                    Text("View Your Stats!")
-                        .font(.largeTitle)
-                        .bold()
-                        .padding()
-                        .padding(.bottom, 120)
-                    TextField("Leetcode Username", text: $username)
-                        .focused($isFocused)
-                        .padding()
-                        .frame(width: 300, height: 50)
-                        .background(Color.gray.opacity(0.2))
-                        .cornerRadius(10)
-                        .onChange(of: username) { newValue in
-                                        username = newValue.replacingOccurrences(of: " ", with: "")
+            GeometryReader{ proxy in
+                ZStack{
+                                
+                                VStack{
+                                    Spacer()
+                                    Text("View Your Stats!")
+                                        .font(.largeTitle)
+                                        .bold()
+                                        .padding()
+                                    
+                                    if progressLoad{
+                                        ProgressView()
+                                            .progressViewStyle(CircularProgressViewStyle())
+                                            .padding()
                                     }
-                    
-                    Button(action: {
-                        Task{
-                            await data.loadStats(name: username)
-                        }
-                        
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 1){
-                            login = true
-                            
-                        }
-                        
-                        isFocused = false
-                        
-                    }, label: {
-                        Text("Login")
-                            .frame(width: 300, height: 50)
-                    })
-                    
-                    .foregroundColor(.white)
-                    
-                    .background(Color.blue)
-                    .cornerRadius(10)
-                    .padding()
-                    
-                }
+                                    TextField("Leetcode Username", text: $username)
+                                        .focused($isFocused)
+                                        .padding()
+                                        .frame(width: proxy.size.width/1.5, height: 50)
+                                        .background(Color.gray.opacity(0.2))
+                                        .cornerRadius(10)
+                                        .onChange(of: username) { newValue in
+                                                        username = newValue.replacingOccurrences(of: " ", with: "")
+                                                    }
+                                    
+                                    Button(action: {
+                                        progressLoad.toggle()
+                                        Task{
+                                            await data.loadStats(name: username)
+                                        }
+                                        
+                                        DispatchQueue.main.asyncAfter(deadline: .now() + 1){
+                                            login = true
+                                            progressLoad.toggle()
+                                            
+                                        }
+                                        
+                                        isFocused = false
+                                        
+                                    }, label: {
+                                        Text("Login")
+                                            .frame(width: proxy.size.width/3, height: 50)
+                                    })
+                                    
+                                    
+                                    .foregroundColor(.white)
+                                    
+                                    .background(Color.blue)
+                                    .cornerRadius(10)
+                                    .padding()
+                                    Spacer()
+                                    
+                                }
+                                .padding([.leading,], 50)
+                            }
             }
+            
         }
         
     }
