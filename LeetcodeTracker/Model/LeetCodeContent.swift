@@ -28,3 +28,7 @@ struct LeetCodeContent: Codable, Identifiable{
   }
     
 }
+struct Token: Identifiable{
+    let id = UUID()
+    var name: String
+}

@@ -8,10 +8,8 @@
 import SwiftUI
 import CoreData
 
-
 @available(iOS 16.0, *)
 struct ContentView: View {
-    
     @ObservedObject var data = DataModel()
     @State private var searchText = ""
     @Environment(\.openURL) var openURL
@@ -22,8 +20,7 @@ struct ContentView: View {
     @State var toggleAlert: Bool = false
     
     
-    
-    
+
     var body: some View {
         NavigationView {
             if data.isApiLoading{
@@ -31,15 +28,12 @@ struct ContentView: View {
                     .progressViewStyle(CircularProgressViewStyle())
             }else{
                 List{
-                    ForEach(data.filteredItems.filter({ "\($0)".lowercased().contains(searchText.lowercased()) || searchText.isEmpty})) { list in
+                    ForEach(data.searchResults) { list in
                         HStack{
                             Text(list.question)
                                 .bold()
                                 .foregroundColor(.accentColor)
                                 .frame(maxWidth: .infinity, alignment: .leading)
-                            
-                            
-                            //                        Spacer()
                             
                             if(list.difficulty == "Easy"){
                                 HStack{
@@ -103,7 +97,7 @@ struct ContentView: View {
                             
                         }
                         .contentShape(Rectangle())
-                        .alert("Uh oh, you havent favorited any questions! 😳",isPresented: $toggleAlert) {
+                        .alert("Uh oh,  you havent favorited any questions! 😳",isPresented: $toggleAlert) {
                             
                             Button("OK", role: .cancel) { }
                         }
@@ -116,6 +110,88 @@ struct ContentView: View {
                         })
                         
                     }
+//                    ForEach(data.filteredItems.filter({ "\($0)".lowercased().contains(searchText.lowercased()) || searchText.isEmpty})) { list in
+//                        HStack{
+//                            Text(list.question)
+//                                .bold()
+//                                .foregroundColor(.accentColor)
+//                                .frame(maxWidth: .infinity, alignment: .leading)
+//
+//                            if(list.difficulty == "Easy"){
+//                                HStack{
+//                                    Text(list.difficulty)
+//                                        .foregroundColor(.green)
+//                                        .bold()
+//                                        .frame(maxWidth: .infinity, alignment: .trailing)
+//                                    Image(systemName: data.contains(list) ? "star.fill" : "star")
+//                                        .bold()
+//                                        .foregroundColor(.yellow)
+//                                        .onTapGesture{
+//                                            data.toggleFavs(question: list)
+//
+//                                        }
+//                                        .frame(maxWidth: .infinity, alignment: .trailing)
+//                                }
+//
+//
+//
+//                            }
+//                            else if(list.difficulty == "Medium"){
+//                                HStack {
+//                                    Text(list.difficulty)
+//
+//                                        .foregroundColor(.orange)
+//                                        .bold()
+//                                        .frame(maxWidth: .infinity, alignment: .trailing)
+//                                    Image(systemName: data.contains(list) ? "star.fill" : "star")
+//                                        .bold()
+//                                        .foregroundColor(.yellow)
+//                                        .onTapGesture{
+//                                            data.toggleFavs(question: list)
+//
+//                                        }
+//                                        .frame(maxWidth: .infinity, alignment: .trailing)
+//                                }
+//
+//                            }
+//                            else{
+//                                HStack{
+//                                    Text(list.difficulty)
+//                                        .foregroundColor(.red)
+//                                        .bold()
+//                                        .frame(alignment: .trailing)
+//                                        .frame(maxWidth: .infinity, alignment: .trailing)
+//                                    Image(systemName: data.contains(list) ? "star.fill" : "star")
+//                                        .bold()
+//                                        .foregroundColor(.yellow)
+//                                        .onTapGesture{
+//
+//                                            print(data.toggleFavs(question: list))
+//                                            data.toggleFavs(question: list)
+//
+//                                        }
+//                                        .frame(maxWidth: .infinity, alignment: .trailing)
+//
+//                                }
+//
+//
+//                            }
+//
+//                        }
+//                        .contentShape(Rectangle())
+//                        .alert("Uh oh,  you havent favorited any questions! 😳",isPresented: $toggleAlert) {
+//
+//                            Button("OK", role: .cancel) { }
+//                        }
+//                        .onTapGesture {
+//                            selected = list
+//                        }
+//
+//                        .sheet(item: $selected, content: { item in
+//                            PromptView(prompt: item.prompt, solution: item.solution, question: item.question)
+//                        })
+//
+//                    }
                 }
                 .navigationBarTitle("Questions")
                 .toolbar{
@@ -150,7 +226,9 @@ struct ContentView: View {
                 
             
         }
-        .searchable(text: $searchText, prompt: "Search Questions, Dificulty, Topic...")
+        .searchable(text: $data.searchText, tokens: $data.currentTokens, suggestedTokens: .constant(data.suggestedTokens),prompt: "Type to filter, or use # for tags"){ token in
+            Text(token.name)
+        }
         .navigationViewStyle(StackNavigationViewStyle())
         .fullScreenCover(isPresented: $showOnboarding, content: {
             OnboardingTabView(showOnboarding: $showOnboarding)

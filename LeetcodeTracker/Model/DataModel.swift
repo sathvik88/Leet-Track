@@ -20,8 +20,17 @@ final class DataModel: ObservableObject{
     @Published var isApiLoading = true
     @Published var isStatsApiLoading = true
     @Published var accentColor: Color = .blue
+    @Published var searchText: String = ""
     let df = DateFormatter()
-    
+    let allTokens = [Token(name: "easy"), Token(name: "medium"), Token(name: "hard")]
+    @Published var currentTokens = [Token]()
+    var suggestedTokens: [Token] {
+            if searchText.starts(with: "#") {
+                return allTokens
+            } else {
+                return []
+            }
+        }
     var filteredItems: [LeetCodeContent] {
         if showingFaves{
             return jsonData.filter{ savedItems.contains($0.question)}
@@ -29,6 +38,28 @@ final class DataModel: ObservableObject{
         } else{
             return jsonData
         }
+    }
+    var searchResults: [LeetCodeContent]{
+        let trimmedSearchText = searchText.trimmingCharacters(in: .whitespaces)
+        if showingFaves{
+            return jsonData.filter{ savedItems.contains($0.question)}
+        }else{
+            return jsonData.filter{
+                if searchText.isEmpty == false{
+                    return "\($0)".lowercased().contains(searchText.lowercased())
+                    
+                }
+                if currentTokens.isEmpty == false{
+                    for token in currentTokens {
+                        return "\($0)".lowercased().contains(token.name.lowercased())
+                    }
+                    return false
+                }
+                return true
+                
+            }
+        }
+        
     }
     
     
