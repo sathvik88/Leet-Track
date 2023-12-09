@@ -21,9 +21,9 @@ struct LoginView: View {
                 
         } else{
             GeometryReader{ proxy in
-                ZStack{
+                ZStack(alignment: .center){
                                 
-                                VStack{
+                    VStack(alignment: .center){
                                     Spacer()
                                     Text("View Your Stats!")
                                         .font(.largeTitle)
@@ -73,8 +73,9 @@ struct LoginView: View {
                                     Spacer()
                                     
                                 }
-                                .padding([.leading,], 50)
+                                
                             }
+                .position(x: proxy.size.width / 2, y: proxy.size.height / 2)
             }
             
         }

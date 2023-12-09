@@ -19,6 +19,7 @@ struct ContentView: View {
     @State var selected: LeetCodeContent?
     @AppStorage("showOnboarding") var showOnboarding: Bool = true
     @State var toggleFav: Bool = false
+    @State var toggleAlert: Bool = false
     
     
     
@@ -88,6 +89,8 @@ struct ContentView: View {
                                         .bold()
                                         .foregroundColor(.yellow)
                                         .onTapGesture{
+                                            
+                                            print(data.toggleFavs(question: list))
                                             data.toggleFavs(question: list)
                                             
                                         }
@@ -100,6 +103,10 @@ struct ContentView: View {
                             
                         }
                         .contentShape(Rectangle())
+                        .alert("Uh oh, you havent favorited any questions! 😳",isPresented: $toggleAlert) {
+                            
+                            Button("OK", role: .cancel) { }
+                        }
                         .onTapGesture {
                             selected = list
                         }
@@ -107,13 +114,21 @@ struct ContentView: View {
                         .sheet(item: $selected, content: { item in
                             PromptView(prompt: item.prompt, solution: item.solution, question: item.question)
                         })
+                        
                     }
                 }
                 .navigationBarTitle("Questions")
                 .toolbar{
                     ToolbarItem(placement: .navigationBarTrailing){
-                        Button(action: {data.sortFaves()
-                            toggleFav.toggle()}, label: {
+                        Button(action: {
+                            if data.savedItems.isEmpty{
+                                toggleAlert.toggle()
+                            }else{
+                                data.sortFaves()
+                                toggleFav.toggle()
+                            }
+                        },
+                        label: {
                             Image(systemName: toggleFav ? "star.fill" : "star")
                         })
                     }
