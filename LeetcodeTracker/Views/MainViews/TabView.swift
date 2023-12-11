@@ -34,6 +34,12 @@ struct TabViewScreen: View {
                     Text("Learn")
                 }
                 .tag(3)
+            LeetFormsView()
+                .tabItem {
+                    Image(systemName: "network")
+                    Text("Forms")
+                }
+                .tag(4)
         }
         .task {
             try? await lnManager.requestAuthorization()
