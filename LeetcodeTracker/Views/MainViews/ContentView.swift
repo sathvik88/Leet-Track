@@ -46,6 +46,10 @@ struct ContentView: View {
                                         .foregroundColor(.yellow)
                                         .onTapGesture{
                                             data.toggleFavs(question: list)
+                                            if data.savedItems.isEmpty{
+                                                toggleFav.toggle()
+                                                data.sortFaves()
+                                            }
                                             
                                         }
                                         .frame(maxWidth: .infinity, alignment: .trailing)
@@ -66,6 +70,10 @@ struct ContentView: View {
                                         .foregroundColor(.yellow)
                                         .onTapGesture{
                                             data.toggleFavs(question: list)
+                                            if data.savedItems.isEmpty{
+                                                toggleFav.toggle()
+                                                data.sortFaves()
+                                            }
                                             
                                         }
                                         .frame(maxWidth: .infinity, alignment: .trailing)
@@ -83,9 +91,11 @@ struct ContentView: View {
                                         .bold()
                                         .foregroundColor(.yellow)
                                         .onTapGesture{
-                                            
-                                            print(data.toggleFavs(question: list))
                                             data.toggleFavs(question: list)
+                                            if data.savedItems.isEmpty{
+                                                toggleFav.toggle()
+                                                data.sortFaves()
+                                            }
                                             
                                         }
                                         .frame(maxWidth: .infinity, alignment: .trailing)
@@ -110,88 +120,6 @@ struct ContentView: View {
                         })
                         
                     }
-//                    ForEach(data.filteredItems.filter({ "\($0)".lowercased().contains(searchText.lowercased()) || searchText.isEmpty})) { list in
-//                        HStack{
-//                            Text(list.question)
-//                                .bold()
-//                                .foregroundColor(.accentColor)
-//                                .frame(maxWidth: .infinity, alignment: .leading)
-//
-//                            if(list.difficulty == "Easy"){
-//                                HStack{
-//                                    Text(list.difficulty)
-//                                        .foregroundColor(.green)
-//                                        .bold()
-//                                        .frame(maxWidth: .infinity, alignment: .trailing)
-//                                    Image(systemName: data.contains(list) ? "star.fill" : "star")
-//                                        .bold()
-//                                        .foregroundColor(.yellow)
-//                                        .onTapGesture{
-//                                            data.toggleFavs(question: list)
-//
-//                                        }
-//                                        .frame(maxWidth: .infinity, alignment: .trailing)
-//                                }
-//
-//
-//
-//                            }
-//                            else if(list.difficulty == "Medium"){
-//                                HStack {
-//                                    Text(list.difficulty)
-//
-//                                        .foregroundColor(.orange)
-//                                        .bold()
-//                                        .frame(maxWidth: .infinity, alignment: .trailing)
-//                                    Image(systemName: data.contains(list) ? "star.fill" : "star")
-//                                        .bold()
-//                                        .foregroundColor(.yellow)
-//                                        .onTapGesture{
-//                                            data.toggleFavs(question: list)
-//
-//                                        }
-//                                        .frame(maxWidth: .infinity, alignment: .trailing)
-//                                }
-//
-//                            }
-//                            else{
-//                                HStack{
-//                                    Text(list.difficulty)
-//                                        .foregroundColor(.red)
-//                                        .bold()
-//                                        .frame(alignment: .trailing)
-//                                        .frame(maxWidth: .infinity, alignment: .trailing)
-//                                    Image(systemName: data.contains(list) ? "star.fill" : "star")
-//                                        .bold()
-//                                        .foregroundColor(.yellow)
-//                                        .onTapGesture{
-//
-//                                            print(data.toggleFavs(question: list))
-//                                            data.toggleFavs(question: list)
-//
-//                                        }
-//                                        .frame(maxWidth: .infinity, alignment: .trailing)
-//
-//                                }
-//
-//
-//                            }
-//
-//                        }
-//                        .contentShape(Rectangle())
-//                        .alert("Uh oh,  you havent favorited any questions! 😳",isPresented: $toggleAlert) {
-//
-//                            Button("OK", role: .cancel) { }
-//                        }
-//                        .onTapGesture {
-//                            selected = list
-//                        }
-//
-//                        .sheet(item: $selected, content: { item in
-//                            PromptView(prompt: item.prompt, solution: item.solution, question: item.question)
-//                        })
-//
-//                    }
                 }
                 .navigationBarTitle("Questions")
                 .toolbar{
