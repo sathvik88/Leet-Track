@@ -1,10 +1,10 @@
 //
-//  UserStats.swift
-//  LeetcodeTracker
+//  File.swift
+//  LeetTrackWidgetExtension
 //
-//  Created by Sathvik Konuganti on 11/6/22.
+//  Created by Sathvik Konuganti on 2/24/24.
 //
-
+import WidgetKit
 import Foundation
 struct Stats: Codable, Identifiable{
     let id = UUID()
@@ -25,14 +25,10 @@ struct Stats: Codable, Identifiable{
     let submissionCalendar: [String: Int]
     
     
+    
 }
 struct submissions: Identifiable{
     let id = UUID()
     let subDay: Date
     let sub: Int
 }
-
-struct calenderModel{
-    let subDay: Date
-}
-

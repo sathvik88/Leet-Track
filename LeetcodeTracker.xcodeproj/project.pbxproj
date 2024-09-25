@@ -32,6 +32,8 @@
 		2C4E0E5729523DD900EAD778 /* MergeSortView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4E0E5629523DD900EAD778 /* MergeSortView.swift */; };
 		2C4E0E592952447700EAD778 /* heapSort.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2C4E0E582952447700EAD778 /* heapSort.gif */; };
 		2C4E0E5B295244CD00EAD778 /* HeapSortView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4E0E5A295244CD00EAD778 /* HeapSortView.swift */; };
+		2C7EFEB42CA35DFE007FFACD /* AxisContribution in Frameworks */ = {isa = PBXBuildFile; productRef = 2C7EFEB32CA35DFE007FFACD /* AxisContribution */; };
+		2C7EFEB72CA3D783007FFACD /* ProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7EFEB62CA3D783007FFACD /* ProgressBarView.swift */; };
 		2C88320D2918254700D35F96 /* UserStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C88320C2918254700D35F96 /* UserStats.swift */; };
 		2C8832112919600800D35F96 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8832102919600800D35F96 /* LoginView.swift */; };
 		2C9787A728F9E6D900388CF4 /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9787A628F9E6D900388CF4 /* StatsView.swift */; };
@@ -53,6 +55,15 @@
 		2C9C3860298AFA7C00C40AB0 /* promptgif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2C9C385F298AFA7C00C40AB0 /* promptgif.gif */; };
 		2CBED0782B26B80600C1BEBB /* LeetFormsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBED0772B26B80600C1BEBB /* LeetFormsView.swift */; };
 		2CBED07A2B26B84D00C1BEBB /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBED0792B26B84D00C1BEBB /* WebView.swift */; };
+		2CE1584E2B8A8B42007B0ACF /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CE1584D2B8A8B41007B0ACF /* WidgetKit.framework */; };
+		2CE158502B8A8B42007B0ACF /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CE1584F2B8A8B42007B0ACF /* SwiftUI.framework */; };
+		2CE158532B8A8B42007B0ACF /* LeetTrackWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE158522B8A8B42007B0ACF /* LeetTrackWidgetBundle.swift */; };
+		2CE158552B8A8B42007B0ACF /* LeetTrackWidgetLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE158542B8A8B42007B0ACF /* LeetTrackWidgetLiveActivity.swift */; };
+		2CE158572B8A8B42007B0ACF /* LeetTrackWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE158562B8A8B42007B0ACF /* LeetTrackWidget.swift */; };
+		2CE158592B8A8B42007B0ACF /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE158582B8A8B42007B0ACF /* AppIntent.swift */; };
+		2CE1585B2B8A8B44007B0ACF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CE1585A2B8A8B44007B0ACF /* Assets.xcassets */; };
+		2CE1585F2B8A8B44007B0ACF /* LeetTrackWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 2CE1584C2B8A8B41007B0ACF /* LeetTrackWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2CE158682B8A907C007B0ACF /* StatsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE158672B8A907C007B0ACF /* StatsModel.swift */; };
 		2CE25C3D2891E47F009FABA7 /* LeetcodeTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE25C3C2891E47F009FABA7 /* LeetcodeTrackerApp.swift */; };
 		2CE25C3F2891E47F009FABA7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE25C3E2891E47F009FABA7 /* ContentView.swift */; };
 		2CE25C412891E481009FABA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CE25C402891E481009FABA7 /* Assets.xcassets */; };
@@ -71,6 +82,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		2CE1585D2B8A8B44007B0ACF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2CE25C312891E47F009FABA7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2CE1584B2B8A8B41007B0ACF;
+			remoteInfo = LeetTrackWidgetExtension;
+		};
 		2CE25C4F2891E481009FABA7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2CE25C312891E47F009FABA7 /* Project object */;
@@ -86,6 +104,20 @@
 			remoteInfo = LeetcodeTracker;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2CE158602B8A8B44007B0ACF /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				2CE1585F2B8A8B44007B0ACF /* LeetTrackWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2C19AE50291984EC00701707 /* UserAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuth.swift; sourceTree = "<group>"; };
@@ -113,6 +145,7 @@
 		2C4E0E5629523DD900EAD778 /* MergeSortView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MergeSortView.swift; sourceTree = "<group>"; };
 		2C4E0E582952447700EAD778 /* heapSort.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = heapSort.gif; sourceTree = "<group>"; };
 		2C4E0E5A295244CD00EAD778 /* HeapSortView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeapSortView.swift; sourceTree = "<group>"; };
+		2C7EFEB62CA3D783007FFACD /* ProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarView.swift; sourceTree = "<group>"; };
 		2C88320C2918254700D35F96 /* UserStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStats.swift; sourceTree = "<group>"; };
 		2C8832102919600800D35F96 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		2C9787A628F9E6D900388CF4 /* StatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
@@ -133,6 +166,16 @@
 		2C9C385F298AFA7C00C40AB0 /* promptgif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = promptgif.gif; sourceTree = "<group>"; };
 		2CBED0772B26B80600C1BEBB /* LeetFormsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetFormsView.swift; sourceTree = "<group>"; };
 		2CBED0792B26B84D00C1BEBB /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		2CE1584C2B8A8B41007B0ACF /* LeetTrackWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = LeetTrackWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CE1584D2B8A8B41007B0ACF /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		2CE1584F2B8A8B42007B0ACF /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		2CE158522B8A8B42007B0ACF /* LeetTrackWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetTrackWidgetBundle.swift; sourceTree = "<group>"; };
+		2CE158542B8A8B42007B0ACF /* LeetTrackWidgetLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetTrackWidgetLiveActivity.swift; sourceTree = "<group>"; };
+		2CE158562B8A8B42007B0ACF /* LeetTrackWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetTrackWidget.swift; sourceTree = "<group>"; };
+		2CE158582B8A8B42007B0ACF /* AppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIntent.swift; sourceTree = "<group>"; };
+		2CE1585A2B8A8B44007B0ACF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2CE1585C2B8A8B44007B0ACF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CE158672B8A907C007B0ACF /* StatsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsModel.swift; sourceTree = "<group>"; };
 		2CE25C392891E47F009FABA7 /* LeetcodeTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeetcodeTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CE25C3C2891E47F009FABA7 /* LeetcodeTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetcodeTrackerApp.swift; sourceTree = "<group>"; };
 		2CE25C3E2891E47F009FABA7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -156,11 +199,21 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		2CE158492B8A8B41007B0ACF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CE158502B8A8B42007B0ACF /* SwiftUI.framework in Frameworks */,
+				2CE1584E2B8A8B42007B0ACF /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2CE25C362891E47F009FABA7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				2C9C37FF2962160300C40AB0 /* SwiftUIX in Frameworks */,
+				2C7EFEB42CA35DFE007FFACD /* AxisContribution in Frameworks */,
 				2CE25D0E2898C647009FABA7 /* Introspect in Frameworks */,
 				376762561F13194A0BB07891 /* Pods_LeetcodeTracker.framework in Frameworks */,
 			);
@@ -216,6 +269,7 @@
 		2C42625B28E22AC7003F1D9D /* MainViews */ = {
 			isa = PBXGroup;
 			children = (
+				2C7EFEB52CA3D768007FFACD /* Components */,
 				2C9C380B2978F68B00C40AB0 /* OnboardingViews */,
 				2C4E0E46293681F000EAD778 /* Sort Views */,
 				2CE25CF22897171E009FABA7 /* TabView.swift */,
@@ -260,6 +314,14 @@
 			path = Gifs;
 			sourceTree = "<group>";
 		};
+		2C7EFEB52CA3D768007FFACD /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				2C7EFEB62CA3D783007FFACD /* ProgressBarView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		2C9C3802296375A100C40AB0 /* SettingsViews */ = {
 			isa = PBXGroup;
 			children = (
@@ -278,12 +340,27 @@
 			path = OnboardingViews;
 			sourceTree = "<group>";
 		};
+		2CE158512B8A8B42007B0ACF /* LeetTrackWidget */ = {
+			isa = PBXGroup;
+			children = (
+				2CE158522B8A8B42007B0ACF /* LeetTrackWidgetBundle.swift */,
+				2CE158542B8A8B42007B0ACF /* LeetTrackWidgetLiveActivity.swift */,
+				2CE158562B8A8B42007B0ACF /* LeetTrackWidget.swift */,
+				2CE158582B8A8B42007B0ACF /* AppIntent.swift */,
+				2CE1585A2B8A8B44007B0ACF /* Assets.xcassets */,
+				2CE1585C2B8A8B44007B0ACF /* Info.plist */,
+				2CE158672B8A907C007B0ACF /* StatsModel.swift */,
+			);
+			path = LeetTrackWidget;
+			sourceTree = "<group>";
+		};
 		2CE25C302891E47F009FABA7 = {
 			isa = PBXGroup;
 			children = (
 				2CE25C3B2891E47F009FABA7 /* LeetcodeTracker */,
 				2CE25C512891E481009FABA7 /* LeetcodeTrackerTests */,
 				2CE25C5B2891E481009FABA7 /* LeetcodeTrackerUITests */,
+				2CE158512B8A8B42007B0ACF /* LeetTrackWidget */,
 				2CE25C3A2891E47F009FABA7 /* Products */,
 				287F204BC51F72D9410F6990 /* Pods */,
 				726B9849C360D0D82BB77A28 /* Frameworks */,
@@ -296,6 +373,7 @@
 				2CE25C392891E47F009FABA7 /* LeetcodeTracker.app */,
 				2CE25C4E2891E481009FABA7 /* LeetcodeTrackerTests.xctest */,
 				2CE25C582891E481009FABA7 /* LeetcodeTrackerUITests.xctest */,
+				2CE1584C2B8A8B41007B0ACF /* LeetTrackWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -378,6 +456,8 @@
 			isa = PBXGroup;
 			children = (
 				7E23B9640F1DCD049230CB08 /* Pods_LeetcodeTracker.framework */,
+				2CE1584D2B8A8B41007B0ACF /* WidgetKit.framework */,
+				2CE1584F2B8A8B42007B0ACF /* SwiftUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -385,6 +465,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		2CE1584B2B8A8B41007B0ACF /* LeetTrackWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2CE158632B8A8B44007B0ACF /* Build configuration list for PBXNativeTarget "LeetTrackWidgetExtension" */;
+			buildPhases = (
+				2CE158482B8A8B41007B0ACF /* Sources */,
+				2CE158492B8A8B41007B0ACF /* Frameworks */,
+				2CE1584A2B8A8B41007B0ACF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LeetTrackWidgetExtension;
+			productName = LeetTrackWidgetExtension;
+			productReference = 2CE1584C2B8A8B41007B0ACF /* LeetTrackWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		2CE25C382891E47F009FABA7 /* LeetcodeTracker */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2CE25C622891E481009FABA7 /* Build configuration list for PBXNativeTarget "LeetcodeTracker" */;
@@ -394,15 +491,18 @@
 				2CE25C362891E47F009FABA7 /* Frameworks */,
 				2CE25C372891E47F009FABA7 /* Resources */,
 				2B285387CAD63E0AFDC7D805 /* [CP] Embed Pods Frameworks */,
+				2CE158602B8A8B44007B0ACF /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				2CE1585E2B8A8B44007B0ACF /* PBXTargetDependency */,
 			);
 			name = LeetcodeTracker;
 			packageProductDependencies = (
 				2CE25D0D2898C647009FABA7 /* Introspect */,
 				2C9C37FE2962160300C40AB0 /* SwiftUIX */,
+				2C7EFEB32CA35DFE007FFACD /* AxisContribution */,
 			);
 			productName = LeetcodeTracker;
 			productReference = 2CE25C392891E47F009FABA7 /* LeetcodeTracker.app */;
@@ -451,9 +551,12 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1340;
+				LastSwiftUpdateCheck = 1510;
 				LastUpgradeCheck = 1340;
 				TargetAttributes = {
+					2CE1584B2B8A8B41007B0ACF = {
+						CreatedOnToolsVersion = 15.1;
+					};
 					2CE25C382891E47F009FABA7 = {
 						CreatedOnToolsVersion = 13.4;
 					};
@@ -479,6 +582,7 @@
 			packageReferences = (
 				2CE25D0C2898C647009FABA7 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
 				2C9C37FD2962160300C40AB0 /* XCRemoteSwiftPackageReference "SwiftUIX" */,
+				2C7EFEB22CA35DFE007FFACD /* XCRemoteSwiftPackageReference "AxisContribution" */,
 			);
 			productRefGroup = 2CE25C3A2891E47F009FABA7 /* Products */;
 			projectDirPath = "";
@@ -487,11 +591,20 @@
 				2CE25C382891E47F009FABA7 /* LeetcodeTracker */,
 				2CE25C4D2891E481009FABA7 /* LeetcodeTrackerTests */,
 				2CE25C572891E481009FABA7 /* LeetcodeTrackerUITests */,
+				2CE1584B2B8A8B41007B0ACF /* LeetTrackWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		2CE1584A2B8A8B41007B0ACF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CE1585B2B8A8B44007B0ACF /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2CE25C372891E47F009FABA7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -567,6 +680,18 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		2CE158482B8A8B41007B0ACF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CE158682B8A907C007B0ACF /* StatsModel.swift in Sources */,
+				2CE158572B8A8B42007B0ACF /* LeetTrackWidget.swift in Sources */,
+				2CE158592B8A8B42007B0ACF /* AppIntent.swift in Sources */,
+				2CE158552B8A8B42007B0ACF /* LeetTrackWidgetLiveActivity.swift in Sources */,
+				2CE158532B8A8B42007B0ACF /* LeetTrackWidgetBundle.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2CE25C352891E47F009FABA7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -582,6 +707,7 @@
 				2CBED0782B26B80600C1BEBB /* LeetFormsView.swift in Sources */,
 				2C4E0E482936820400EAD778 /* BubbleSortView.swift in Sources */,
 				2C42627428E22C59003F1D9D /* TopologicalView.swift in Sources */,
+				2C7EFEB72CA3D783007FFACD /* ProgressBarView.swift in Sources */,
 				2C9C37BA2954F62400C40AB0 /* SelectionSortView.swift in Sources */,
 				2C42626B28E22BDB003F1D9D /* SubsetsView.swift in Sources */,
 				2C9C37C22956329D00C40AB0 /* SplashScreenView.swift in Sources */,
@@ -640,6 +766,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		2CE1585E2B8A8B44007B0ACF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2CE1584B2B8A8B41007B0ACF /* LeetTrackWidgetExtension */;
+			targetProxy = 2CE1585D2B8A8B44007B0ACF /* PBXContainerItemProxy */;
+		};
 		2CE25C502891E481009FABA7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 2CE25C382891E47F009FABA7 /* LeetcodeTracker */;
@@ -653,6 +784,73 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		2CE158612B8A8B44007B0ACF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8M22PYB3ZS;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LeetTrackWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = LeetTrackWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Sathvik.LeetcodeTracker.LeetTrackWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2CE158622B8A8B44007B0ACF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8M22PYB3ZS;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LeetTrackWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = LeetTrackWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Sathvik.LeetcodeTracker.LeetTrackWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		2CE25C602891E481009FABA7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -771,6 +969,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 70E4EEFAD61F5B5CC128BA05 /* Pods-LeetcodeTracker.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -805,6 +1004,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EC35A99CCC70796847E0B2FA /* Pods-LeetcodeTracker.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -914,6 +1114,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2CE158632B8A8B44007B0ACF /* Build configuration list for PBXNativeTarget "LeetTrackWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CE158612B8A8B44007B0ACF /* Debug */,
+				2CE158622B8A8B44007B0ACF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2CE25C342891E47F009FABA7 /* Build configuration list for PBXProject "LeetcodeTracker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -953,6 +1162,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		2C7EFEB22CA35DFE007FFACD /* XCRemoteSwiftPackageReference "AxisContribution" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jasudev/AxisContribution.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.5.0;
+			};
+		};
 		2C9C37FD2962160300C40AB0 /* XCRemoteSwiftPackageReference "SwiftUIX" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SwiftUIX/SwiftUIX";
@@ -972,6 +1189,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		2C7EFEB32CA35DFE007FFACD /* AxisContribution */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2C7EFEB22CA35DFE007FFACD /* XCRemoteSwiftPackageReference "AxisContribution" */;
+			productName = AxisContribution;
+		};
 		2C9C37FE2962160300C40AB0 /* SwiftUIX */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 2C9C37FD2962160300C40AB0 /* XCRemoteSwiftPackageReference "SwiftUIX" */;

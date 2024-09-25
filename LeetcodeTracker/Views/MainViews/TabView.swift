@@ -41,6 +41,7 @@ struct TabViewScreen: View {
                 }
                 .tag(4)
         }
+        
         .task {
             try? await lnManager.requestAuthorization()
         }

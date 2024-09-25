@@ -13,6 +13,7 @@ final class DataModel: ObservableObject{
     @Published var jsonData = [LeetCodeContent]()
     @Published var stats: Stats?
     @Published var subs = [submissions]()
+    @Published var calenderData = [Date()]
     @Published var username: String = ""
     @Published var showingFaves = false
     @Published var savedItems: Set<String>
@@ -21,6 +22,7 @@ final class DataModel: ObservableObject{
     @Published var isStatsApiLoading = true
     @Published var accentColor: Color = .blue
     @Published var searchText: String = ""
+    @Published var calendarLoaded: Bool = false
     let df = DateFormatter()
     let allTokens = [Token(name: "easy"), Token(name: "medium"), Token(name: "hard")]
     @Published var currentTokens = [Token]()
@@ -118,16 +120,18 @@ final class DataModel: ObservableObject{
                     self.accentColor = .blue
                 }
                 
-            }
-            
-            //Submission activity (fix with dates later)
-            for (key,val) in res.submissionCalendar{
-                DispatchQueue.main.async{
-                    self.subs.append(submissions(subDay: Date(timeIntervalSince1970: Double(key) ?? 0.0), sub: val))
+                //Submission activity (fix with dates later)
+                for (key,val) in res.submissionCalendar{
                     
+                    self.subs.append(submissions(subDay: Date(timeIntervalSince1970: Double(key) ?? 0.0), sub: val))
+                    self.calenderData.append(Date(timeIntervalSince1970: Double(key) ?? 0.0))
+
                     
                 }
- 
+                if !self.calenderData.isEmpty{
+                    self.calendarLoaded = true
+                }
+                print(self.calenderData)
             }
             
         }

@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Charts
+import AxisContribution
 
 struct StatsView: View {
     @StateObject var data = DataModel()
@@ -14,10 +15,8 @@ struct StatsView: View {
     @AppStorage("username") private var username: String = ""
     @State var lineWidth: CGFloat
     @State var fontSize: CGFloat
-    
-    
-    
-    
+    let dateFormatter = DateFormatter()
+    var dates = [Date()]
     var body: some View {
         if data.isAPIDown{
             Text("API is currently down, please check back later!")
@@ -25,6 +24,7 @@ struct StatsView: View {
         }else{
             NavigationView{
                 VStack{
+                    Spacer()
                     ZStack{
                         Circle()
                             .stroke(lineWidth: 20)
@@ -47,6 +47,7 @@ struct StatsView: View {
                             .animation(.easeOut, value: (Float(data.stats?.totalSolved ?? 0)/Float(data.stats?.totalQuestions ?? 1)))
                         
                     }
+                    .frame(minWidth: 150, idealWidth: 180, maxWidth: 200, minHeight: 150, idealHeight: 180, maxHeight: 200, alignment: .center)
                     .padding()
                     HStack{
                         ZStack{
@@ -119,52 +120,45 @@ struct StatsView: View {
                         .padding()
                         
                     }
+                    Spacer()
                     ProgressView("Acceptance Rate: \(Int(data.stats?.acceptanceRate ?? 0)) %", value: data.stats?.acceptanceRate ?? 0.0, total: 100)
-                        .padding([.leading,.trailing], 10)
-                        .accentColor(data.accentColor)
-                        .bold()
-                        
-                    
-                    Text("Submission Activity")
-                        .frame(alignment: .leading)
-                        .bold()
-                    
-                    VStack{
-                        
-                        if #available(iOS 16.0, *) {
-                            if data.subs.count < 50{
-                                Chart(data.subs){ item in
-                                    BarMark(x: .value("Month", item.subDay, unit: .weekOfMonth), y: .value("Subs", item.sub))
+                        .progressViewStyle(ProgressBarView(color: data.accentColor, height: 20, labelFontStyle: .body.weight(.bold)))
+                        .padding([.leading,.trailing])
 
-                                }
+                    
+                    
+                    
+                    if data.calendarLoaded{
+                        
+                        AxisContribution(constant: .init(), source: data.calenderData)
+//                        { indexSet, data in
+//                            Image(systemName: "square.fill")
+//                              .foregroundColor(Color(hex: colorScheme == .dark ? 0x171B21 : 0xF0F0F0))
+//                              .font(.system(size: 20))
+//                              .frame(width: 20, height: 20)
+//                        } foreground: { indexSet, data in
+//                            Image(systemName: "square.fill")
+//                              .foregroundColor(Color(hex: 0x6CD164))
+//                              .font(.system(size: 20))
+//                              .frame(width: 20, height: 20)
+//                        }
 
-                                
-                            }else{
-                                Chart(data.subs){ item in
-                                    BarMark (x: .value("Month", item.subDay, unit: .month), y: .value("Subs", item.sub))
-                                    
-                                    
-                                }
-                                
-                                
-                                
-                            }
-                            
-                        } else {
-                            // Don't display chart
+                    }else{
+                        GroupBox{
+                            Text("No recent submissions")
+                                .frame(width: 300)
                         }
+                        
+                        
+                        
                     }
-                   
+
                 }
                 
                 .onAppear{
                     Task{
-                        if(data.subs.isEmpty){
-                            await data.loadStats(name: username)
-                            
-                        }else{
-                            print(data.subs)
-                        }
+                        await data.loadStats(name: username)
+                        
                     }
                     UIApplication.shared.applicationIconBadgeNumber = 0
                     if UIDevice.current.userInterfaceIdiom == .pad {
@@ -174,10 +168,7 @@ struct StatsView: View {
                         self.lineWidth = 10
                         self.fontSize = 15
                     }
-                    
-                    
-                    
-                    
+
                 }
                 .onDisappear {
                     AppDelegate.orientationLock = .all // Unlocking the rotation when leaving the view
