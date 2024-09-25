@@ -25,29 +25,7 @@ struct StatsView: View {
             NavigationView{
                 VStack{
                     Spacer()
-                    ZStack{
-                        Circle()
-                            .stroke(lineWidth: 20)
-                            .opacity(0.2)
-                            .overlay(
-                                VStack{
-                                    Text("\(data.stats?.totalSolved ?? 0)")
-                                        .font(.system(size: 25) .bold())
-                                    Text("Total")
-                                        .font(.system(size: 20) .bold())
-                                })
-                            .foregroundColor(Color.gray)
-                        
-                        Circle()
-                            .trim(from: 0.0, to: CGFloat(Float(data.stats?.totalSolved ?? 0)/Float(data.stats?.totalQuestions ?? 1)))
-                        
-                            .stroke(style: StrokeStyle(lineWidth: 20, lineCap: .round, lineJoin: .round))
-                            .foregroundColor(Color.yellow)
-                            .rotationEffect(.degrees(-90))
-                            .animation(.easeOut, value: (Float(data.stats?.totalSolved ?? 0)/Float(data.stats?.totalQuestions ?? 1)))
-                        
-                    }
-                    .frame(minWidth: 150, idealWidth: 180, maxWidth: 200, minHeight: 150, idealHeight: 180, maxHeight: 200, alignment: .center)
+                    TotalCircleView(solved: data.stats?.totalSolved ?? 0, total: data.stats?.totalQuestions ?? 1, minWidth: 150, idealWidth: 180, maxWidth: 200, minHeight: 150, idealHeight: 180, maxHeight: 200, title: "Total")
                     .padding()
                     HStack{
                         ZStack{
@@ -131,17 +109,17 @@ struct StatsView: View {
                     if data.calendarLoaded{
                         
                         AxisContribution(constant: .init(), source: data.calenderData)
-//                        { indexSet, data in
-//                            Image(systemName: "square.fill")
-//                              .foregroundColor(Color(hex: colorScheme == .dark ? 0x171B21 : 0xF0F0F0))
-//                              .font(.system(size: 20))
-//                              .frame(width: 20, height: 20)
-//                        } foreground: { indexSet, data in
-//                            Image(systemName: "square.fill")
-//                              .foregroundColor(Color(hex: 0x6CD164))
-//                              .font(.system(size: 20))
-//                              .frame(width: 20, height: 20)
-//                        }
+                        { indexSet, data in
+                            Image(systemName: "square.fill")
+                                .foregroundColor(.gray.opacity(0.5))
+                              .font(.system(size: 20))
+                              .frame(width: 20, height: 20)
+                        } foreground: { indexSet, data in
+                            Image(systemName: "square.fill")
+                                .foregroundColor(.green)
+                              .font(.system(size: 20))
+                              .frame(width: 20, height: 20)
+                        }
 
                     }else{
                         GroupBox{
