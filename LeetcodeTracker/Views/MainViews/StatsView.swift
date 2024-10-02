@@ -107,6 +107,16 @@ struct StatsView: View {
                     
                     
                     if data.calendarLoaded{
+                        HStack{
+                            Text("\(data.calenderData.count)")
+                                .bold()
+                                
+                            Text("submissions in the past one year")
+                                .foregroundStyle(Color.gray)
+                                .bold()
+                            Spacer()
+                        }
+                        .padding([.leading, .trailing])
                         
                         AxisContribution(constant: .init(), source: data.calenderData)
                         { indexSet, data in
@@ -135,7 +145,13 @@ struct StatsView: View {
                 
                 .onAppear{
                     Task{
-                        await data.loadStats(name: username)
+                        if(!data.calenderData.isEmpty){
+                           
+                            data.calenderData.removeAll()
+                            await data.loadStats(name: username)
+                        }else{
+                            await data.loadStats(name: username)
+                        }
                         
                     }
                     UIApplication.shared.applicationIconBadgeNumber = 0
@@ -160,7 +176,7 @@ struct StatsView: View {
                     ToolbarItem(placement: .navigationBarTrailing){
                         Button(action: {
                             login = false
-                            data.subs.removeAll()
+                            data.calenderData.removeAll()
                             
                         }, label: {
                             Image(systemName: "rectangle.portrait.and.arrow.right")
@@ -171,10 +187,13 @@ struct StatsView: View {
                     ToolbarItem(placement: .navigationBarLeading){
                         Button(action: {
                             Task{
-                                if(!data.subs.isEmpty){
-                                    data.subs.removeAll()
+                                if(!data.calenderData.isEmpty){
+                                    data.calenderData.removeAll()
+                                    await data.loadStats(name: username)
+                                }else{
+                                    await data.loadStats(name: username)
                                 }
-                                await data.loadStats(name: username)
+                                
                             }
                             
                         }, label: {

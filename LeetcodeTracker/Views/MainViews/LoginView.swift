@@ -44,6 +44,7 @@ struct LoginView: View {
                                         .onChange(of: username) { newValue in
                                                         username = newValue.replacingOccurrences(of: " ", with: "")
                                                     }
+                                        .autocorrectionDisabled()
                                     
                                     Button(action: {
                                         progressLoad.toggle()
