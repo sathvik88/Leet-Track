@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct PromptView: View {
+    @Binding var showPrompt: Bool
     let prompt: String
     let solution: String
     let question: String
@@ -30,7 +31,9 @@ struct PromptView: View {
                 
                 
                 Button{
-                    UIApplication.shared.open (URL(string: solution)!)
+                    UIApplication.shared.open(URL(string: solution)!)
+                    
+                    
                 } label: {
                     Text("View Solution")
                 }

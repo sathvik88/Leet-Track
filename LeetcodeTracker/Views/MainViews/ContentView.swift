@@ -18,109 +18,36 @@ struct ContentView: View {
     @AppStorage("showOnboarding") var showOnboarding: Bool = true
     @State var toggleFav: Bool = false
     @State var toggleAlert: Bool = false
+    @Environment(\.colorScheme) var colorScheme
     
-    
-
     var body: some View {
-        NavigationView {
+        NavigationStack {
             if data.isApiLoading{
                 ProgressView()
                     .progressViewStyle(CircularProgressViewStyle())
             }else{
                 List{
                     ForEach(data.searchResults) { list in
-                        HStack{
-                            Text(list.question)
-                                .bold()
-                                .foregroundColor(.accentColor)
-                                .frame(maxWidth: .infinity, alignment: .leading)
-                            
-                            if(list.difficulty == "Easy"){
-                                HStack{
-                                    Text(list.difficulty)
-                                        .foregroundColor(.green)
-                                        .bold()
-                                        .frame(maxWidth: .infinity, alignment: .trailing)
-                                    Image(systemName: data.contains(list) ? "star.fill" : "star")
-                                        .bold()
-                                        .foregroundColor(.yellow)
-                                        .onTapGesture{
-                                            data.toggleFavs(question: list)
-                                            if data.savedItems.isEmpty{
-                                                toggleFav.toggle()
-                                                data.sortFaves()
-                                            }
-                                            
-                                        }
-                                        .frame(maxWidth: .infinity, alignment: .trailing)
-                                }
-                                
-                                
-                                
-                            }
-                            else if(list.difficulty == "Medium"){
-                                HStack {
-                                    Text(list.difficulty)
-                                    
-                                        .foregroundColor(.orange)
-                                        .bold()
-                                        .frame(maxWidth: .infinity, alignment: .trailing)
-                                    Image(systemName: data.contains(list) ? "star.fill" : "star")
-                                        .bold()
-                                        .foregroundColor(.yellow)
-                                        .onTapGesture{
-                                            data.toggleFavs(question: list)
-                                            if data.savedItems.isEmpty{
-                                                toggleFav.toggle()
-                                                data.sortFaves()
-                                            }
-                                            
-                                        }
-                                        .frame(maxWidth: .infinity, alignment: .trailing)
-                                }
-                                
-                            }
-                            else{
-                                HStack{
-                                    Text(list.difficulty)
-                                        .foregroundColor(.red)
-                                        .bold()
-                                        .frame(alignment: .trailing)
-                                        .frame(maxWidth: .infinity, alignment: .trailing)
-                                    Image(systemName: data.contains(list) ? "star.fill" : "star")
-                                        .bold()
-                                        .foregroundColor(.yellow)
-                                        .onTapGesture{
-                                            data.toggleFavs(question: list)
-                                            if data.savedItems.isEmpty{
-                                                toggleFav.toggle()
-                                                data.sortFaves()
-                                            }
-                                            
-                                        }
-                                        .frame(maxWidth: .infinity, alignment: .trailing)
-                                    
-                                }
-                                
-                                
-                            }
-                            
-                        }
-                        .contentShape(Rectangle())
+                        QuestionCardView(title: list.question, difficulty: list.difficulty, solutionLink: list.solution, item: list, isFaved: $toggleFav, description: list.prompt, showPrompt: $showSheet)
+                            .environmentObject(data)
                         .alert("Uh oh,  you havent favorited any questions! 😳",isPresented: $toggleAlert) {
                             
                             Button("OK", role: .cancel) { }
                         }
                         .onTapGesture {
                             selected = list
+                            showSheet.toggle()
                         }
                         
-                        .sheet(item: $selected, content: { item in
-                            PromptView(prompt: item.prompt, solution: item.solution, question: item.question)
-                        })
                         
                     }
+                    
                 }
+                .navigationDestination(isPresented: $showSheet, destination: {
+                    PromptView(showPrompt: $showSheet, prompt: selected?.prompt ?? "Empty", solution: selected?.solution ?? "Empty", question: selected?.question ?? "empty")
+                })
+                .listStyle(PlainListStyle())
+                
                 .navigationBarTitle("Questions")
                 .toolbar{
                     ToolbarItem(placement: .navigationBarTrailing){
@@ -133,7 +60,7 @@ struct ContentView: View {
                             }
                         },
                         label: {
-                            Image(systemName: toggleFav ? "star.fill" : "star")
+                            Image(systemName: toggleFav ? "heart.fill" : "heart")
                         })
                     }
                     ToolbarItem(placement: .navigationBarTrailing){
@@ -149,18 +76,20 @@ struct ContentView: View {
                 .refreshable {
                     data.load()
                 }
+                
             }
             
                 
             
         }
-        .searchable(text: $data.searchText, tokens: $data.currentTokens, suggestedTokens: .constant(data.suggestedTokens),prompt: "Type to filter, or use # for tags"){ token in
+        .searchable(text: $data.searchText, tokens: $data.currentTokens, suggestedTokens: .constant(data.suggestedTokens),prompt: "Type to filter"){ token in
             Text(token.name)
         }
         .navigationViewStyle(StackNavigationViewStyle())
         .fullScreenCover(isPresented: $showOnboarding, content: {
             OnboardingTabView(showOnboarding: $showOnboarding)
         })
+        
     }
     
 }

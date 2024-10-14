@@ -13,10 +13,12 @@ struct TabViewScreen: View {
     @EnvironmentObject var lnManager: NotificationManager
     @Environment(\.scenePhase) var scenePhase
     @State private var selection = 1
+    @Environment(\.colorScheme) var colorScheme
     
     var body: some View {
         TabView(selection: $selection){
             ContentView()
+                
                 .tabItem{
                     Image(systemName: "house")
                     Text("Home")

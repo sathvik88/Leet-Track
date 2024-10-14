@@ -56,6 +56,7 @@
 		2C9C3860298AFA7C00C40AB0 /* promptgif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2C9C385F298AFA7C00C40AB0 /* promptgif.gif */; };
 		2CBED0782B26B80600C1BEBB /* LeetFormsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBED0772B26B80600C1BEBB /* LeetFormsView.swift */; };
 		2CBED07A2B26B84D00C1BEBB /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBED0792B26B84D00C1BEBB /* WebView.swift */; };
+		2CD7537E2CB239EF00446B6B /* QuestionCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD7537D2CB239EF00446B6B /* QuestionCardView.swift */; };
 		2CE1584E2B8A8B42007B0ACF /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CE1584D2B8A8B41007B0ACF /* WidgetKit.framework */; };
 		2CE158502B8A8B42007B0ACF /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CE1584F2B8A8B42007B0ACF /* SwiftUI.framework */; };
 		2CE158532B8A8B42007B0ACF /* LeetTrackWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE158522B8A8B42007B0ACF /* LeetTrackWidgetBundle.swift */; };
@@ -168,6 +169,7 @@
 		2C9C385F298AFA7C00C40AB0 /* promptgif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = promptgif.gif; sourceTree = "<group>"; };
 		2CBED0772B26B80600C1BEBB /* LeetFormsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetFormsView.swift; sourceTree = "<group>"; };
 		2CBED0792B26B84D00C1BEBB /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		2CD7537D2CB239EF00446B6B /* QuestionCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCardView.swift; sourceTree = "<group>"; };
 		2CE1584C2B8A8B41007B0ACF /* LeetTrackWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = LeetTrackWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CE1584D2B8A8B41007B0ACF /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		2CE1584F2B8A8B42007B0ACF /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -321,6 +323,7 @@
 			children = (
 				2C7EFEB62CA3D783007FFACD /* ProgressBarView.swift */,
 				2C7EFEB82CA4ADC9007FFACD /* CircleView.swift */,
+				2CD7537D2CB239EF00446B6B /* QuestionCardView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -746,6 +749,7 @@
 				2C4E0E45292E953C00EAD778 /* NotificationManager.swift in Sources */,
 				2C42627228E22C2C003F1D9D /* KWayView.swift in Sources */,
 				2C42625528E2238A003F1D9D /* SlidingWindowView.swift in Sources */,
+				2CD7537E2CB239EF00446B6B /* QuestionCardView.swift in Sources */,
 				2C9C380129635F6900C40AB0 /* SettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
