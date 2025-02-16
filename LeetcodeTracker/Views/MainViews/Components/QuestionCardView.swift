@@ -20,11 +20,11 @@ struct QuestionCardView: View {
     @Environment(\.colorScheme) var colorScheme
     var body: some View {
         ZStack{
-            
             RoundedRectangle(cornerSize: CGSize(width: 15, height: 15))
                 .frame(height: 100)
                 .foregroundStyle(colorScheme == .dark ? Color(hex: "#1a1b25") : Color.white)
                 .shadow(radius: 5, x: 5, y: 0)
+            
             HStack{
                 VStack{
                     Text(title)
