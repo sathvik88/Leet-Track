@@ -19,6 +19,8 @@ struct ContentView: View {
     @State var toggleFav: Bool = false
     @State var toggleAlert: Bool = false
     @Environment(\.colorScheme) var colorScheme
+    @Environment(\.managedObjectContext) var moc
+    @FetchRequest(sortDescriptors: []) var savedQuestions: FetchedResults<SavedQuestions>
     
     var body: some View {
         NavigationStack {
@@ -27,7 +29,10 @@ struct ContentView: View {
                     .progressViewStyle(CircularProgressViewStyle())
             }else{
                 List{
-                    ForEach(data.searchResults) { list in
+                    ForEach(toggleFav == false ? data.searchResults : data.searchResults.filter{ q in
+                        savedQuestions.contains{ $0.question == q.question}
+                    }
+                    ) { list in
                         QuestionCardView(title: list.question, difficulty: list.difficulty, solutionLink: list.solution, item: list, isFaved: $toggleFav, description: list.prompt, showPrompt: $showSheet)
                             .environmentObject(data)
                         .alert("Uh oh,  you havent favorited any questions! 😳",isPresented: $toggleAlert) {
@@ -52,10 +57,11 @@ struct ContentView: View {
                 .toolbar{
                     ToolbarItem(placement: .navigationBarTrailing){
                         Button(action: {
-                            if data.savedItems.isEmpty{
-                                toggleAlert.toggle()
+                            if savedQuestions.isEmpty{
+                                toggleAlert = true
                             }else{
-                                data.sortFaves()
+                                print("PRINTING SAVED QUESTIONS:")
+                                print(savedQuestions)
                                 toggleFav.toggle()
                             }
                         },
@@ -73,9 +79,9 @@ struct ContentView: View {
                     
                     
                 }
-                .refreshable {
-                    data.load()
-                }
+//                .refreshable {
+//                    data.load()
+//                }
                 
             }
             
@@ -89,6 +95,10 @@ struct ContentView: View {
         .fullScreenCover(isPresented: $showOnboarding, content: {
             OnboardingTabView(showOnboarding: $showOnboarding)
         })
+        .onAppear(){
+            
+            print(savedQuestions)
+        }
         
     }
     

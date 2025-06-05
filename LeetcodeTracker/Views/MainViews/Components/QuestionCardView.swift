@@ -9,6 +9,8 @@ import SwiftUI
 
 struct QuestionCardView: View {
     @ObservedObject var data = DataModel()
+    @Environment(\.managedObjectContext) var moc
+    @FetchRequest(sortDescriptors: []) var savedQuestions: FetchedResults<SavedQuestions>
     let title: String
     let difficulty: String
     let solutionLink: String
@@ -18,6 +20,7 @@ struct QuestionCardView: View {
     @Binding var showPrompt: Bool
     @State var toggleFav: Bool = false
     @Environment(\.colorScheme) var colorScheme
+    @State var fillHeart = false
     var body: some View {
         ZStack{
             RoundedRectangle(cornerSize: CGSize(width: 15, height: 15))
@@ -61,17 +64,30 @@ struct QuestionCardView: View {
                 }
                 .padding([.top, .bottom])
                 
-                Image(systemName: data.contains(item) ? "heart.fill" : "heart")
+                Image(systemName: fillHeart ? "heart.fill" : "heart")
                     .font(.system(size: 20))
                     .foregroundStyle(Color.red)
                     .bold()
                     .onTapGesture{
-                        data.toggleFavs(question: item)
-                        if data.savedItems.isEmpty{
-                            toggleFav.toggle()
-                            data.sortFaves()
-                        }
                         
+                        if fillHeart{
+                            for i in savedQuestions{
+                                if item.id == i.id{
+                                    moc.delete(i)
+                                    
+                                    fillHeart = false
+                                }
+                            }
+                        }else{
+                            let savedquestions = SavedQuestions(context: moc)
+                            savedquestions.id = UUID()
+                            savedquestions.question = item.question
+                            print(item.id)
+                            do{
+                                try? moc.save()
+                            }
+                            fillHeart = true
+                        }
                         
                     }
                     .padding()
@@ -80,6 +96,13 @@ struct QuestionCardView: View {
             .padding([.leading, .trailing])
             .contentShape(Rectangle())
             .listRowBackground(colorScheme == .dark ? Color.black : Color(hex: "#bdd5ea"))
+            .onAppear(){
+                for i in savedQuestions{
+                    if item.question == i.question{
+                        fillHeart = true
+                    }
+                }
+            }
         }
         
     }

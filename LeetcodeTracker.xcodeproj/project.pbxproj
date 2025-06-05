@@ -38,6 +38,7 @@
 		2C88320D2918254700D35F96 /* UserStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C88320C2918254700D35F96 /* UserStats.swift */; };
 		2C8832112919600800D35F96 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8832102919600800D35F96 /* LoginView.swift */; };
 		2C9787A728F9E6D900388CF4 /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9787A628F9E6D900388CF4 /* StatsView.swift */; };
+		2C9978572DF1435B00A9CB98 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9978562DF1435B00A9CB98 /* DataController.swift */; };
 		2C9C37BA2954F62400C40AB0 /* SelectionSortView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9C37B92954F62400C40AB0 /* SelectionSortView.swift */; };
 		2C9C37BC2954F63800C40AB0 /* InsertionSortView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9C37BB2954F63800C40AB0 /* InsertionSortView.swift */; };
 		2C9C37BE2955749F00C40AB0 /* selectionSort.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2C9C37BD2955749F00C40AB0 /* selectionSort.gif */; };
@@ -70,8 +71,7 @@
 		2CE25C3F2891E47F009FABA7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE25C3E2891E47F009FABA7 /* ContentView.swift */; };
 		2CE25C412891E481009FABA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CE25C402891E481009FABA7 /* Assets.xcassets */; };
 		2CE25C442891E481009FABA7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CE25C432891E481009FABA7 /* Preview Assets.xcassets */; };
-		2CE25C462891E481009FABA7 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE25C452891E481009FABA7 /* Persistence.swift */; };
-		2CE25C492891E481009FABA7 /* LeetcodeTracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2CE25C472891E481009FABA7 /* LeetcodeTracker.xcdatamodeld */; };
+		2CE25C492891E481009FABA7 /* DataModels.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2CE25C472891E481009FABA7 /* DataModels.xcdatamodeld */; };
 		2CE25C532891E481009FABA7 /* LeetcodeTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE25C522891E481009FABA7 /* LeetcodeTrackerTests.swift */; };
 		2CE25C5D2891E481009FABA7 /* LeetcodeTrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE25C5C2891E481009FABA7 /* LeetcodeTrackerUITests.swift */; };
 		2CE25C5F2891E481009FABA7 /* LeetcodeTrackerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE25C5E2891E481009FABA7 /* LeetcodeTrackerUITestsLaunchTests.swift */; };
@@ -152,6 +152,7 @@
 		2C88320C2918254700D35F96 /* UserStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStats.swift; sourceTree = "<group>"; };
 		2C8832102919600800D35F96 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		2C9787A628F9E6D900388CF4 /* StatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
+		2C9978562DF1435B00A9CB98 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		2C9C37B92954F62400C40AB0 /* SelectionSortView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionSortView.swift; sourceTree = "<group>"; };
 		2C9C37BB2954F63800C40AB0 /* InsertionSortView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertionSortView.swift; sourceTree = "<group>"; };
 		2C9C37BD2955749F00C40AB0 /* selectionSort.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = selectionSort.gif; sourceTree = "<group>"; };
@@ -185,8 +186,7 @@
 		2CE25C3E2891E47F009FABA7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2CE25C402891E481009FABA7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2CE25C432891E481009FABA7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		2CE25C452891E481009FABA7 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		2CE25C482891E481009FABA7 /* LeetcodeTracker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LeetcodeTracker.xcdatamodel; sourceTree = "<group>"; };
+		2CE25C482891E481009FABA7 /* DataModels.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModels.xcdatamodel; sourceTree = "<group>"; };
 		2CE25C4E2891E481009FABA7 /* LeetcodeTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LeetcodeTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CE25C522891E481009FABA7 /* LeetcodeTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetcodeTrackerTests.swift; sourceTree = "<group>"; };
 		2CE25C582891E481009FABA7 /* LeetcodeTrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LeetcodeTrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -394,8 +394,7 @@
 				2CE25C712891E625009FABA7 /* Services */,
 				2CE25C3C2891E47F009FABA7 /* LeetcodeTrackerApp.swift */,
 				2CE25C402891E481009FABA7 /* Assets.xcassets */,
-				2CE25C452891E481009FABA7 /* Persistence.swift */,
-				2CE25C472891E481009FABA7 /* LeetcodeTracker.xcdatamodeld */,
+				2CE25C472891E481009FABA7 /* DataModels.xcdatamodeld */,
 				2CE25C422891E481009FABA7 /* Preview Content */,
 				2C9C37F9295ABF6D00C40AB0 /* AppDelegate.swift */,
 			);
@@ -434,6 +433,7 @@
 				2C19AE50291984EC00701707 /* UserAuth.swift */,
 				2C4E0E44292E953C00EAD778 /* NotificationManager.swift */,
 				2C9C3805296BBEDE00C40AB0 /* LocalNotification.swift */,
+				2C9978562DF1435B00A9CB98 /* DataController.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -705,8 +705,7 @@
 				2C42626328E22B6C003F1D9D /* TreeBFSView.swift in Sources */,
 				2CBED07A2B26B84D00C1BEBB /* WebView.swift in Sources */,
 				2C4E0E5729523DD900EAD778 /* MergeSortView.swift in Sources */,
-				2CE25C462891E481009FABA7 /* Persistence.swift in Sources */,
-				2CE25C492891E481009FABA7 /* LeetcodeTracker.xcdatamodeld in Sources */,
+				2CE25C492891E481009FABA7 /* DataModels.xcdatamodeld in Sources */,
 				2CE25C3F2891E47F009FABA7 /* ContentView.swift in Sources */,
 				2CE25C3D2891E47F009FABA7 /* LeetcodeTrackerApp.swift in Sources */,
 				2C8832112919600800D35F96 /* LoginView.swift in Sources */,
@@ -737,6 +736,7 @@
 				2C9C380D2978F6B400C40AB0 /* OnboardingTabView.swift in Sources */,
 				2C9C380A296DB9CD00C40AB0 /* PromptView.swift in Sources */,
 				2C42625D28E22B21003F1D9D /* MergeIntervalsView.swift in Sources */,
+				2C9978572DF1435B00A9CB98 /* DataController.swift in Sources */,
 				2C9C3806296BBEDE00C40AB0 /* LocalNotification.swift in Sources */,
 				2C42625728E2299C003F1D9D /* TwoPointersView.swift in Sources */,
 				2C4E0E51294BC78000EAD778 /* QuickSortView.swift in Sources */,
@@ -1215,13 +1215,13 @@
 /* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
-		2CE25C472891E481009FABA7 /* LeetcodeTracker.xcdatamodeld */ = {
+		2CE25C472891E481009FABA7 /* DataModels.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				2CE25C482891E481009FABA7 /* LeetcodeTracker.xcdatamodel */,
+				2CE25C482891E481009FABA7 /* DataModels.xcdatamodel */,
 			);
-			currentVersion = 2CE25C482891E481009FABA7 /* LeetcodeTracker.xcdatamodel */;
-			path = LeetcodeTracker.xcdatamodeld;
+			currentVersion = 2CE25C482891E481009FABA7 /* DataModels.xcdatamodel */;
+			path = DataModels.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

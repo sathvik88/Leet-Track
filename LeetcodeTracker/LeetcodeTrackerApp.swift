@@ -13,7 +13,8 @@ struct LeetcodeTrackerApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     @StateObject private var userAuth = UserAuth()
     @StateObject var lnManager = NotificationManager()
-    let persistenceController = PersistenceController.shared
+  
+    @StateObject private var coreDataStack = DataController()
     
     
     class AppDelegate: NSObject, UIApplicationDelegate {
@@ -31,10 +32,12 @@ struct LeetcodeTrackerApp: App {
     var body: some Scene {
         WindowGroup {
             SplashScreenView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+              
                 .environmentObject(userAuth)
                 .environmentObject(lnManager) 
         }
+        .environment(\.managedObjectContext,
+                      coreDataStack.container.viewContext)
         
     }
 }
